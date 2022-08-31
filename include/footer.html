@@ -1,0 +1,130 @@
+<footer id="footer" class="footer">
+	<div class="container container--1680 pt-10 pb-20 pt-md-15 pb-md-30">
+		<div class="footer-logo mb-15 mb-md-8">
+			<img src="../assets/images/main/logo.svg" alt="<?=$SS[sitename]?>" />
+		</div>
+
+		<ul class="footer-sns">
+			<li>
+				<a href="<?=$P_sns_instagram?>" target="_blank" title="인스타그램 바로가기">
+					<img src="../assets/images/icon/instagram.png" alt="인스타그램" />
+				</a>
+			</li>
+			<li>
+				<a href="<?=$P_sns_navershop?>" target="_blank" title="네이버쇼핑 바로가기">
+					<img src="../assets/images/icon/navershop.png" alt="네이버쇼핑" />
+				</a>
+			</li>
+			<li>
+				<a href="<?=$P_sns_youtube?>" target="_blank" title="유튜브 바로가기">
+					<img src="../assets/images/icon/youtube.png" alt="유튜브" />
+				</a>
+			</li>
+		</ul>
+
+		<div class="row">
+			<div class="col-12 col-md-auto">
+				<p class="title mb-1 mb-md-3">고객센터</p>
+				<p class="tel mb-2">
+					<a href="tel:<?=$SS[sitetel]?>"><?=$SS[sitetel]?></a>
+				</p>
+				<p class="text">
+					평일 AM 11:00 - PM 19:00 <br class="d-none d-md-block" />
+					<span class="d-md-none">/</span> 주말·공휴일 휴무
+				</p>
+			</div>
+			<div class="col-12 col-md pl-md-8 pl-lg-15 mt-5 mt-md-0 position-static">
+				<ul class="d-flex align-items-center footer-menu mb-3">
+					<li class="title"><a href="../policy/term.html">이용약관</a></li>
+					<li class="title"><a href="../policy/privacy.html">개인정보처리방침</a></li>
+					<li class="title"><a href="../policy/email-security.html">이메일무단수집거부</a></li>
+				</ul>
+
+				<div class="footer-text">
+					<p class="text">
+						<span><?=$SS[sitename]?></span>
+						<span
+							>통신판매업신고번호:
+							<?=$P_sales_no?></span
+						>
+						<span
+							>사업자등록번호:
+							<?=$P_business_no?>
+							주식회사 터틀힙</span
+						>
+					</p>
+					<p class="text">
+						<span
+							>주소:
+							<?=$P_addr1?></span
+						>
+						<span
+							>대표자:
+							<?=$P_company_owner?></span
+						>
+						<span
+							>전화번호:
+							<?=$SS[sitetel]?></span
+						>
+					</p>
+					<p class="text mt-3">
+						<span><?=$SS[sitecopyright]?></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bg"></div>
+</footer>
+
+<!--
+TODO: 고객사 요청으로 제거
+<div class="linecanvasWrap">
+	<canvas id="linecanvas" resize="true" data-paper-resize="true"></canvas>
+</div>
+-->
+
+<!--
+<script type="text/paperscript" canvas="linecanvas">
+	// Adapted from the following Processing example:
+	// http://processing.org/learning/topics/follow3.html
+
+	// The amount of points in the path:
+	var points = 15;
+
+	// The distance between the points:
+	var length = 12;
+
+	var path = new Path({
+		strokeColor: '#873e00',
+		strokeWidth: 4,
+		strokeCap: 'round'
+	});
+
+	var start = view.center / [10, 1];
+	for (var i = 0; i < points; i++)
+		path.add(start + new Point(i * length, 0));
+
+	function onMouseMove(event) {
+		path.firstSegment.point = event.point;
+		for (var i = 0; i < points - 1; i++) {
+			var segment = path.segments[i];
+			var nextSegment = segment.next;
+			var vector = segment.point - nextSegment.point;
+			vector.length = length;
+			nextSegment.point = segment.point - vector;
+		}
+		path.smooth({type: 'continuous'});
+	}
+
+	function onMouseDown(event) {
+		path.fullySelected = true;
+		path.strokeColor = '#e08285';
+	}
+
+	function onMouseUp(event) {
+		path.fullySelected = false;
+		path.strokeColor = '#e4141b';
+	}
+</script>
+-->

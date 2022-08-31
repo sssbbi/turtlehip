@@ -1,0 +1,38 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 'join';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section">
+				<div class="container">
+					<div class="text-center title-icon mb-2">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div>
+					<h1 class="sub-main__title mb-10">회원가입 완료</h1>
+
+					<div class="text-center">
+						<p class="common-title--26 font-weight-medium mb-15">
+							회원가입이 완료되었습니다.<br />
+							터틀힙의 다양한 케이크를 만나보세요.
+						</p>
+
+						<a href="../member/login.html" class="btn-type-01 py-4 px-15">로그인</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

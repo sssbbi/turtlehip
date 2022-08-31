@@ -1,0 +1,111 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 'login';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section">
+				<div class="container">
+					<div class="login__wrap">
+						<div class="text-center title-icon mb-2">
+							<img src="../assets/images/sub/title_icon.png" alt="candy" />
+						</div>
+						<h1 class="sub-main__title mb-10">로그인</h1>
+						<!-- S :  -->
+						<div class="login__input">
+							<input type="text" class="input_for" placeholder="아이디를 입력해주세요." name="GetId" value="" />
+						</div>
+						<div class="login__input">
+							<input type="password" class="input_for" placeholder="비밀번호를 입력해주세요." name="GetPw" />
+						</div>
+						<!-- E :  -->
+
+						<!-- S : 로그인 버튼 -->
+						<div class="login__btn-box mt-5">
+							<button type="button" class="login__btn color-01" id="loginSubmit">로그인</button>
+						</div>
+						<!-- E : 로그인 버튼 -->
+
+						<!-- S : 체크 항목 및 찾기 링크 -->
+						<div class="login__check mt-5">
+							<div class="login__check--left mr-3">
+								<label class="input-label input-label--checkbox">
+									<input type="checkbox" name="idsave" id="" />
+									<span class="input-label__txt text-color-1 font-weight-medium">아이디 저장</span>
+								</label>
+							</div>
+							<div class="login__check--right">
+								<a href="../member/find_id.html" class="login-member-link">아이디찾기</a>
+								<a href="../member/find_pw.html" class="login-member-link">비밀번호찾기</a>
+							</div>
+						</div>
+						<!-- E : 체크 항목 및 찾기 링크 -->
+
+						<div class="login-list login-list__sns mt-8">
+							<div class="login-list-item">
+								<a href="javascript:;" class="sns-btn login-naver" onclick="window.open('https://nid.naver.com/oauth2.0/authorize?response_type=token&amp;client_id=gSh8BeKrODnRLNiTJgFN&amp;redirect_uri=https://turtlehip.com/openapi/login/naver.php', 'login_popup', 'width=430,height=590,scrollbar=yes');"> 네이버 로그인 </a>
+							</div>
+							<div class="login-list-item">
+								<a href="javascript:;" class="sns-btn login-kakao" onclick="window.open('https://kauth.kakao.com/oauth/authorize?client_id=4fac699f2dba5b03713cd2fc83d64467&amp;redirect_uri=https%3A%2F%2Fturtlehip.com%2Fopenapi%2Flogin%2Fkakao.php&amp;response_type=code', 'login_popup', 'width=430,height=590,scrollbar=yes');"> 카카오계정 로그인 </a>
+							</div>
+						</div>
+
+						<div class="login__type">
+							<div class="login__type--item">
+								<a href="#none" class="login__type--inner">
+									<p class="login__type-text">개인 회원가입</p>
+								</a>
+							</div>
+							<div class="login__type--item">
+								<a href="#none" class="login__type--inner">
+									<p class="login__type-text">
+										기업 회원가입
+										<span class="login__type-text--small">(개인, 법인사업자)</span>
+									</p>
+								</a>
+							</div>
+						</div>
+
+						<!-- S : 비회원 주문조회 -->
+						<div class="border border-color-1 p-6 mt-2">
+							<h2 class="common-title--22 font-weight-medium text-center text-color-1 mb-5">비회원 조회</h2>
+							<div class="login__input py-0">
+								<input type="text" class="input_for" placeholder="주문자명을 입력해주세요." name="order_name" value="" />
+							</div>
+							<div class="login__input py-0">
+								<input type="password" class="input_for" placeholder="주문번호를 입력해주세요." name="order_number" />
+							</div>
+
+							<div class="login__btn-box mt-5">
+								<button type="button" class="login__btn color-01" id="orderSubmit">주문조회</button>
+							</div>
+						</div>
+						<!-- E : 비회원 주문조회 -->
+
+						<!-- S : 비회원 주문하기 -->
+						<!--
+							미로그인 상태에서 주문하기 클릭했을때에만 노출, 
+							위 비회원 주문조회 영역은 미노출.
+						-->
+						<div class="login__btn-box mt-5">
+							<button type="button" class="login__btn color-01" id="orderSubmit2" onclick="location.href='../order/order__nonmember.html'">비회원 주문하기</button>
+						</div>
+						<!-- E : 비회원 주문하기 -->
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

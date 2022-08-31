@@ -1,0 +1,232 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+      include "../include/meta.html";
+			$P_dp1 = 'mypage';
+			$P_dp2 = '6';
+      //
+      ${nav_.$P_dp1._.$P_dp2} = $nav_7;
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<div class="mypage-article">
+								<!-- S : 회원 정보 -->
+								<div class="user-info">
+									<div class="user-info-box">
+										<div class="user-info__icon">
+											<img src="../assets/images/icon/i_ueser.png" alt="회원 아이콘" />
+										</div>
+										<div class="user-info__text-box">
+											<p class="user-info__name">홍길동님</p>
+											<p class="user-info__rating">터틀힙 회원등급</p>
+										</div>
+									</div>
+								</div>
+								<!-- E : 회원 정보 -->
+								<p class="text-size-18 text-gray-2 font-weight-bold mt-6">회원 등급 발생/유지 기준</p>
+								<p class="text-size-14 text-color-1 font-weight-medium text-line_height-7 text-indent-7 mt-3">* 연간 구매 금액 : 가입 일 기준 1년단위 등급 유지 (가입일 기준 쿠폰 및 혜택 리셋) <br />(ex_2019.12.10~2020.12.09 목표 달성 익일 등급 반영 - 2020.12.10~2021.12.09 적립률에 한해 등급유지, 금액 및 횟수 목표 초기화</p>
+							</div>
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4">나의 회원등급</h2>
+								<table class="normal-table normal-table__type-2">
+									<colgroup>
+										<col width="25%" />
+										<col width="25%" />
+										<col width="25%" />
+										<col width="25%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>
+												<p class="text-size-16 font-weight-medium">현재 마일리지</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">구매횟수</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">구매금액</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">기준날짜</p>
+											</th>
+										</tr>
+										<tr>
+											<td>
+												<p class="text-size-15">상품구매</p>
+											</td>
+											<td>
+												<p class="text-size-15">상품구매</p>
+											</td>
+											<td>
+												<p class="text-size-15">상품구매</p>
+											</td>
+											<td>
+												<p class="text-size-14 font-weight-bold">2019.01.01 ~ 2019.12.31</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="rating">
+									<div class="rating__item rating__item--welcome">
+										<div class="rating__inner text-center">
+											<p class="text-size-18 font-weight-bold text-gray-f">Welcome</p>
+											<p class="text-size-14 font-weight-medium text-gray-f mt-2">신규회원</p>
+										</div>
+									</div>
+									<div class="rating__item rating__item--frends">
+										<div class="rating__inner text-center">
+											<p class="text-size-18 font-weight-bold text-gray-f">Friends</p>
+											<p class="text-size-14 font-weight-medium text-gray-f mt-2">2회 이상 구매<br />(총 결제 금액 10만원 이상)</p>
+										</div>
+									</div>
+									<div class="rating__item rating__item--family">
+										<div class="rating__inner text-center">
+											<p class="text-size-18 font-weight-bold text-gray-f">Family</p>
+											<p class="text-size-14 font-weight-medium text-gray-f mt-2">3회 이상 구매<br />(총 결제 금액 20만원 이상)</p>
+										</div>
+									</div>
+									<div class="rating__item rating__item--vip">
+										<div class="rating__inner text-center">
+											<p class="text-size-18 font-weight-bold text-gray-f">Vip</p>
+											<p class="text-size-14 font-weight-medium text-gray-f mt-2">7회 이상 구매<br />(총 결제 금액 40만원 이상)</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4">나의 회원등급</h2>
+								<table class="normal-table normal-table__type-2">
+									<thead>
+										<tr>
+											<th>
+												<p class="text-size-16 font-weight-medium">회원등급</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">웰컴</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">프렌즈</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">패밀리</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">VIP</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<p class="text-size-16 font-weight-medium">구매 횟수/금액</p>
+											</td>
+											<td>
+												<p class="text-size-15">신규회원</p>
+											</td>
+											<td>
+												<p class="text-size-15">
+													2회 이상 구매<br />
+													(총 결제 금액 10만원 이상)
+												</p>
+											</td>
+											<td>
+												<p class="text-size-15">
+													3회 이상 구매<br />
+													(총 결제 금액 20만원 이상)
+												</p>
+											</td>
+											<td>
+												<p class="text-size-15">
+													7회 이상 구매<br />
+													(총 결제 금액 40만원 이상)
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="text-size-16 font-weight-medium">마일리지 적립</p>
+											</td>
+											<td>
+												<p class="text-size-15">1%</p>
+											</td>
+											<td>
+												<p class="text-size-15">2%</p>
+											</td>
+											<td>
+												<p class="text-size-15">2.5%</p>
+											</td>
+											<td>
+												<p class="text-size-15">3%</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="text-size-16 font-weight-medium">추가 혜택</p>
+											</td>
+											<td>
+												<p class="text-size-15"></p>
+											</td>
+											<td>
+												<p class="text-size-15">
+													주문제작 케이크 제외<br />
+													2,000원 할인
+												</p>
+												<p class="text-size-15 mt-2">
+													쿠폰 주문제작 케이크<br />
+													3,000원 할인 쿠폰
+												</p>
+											</td>
+											<td>
+												<p class="text-size-15">사이즈 업(10,000원)</p>
+											</td>
+											<td>
+												<p class="text-size-15">
+													이벤트 날<br />
+													(어버이날, 크리스마스 등)<br />
+													시즌 케이크 무상+퀵 서비스<br />
+													(15,000원) 일부제공
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

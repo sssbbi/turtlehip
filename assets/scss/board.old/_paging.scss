@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+///*목록 페이징*/
+.paging-area {
+	position: relative;
+	margin-top: rem(70);
+	font-size: 0;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 rem(8);
+		padding: 0;
+	}
+
+	a {
+		font-size: rem(20);
+		position: relative;
+		display: inline-block;
+		width: rem(40);
+		height: rem(40);
+		line-height: rem(38);
+		color: $color-1;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		box-sizing: border-box;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: auto rem(16);
+		cursor: pointer;
+
+		span {
+			display: inline-block;
+			text-indent: -9999px;
+		}
+
+		&.active,
+		&:not(.prev, .next):hover {
+			border-color: $mc;
+		}
+
+		&.prev-first {
+			background-image: url('../images/paging/prev-first.svg');
+		}
+
+		&.prev {
+			background-image: url('../images/paging/prev.svg');
+		}
+
+		&.next-last {
+			background-image: url('../images/paging/next-last.svg');
+		}
+
+		&.next {
+			background-image: url('../images/paging/next.svg');
+		}
+	}
+
+	@include mdq-max(lg) {
+		margin-top: 30px;
+
+		li {
+			margin: 0 rem(3);
+		}
+
+		a {
+			font-size: 13px;
+			width: 28px;
+			height: 28px;
+			background-size: auto 13px;
+			line-height: 26px;
+		}
+	}
+}

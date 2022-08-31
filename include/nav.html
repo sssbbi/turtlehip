@@ -1,0 +1,72 @@
+<ul class="nav-list nav-list--depth1">
+	<li class="nav-list__item depth-1">
+		<a href="<?=$nav_1_href?>" class="link"><?=$nav_1?></a>
+		<ul class="nav-list nav-list--depth2">
+			<li class="nav-list__item depth-2">
+				<a href="../cake/list.html" class="link"><?=$nav_1_1?></a>
+			</li>
+			<li class="nav-list__item depth-2">
+				<a href="../cake/list.html" class="link"><?=$nav_1_2?></a>
+			</li>
+			<li class="nav-list__item depth-2">
+				<a href="../cake/list.html" class="link"><?=$nav_1_3?></a>
+			</li>
+			<li class="nav-list__item depth-2">
+				<a href="../cake/list.html" class="link"><?=$nav_1_4?></a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-list__item depth-1">
+		<a href="<?=$nav_2_href?>" class="link"><?=$nav_2?></a>
+	</li>
+
+	<!-- S : 당일픽업 가능한 시간에 active 됨 (common.js) -->
+	<li class="nav-list__item depth-1 depth-1--today">
+		<a href="<?=$nav_3_href?>" class="link">
+			<span>당</span>
+			<span>일</span>
+			<span>픽</span>
+			<span>업</span>
+		</a>
+	</li>
+	<!-- E : 당일픽업 가능한 시간에 active 됨 (common.js) -->
+
+	<!-- <li class="nav-list__item depth-1">
+		<a href="<?=$nav_3_href?>" class="link"><?=$nav_3?></a>
+	</li> -->
+	<li class="nav-list__item depth-1">
+		<a href="<?=$nav_4_href?>" class="link"><?=$nav_4?></a>
+	</li>
+	<li class="nav-list__item depth-1">
+		<a href="<?=$nav_5_href?>" onclick="javascript:alert('준비중입니다.'); return false" class="link"><?=$nav_5?></a>
+	</li>
+	<li class="nav-list__item depth-1 depth-1--customer d-lg-none">
+		<a href="<?=$nav_6_href?>" class="link"><?=$nav_6?></a>
+		<ul class="nav-list nav-list--depth2">
+			<li class="nav-list__item depth-2">
+				<a href="<?=$nav_6_1_href?>" class="link"><?=$nav_6_1?></a>
+			</li>
+			<li class="nav-list__item depth-2">
+				<a href="<?=$nav_6_2_href?>" class="link"><?=$nav_6_2?></a>
+			</li>
+			<li class="nav-list__item depth-2">
+				<a href="<?=$nav_6_3_href?>" class="link"><?=$nav_6_3?></a>
+			</li>
+		</ul>
+	</li>
+
+	<li class="nav-list__item depth-1 d-none">
+		<a href="<?=$nav_policy_href?>" class="link"><?=$nav_policy?></a>
+		<ul class="nav-list nav-list--depth2">
+			<li class="nav-list__item depth-2">
+				<a href="<?=$nav_policy_1_href?>" class="link"><?=$nav_policy_1?></a>
+			</li>
+			<li class="nav-list__item depth-2">
+				<a href="<?=$nav_policy_2_href?>" class="link"><?=$nav_policy_2?></a>
+			</li>
+			<li class="nav-list__item depth-2">
+				<a href="<?=$nav_policy_3_href?>" class="link"><?=$nav_policy_3?></a>
+			</li>
+		</ul>
+	</li>
+</ul>

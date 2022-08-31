@@ -1,0 +1,212 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+			$P_dp1 = 'mypage';
+			$P_dp2 = '6';
+			$P_dp3 = '1';
+      include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4">회원정보 변경</h2>
+								<div class="join-area join-area--border-top2 join-area--border-color1 mt-3">
+									<div class="join-area__box">
+										<p class="join-area__title">아이디(이메일)</p>
+										<input class="input_for readonly" type="text" name="mid" id="mid" title="아이디" placeholder="" value="abc1234@naver.com" readonly required="" />
+									</div>
+									<div class="join-area__box">
+										<button type="button" class="table-btn-01 btn-type-01 text-size-14 px-5 pw-change-btn">비밀번호 변경</button>
+									</div>
+									<div class="join-area__box pw-hide">
+										<p class="join-area__title">비밀번호</p>
+										<input type="password" class="input_for" name="upasswd" id="upasswd" title="비밀번호" txtlimit="6" maxlength="16" chk="pwcheck" placeholder="영문/숫자를 혼용하여 6~12자" required="" />
+									</div>
+									<div class="join-area__box pw-hide">
+										<p class="join-area__title">비밀번호 변경확인</p>
+										<input type="password" class="input_for" name="upasswd1" id="upasswd1" title="비밀번호 확인" txtlimit="6" maxlength="16" chk="pwcheck" placeholder="비밀번호를 다시 입력해주세요." required="" />
+										<p class="text-size-14 text-danger mt-2">비밀번호가 일치하지 않습니다. 다시 확인해주세요.</p>
+									</div>
+									<div class="join-area__box">
+										<p class="join-area__title">이름</p>
+										<input class="input_for readonly" type="text" name="uname" id="uname" title="이름" placeholder="" value="홍길동" readonly required="" />
+									</div>
+									<div class="join-area__box">
+										<p class="join-area__title">성별</p>
+										<div class="row mt-4">
+											<div class="col-auto"><input type="radio" id="female" name="gender" checked value="" /><label for="female" class="text-color-1 font-weight-bold">여성</label></div>
+											<div class="col-auto pl-0"><input type="radio" id="male" name="gender" value="" /><label for="male" class="text-color-1 font-weight-bold">남성</label></div>
+										</div>
+									</div>
+									<div class="join-area__box">
+										<p class="join-area__title">휴대폰번호</p>
+										<div class="input_find">
+											<input class="input_for" type="tel" name="uptel" id="uptel" title="연락처" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="‘–’ 제외하고 숫자만 입력해주세요." required="" />
+											<button type="button" class="table-btn-01 btn-type-01 text-size-14 request-btn">인증번호 요청</button>
+										</div>
+										<div class="input_find number-form mt-3">
+											<div class="input-time__count">
+												<input type="text" class="input_for" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="인증번호(4자리)" id="certNumber" />
+												<div class="input-time__count--box">
+													<span class="input-time__count--min"></span>
+													<span class="input-time__count--sec"></span>
+												</div>
+											</div>
+											<button type="button" class="table-btn-01 btn-type-01 text-size-14 certify-btn" onclick="chknumber($('#certNumber').val())">인증하기</button>
+										</div>
+										<p class="text-size-14 text-danger mt-2">인증번호가 맞지 않습니다. 다시 입력해주세요.</p>
+									</div>
+									<div class="join-area__box">
+										<p class="join-area__title">생년월일</p>
+										<input class="input_for readonly" type="text" readonly value="19880512" />
+									</div>
+									<div class="join-area__box">
+										<p class="join-area__title">기념일</p>
+										<input class="input_for readonly" type="text" readonly value="19950602" />
+									</div>
+									<div class="join-area__box">
+										<p class="join-area__title">주소</p>
+										<div class="input_find input_40">
+											<input type="text" id="info40" class="" />
+											<a href="#" class="table-btn-01 btn-type-01">우편번호</a>
+										</div>
+										<div class="row mx-0">
+											<div class="col-12 px-0 mt-2">
+												<input type="text" class="input_for" name="uaddr1" id="uaddr1" title="기본주소" maxlength="200" value="" placeholder="기본주소" />
+											</div>
+											<div class="col-12 px-0 mt-2">
+												<input type="text" class="input_for" name="uaddr2" id="uaddr2" title="상세주소" maxlength="200" value="" placeholder="상세주소 입력" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="join-area border-top-line border-color-1">
+									<div class="row">
+										<div class="col-12 col-md-auto mr-md-8 mb-3 mb-md-0">
+											<h3 class="join__title">마케팅 안내</h3>
+										</div>
+										<div class="col-12 col-md">
+											<span class="d-block d-md-inline-block mr-md-3 mb-2 mb-md-0"> <input type="checkbox" id="agree__16" name="" value="Y" /><label for="agree__16" class="text-size-15 text-gray-8 font-weight-medium">(이메일/문자) 마케팅 수신 모두 동의</label> </span>
+											<span class="d-block d-md-inline-block mr-md-3 mb-2 mb-md-0"> <input type="checkbox" id="agree__17" name="" checked value="Y" /><label for="agree__17" class="text-size-15 text-gray-8 font-weight-medium">이메일</label> </span>
+											<span class=""> <input type="checkbox" id="agree__18" name="" value="Y" /><label for="agree__18" class="text-size-15 text-gray-8 font-weight-medium">문자(SMS)</label> </span>
+										</div>
+									</div>
+								</div>
+								<div class="row justify-content-center mx-n1 mt-15">
+									<div class="col-auto px-1">
+										<button type="button" class="btn-type-01 __line py-4 px-15 font-weight-medium">취소</button>
+									</div>
+									<div class="col-auto px-1">
+										<button type="button" class="btn-type-01 py-4 px-11 font-weight-medium">정보수정</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script>
+			$('.pw-change-btn').on('click', function () {
+				$('.pw-hide').show();
+			});
+			/* 휴대폰 번호 인증 */
+			var numdefault = 7; // 몇분을 설정할지의 대한 변수 선언
+			var num = numdefault;
+			var myVar;
+			function time() {
+				myVar = setInterval(alertFunc, 1000);
+				alert('인증번호가 발송되었습니다.');
+				$('.number-form').css('display', 'flex');
+			}
+
+			function alertFunc() {
+				var min = num / 60;
+				min = Math.floor(min);
+
+				var sec = num % 60;
+				// console.log(min);
+				// console.log(sec);
+				if (sec < 10) viewsec = '0' + sec;
+				// 초단위 숫자가 10 보다 작아지면 09,08,07...,00 이와 같이 출력
+				else viewsec = sec;
+
+				var $input = $('.input-time__count--min').html(min),
+					$input2 = $('.input-time__count--sec').html(':' + viewsec);
+
+				if (num == 0) {
+					alert('인증시간이 초과되었습니다. 인증번호를 다시 요청해주십시오.');
+					clearInterval(myVar); // num 이 0초가 되었을대 clearInterval로 타이머 종료
+					$('.request-btn').text('인증번호 재요청');
+					$('#certNumber').val(''); //인증번호 input 초기화
+					num = numdefault;
+				}
+				num--;
+			}
+
+			function chknumber(v) {
+				var certification = '123'; // 인증번호
+
+				if (v == certification) {
+					if ($('.certify-btn').hasClass('unbind')) {
+						return false;
+					} else {
+						alert('인증성공');
+					}
+					clearInterval(myVar); //clearInterval로 타이머 종료
+					$('.input-time__count--box').hide(); //타이머 숨김
+					$('.request-btn').hide(); // 인증요청 버튼 숨김
+					$('#uptel').attr('readonly', true); // 휴대폰번호 입력 input readonly 처리
+					$('#uptel').addClass('readonly'); // 휴대폰번호 입력 input readonly 처리
+					$('.certify-btn').text('인증확인'); // 인증하기 -> 인증확인
+					$('.certify-btn').addClass('unbind');
+				} else {
+					alert('인증실패');
+					$('#certNumber').val(''); //인증번호 input 초기화
+				}
+			}
+
+			// function btnDefault(e) {
+			//   e.preventDefault();
+			//   e.stopPropagation();
+			// }
+
+			$(document).on('click', '.request-btn', function () {
+				time();
+			});
+		</script>
+	</body>
+</html>

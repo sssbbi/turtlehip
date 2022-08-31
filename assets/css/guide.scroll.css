@@ -1,0 +1,399 @@
+/* Made by Masstige */
+.cloud-bg {
+  position: relative;
+  z-index: 2;
+  margin: -30px 0;
+  height: 15.875rem;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cloud-bg--white {
+  background-image: url(../images/guide/cloud_bg_white.png);
+}
+.cloud-bg--color1 {
+  background-image: url(../images/guide/cloud_bg_color1.png);
+}
+.cloud-bg .text-en {
+  letter-spacing: 0.15em;
+}
+
+.section--guide1 {
+  padding: 12.5em 0 15.625em;
+  text-align: center;
+  position: relative;
+}
+.section--guide1 .text-img {
+  position: relative;
+}
+.section--guide1 .text-img .icon {
+  position: absolute;
+}
+.section--guide1 .text-img .icon img {
+  width: 9.0625em;
+}
+.section--guide1 .text-img .icon--1 {
+  left: 0;
+  top: 0;
+  transform: translate(-100%, -50%);
+}
+.section--guide1 .text-img .icon--2 {
+  left: 53%;
+  top: 0;
+  transform: translateY(-90%);
+}
+.section--guide1 .text-img .icon--3 {
+  right: 0;
+  top: 0;
+  transform: translate(90%, -50%);
+}
+.section--guide1 .text-img .icon--3 img {
+  width: 7.5em;
+}
+.section--guide1 .text-img .icon--4 {
+  left: 10%;
+  top: 45%;
+}
+.section--guide1 .text-img .icon--4 img {
+  width: 8.4375em;
+}
+.section--guide1 .text-img .icon--5 {
+  left: 68%;
+  top: 70%;
+}
+.section--guide1 .text-img .icon--5 img {
+  width: 7.5em;
+}
+.section--guide1 .exit-btn {
+  position: absolute;
+  left: 3vw;
+  bottom: 5.625em;
+  width: 5.25em;
+  height: 5.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.section--guide1 .exit-btn i {
+  font-size: 1.875em;
+}
+.section--guide1 .exit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #8784d6;
+}
+
+.section--guide2 {
+  position: relative;
+}
+.section--guide2 .card-img-box {
+  position: relative;
+}
+.section--guide2 .card-img-box .abs-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section--guide2 .card-img-box .abs-img img {
+  max-width: none;
+}
+
+.section--guide3 {
+  overflow: hidden;
+}
+.section--guide3 .card-list {
+  display: flex;
+}
+.section--guide3 .card-list__item {
+  flex: 0 0 31.5625em;
+  width: 31.5625em;
+}
+.section--guide3 .card-list__item:nth-child(2) {
+  transform: translateX(-55%);
+}
+.section--guide3 .card-list__item:nth-child(3) {
+  transform: translateX(-110%);
+}
+.section--guide3 .card-list__item:nth-child(4) {
+  transform: translateX(-165%);
+}
+
+.section--guide4 {
+  position: relative;
+}
+.section--guide4 .content-box {
+  position: relative;
+  display: inline-block;
+  min-width: 940px;
+}
+.section--guide4 .content-box .text {
+  position: relative;
+  z-index: 2;
+}
+.section--guide4 .content-box .circle {
+  border-radius: 50%;
+  position: absolute;
+}
+.section--guide4 .content-box .circle.bg-color-3 {
+  width: 29.375em;
+  height: 29.375em;
+  right: -1.875em;
+  top: 0;
+}
+.section--guide4 .content-box .circle.bg-color-1 {
+  width: 45em;
+  height: 45em;
+  left: -7vw;
+  top: -16vw;
+}
+.section--guide4 .content-box .img {
+  position: relative;
+  z-index: 2;
+}
+.section--guide4 .content-box--1 {
+  padding-right: 5vw;
+}
+.section--guide4 .content-box--2 {
+  padding-left: 14vw;
+}
+.section--guide4 .deco {
+  position: absolute;
+  right: 0;
+  bottom: 7vw;
+}
+
+.section--guide5 {
+  background: #fff4e4;
+  padding: 16.25em 0;
+}
+.section--guide5 .flavors {
+  width: 100%;
+  max-width: 1060px;
+  margin: 18.75rem auto 0;
+}
+.section--guide5 .flavors__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  padding-top: 7.5rem;
+  margin-top: 12.5rem;
+}
+.section--guide5 .flavors__item:nth-child(1) .deco-box .circle {
+  background: #813b11;
+}
+.section--guide5 .flavors__item:nth-child(2) .deco-box .circle {
+  background: #80ac04;
+}
+.section--guide5 .flavors__item:nth-child(3) .deco-box .circle {
+  background: #d8821c;
+}
+.section--guide5 .flavors__item:nth-child(4) .deco-box .circle {
+  background: #ff3e42;
+}
+.section--guide5 .flavors__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.section--guide5 .flavors__item:nth-child(even) .deco-box {
+  left: auto;
+  right: -5vw;
+}
+.section--guide5 .flavors__item:nth-child(even) .deco-box .text {
+  left: auto;
+  right: 3.125rem;
+}
+.section--guide5 .flavors__item:nth-child(even) .txt-box {
+  padding-left: 0;
+  padding-right: 5.625em;
+  text-align: right;
+}
+.section--guide5 .flavors .deco-box {
+  position: absolute;
+  left: -5vw;
+  top: 0;
+}
+.section--guide5 .flavors .deco-box .circle {
+  width: 16.875rem;
+  height: 16.875rem;
+  border-radius: 50%;
+}
+.section--guide5 .flavors .deco-box .text {
+  position: absolute;
+  left: 3.125rem;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.section--guide5 .flavors .deco-box .text img {
+  max-width: none;
+}
+.section--guide5 .flavors .img-box {
+  flex: 0 0 48.3962264151%;
+  max-width: 48.3962264151%;
+  position: relative;
+}
+.section--guide5 .flavors .txt-box {
+  flex: 1 1 auto;
+  width: 1%;
+  padding-left: 5.625em;
+  position: relative;
+}
+.section--guide5 .flavors .txt-box .title {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+.section--guide5 .flavors .txt-box .description {
+  font-size: 1.125em;
+}
+
+.section--guide6 {
+  position: relative;
+}
+
+.section--custom {
+  position: relative;
+  height: 100vh;
+}
+.section--custom .custom-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section--custom .custom-item .img-box {
+  flex: 0 0 51.9827586207%;
+  max-width: 51.9827586207%;
+}
+.section--custom .custom-item .img-box .p-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 450px;
+  height: 80vh;
+}
+.section--custom .custom-item .img-box .panel {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+}
+.section--custom .custom-item .txt-box {
+  flex: 1 1 auto;
+  width: 1%;
+  padding-left: 5vw;
+}
+.section--custom .custom-item .txt-box .bullet-list > .item {
+  display: flex;
+}
+.section--custom .custom-item .txt-box .bullet-list > .item::before {
+  content: "";
+  display: block;
+  flex: 0 0 0.875em;
+  width: 0.875em;
+  height: 0.9375em;
+  background-color: #333;
+  margin-top: 0.75em;
+  margin-right: 0.5em;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.section--custom .custom-item .txt-box .bullet-list.bullet-list--disc > .item::before {
+  border-radius: 50%;
+}
+.section--custom .custom-item .txt-box .bullet-list.bullet-list--circle > .item::before {
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid #333;
+}
+.section--custom .custom-item .txt-box .bullet-list.bullet-list--decimal > .item::before {
+  display: none;
+}
+.section--custom .custom-item .txt-box .bullet-list.bullet-list--decimal > .item .decimal-number {
+  display: block;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  height: 1.5em;
+  margin-top: 0.75em;
+  margin-right: 0.5em;
+  transform: translateY(-50%);
+}
+.section--custom .custom-item .txt-box .bullet-list.bullet-list--image > .item::before {
+  background-color: transparent;
+  background-image: url("../images/guide/check_icon.png");
+}
+.section--custom .custom-item .txt-box .bullet-list.bullet-list--txt > .item:before {
+  content: attr(data-bullet);
+  display: inline;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin: 0;
+  transform: none;
+  margin-right: 0.5em;
+}
+
+#animation {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: #f478c4;
+}
+#animation section:not(.first) {
+  opacity: 0;
+}
+#animation .active {
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+#animation .panel {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+#animation .panel img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+#animation .text {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  color: red;
+  font-weight: bold;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.spacer {
+  position: relative;
+}
+/*# sourceMappingURL=guide.scroll.css.map */

@@ -1,0 +1,87 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+			$P_dp1 = 'mypage';
+			$P_dp2 = '6';
+			$P_dp3 = '2';
+      include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4">회원탈퇴</h2>
+								<div class="border-top-line border-top-line-2 border-color-1 py-6">
+									<p class="text-size-16 text-gray-2 font-weight-bold">탈퇴 전 반드시 아래 내용을 확인해주시기 바랍니다.</p>
+									<p class="text-size-16 mt-4">1. 회원탈퇴 시 동일한 아이디로 재가입이 불가능합니다.</p>
+									<p class="text-size-16 pl-4">- 회원의 이름, 이메일 주소, 전화번호(회원 탈퇴 후 30일간 재가입 방지 목적) : 30일간 보유</p>
+									<p class="text-size-16 mt-3">2. 탈퇴 시 회원님의 개인정보 및 쿠폰 및 마일리지가 시스템에서 삭제 처리됩니다.</p>
+									<p class="text-size-16 mt-10">이용해 주셔서 감사드립니다.</p>
+								</div>
+
+								<h2 class="common-title--22 font-weight-medium mb-4 mt-15">탈퇴사유</h2>
+								<div class="border-top-line border-top-line-2 border-color-1 py-6">
+									<div class="withdrawal__box">
+										<select name="" id="" class="sel_for input_30">
+											<option value="탈퇴사유">탈퇴사유</option>
+											<option value="상품품절 불만">상품품절 불만</option>
+											<option value="주문수정 불만">주문수정 불만</option>
+											<option value="주문취소 불만">주문취소 불만</option>
+											<option value="이용 빈도 낮음/구매 의사 없음">이용 빈도 낮음/구매 의사 없음</option>
+											<option value="쇼핑혜택/회원특혜 부족">쇼핑혜택/회원특혜 부족</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+									<div class="withdrawal__box mt-4">
+										<textarea name="" id="" cols="" rows="" class=""></textarea>
+									</div>
+									<!-- S :  -->
+									<div class="row justify-content-center mx-n1 mt-15">
+										<div class="col-auto px-1">
+											<button type="button" class="btn-type-01 __line py-4 px-15 font-weight-medium">취소</button>
+										</div>
+										<div class="col-auto px-1">
+											<button type="button" class="btn-type-01 py-4 px-11 font-weight-medium">회원탈퇴</button>
+										</div>
+									</div>
+									<!-- E :  -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

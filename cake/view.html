@@ -1,0 +1,732 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/product.min.css" />
+		<link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.css" />
+	</head>
+	<body class="sub-body prd-view">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<!-- S : 상세 -->
+			<section class="section">
+				<div class="container container--1160">
+					<div class="product-view">
+						<div class="product-view__detail">
+							<div class="product-slider">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider-thumbs">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="swiper-slide">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-lg-none mt-8 mt-lg-0">
+								<h1 class="common-title--26 font-weight-medium product-name mb-3">케이크명</h1>
+								<h1 class="common-title--26 font-weight-medium product-price mb-10">39,500 won</h1>
+							</div>
+
+							<!-- S : 남은 시간이 있을 경우 -->
+							<div class="d-lg-none mt-8 mt-lg-0">
+								<h6 class="h6 mb-2">남은 시간</h6>
+								<div class="time-remaining mb-10">
+									<div class="time-remaining__item">
+										<div class="time-remaining__inner">
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter1_1">0</p>
+											</div>
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter1_2">8</p>
+											</div>
+										</div>
+									</div>
+									<div class="time-remaining__item non-number">:</div>
+									<div class="time-remaining__item">
+										<div class="time-remaining__inner">
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter2_1">2</p>
+											</div>
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter2_2">0</p>
+											</div>
+										</div>
+									</div>
+									<div class="time-remaining__item non-number">:</div>
+									<div class="time-remaining__item">
+										<div class="time-remaining__inner">
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter3_1">3</p>
+											</div>
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter3_2">0</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- E : 남은 시간이 있을 경우 -->
+
+							<div class="tab--product mt-12" data-tab="true" data-tab-order="0" data-tab-active="on" data-tab-index="" data-css="true">
+								<div class="tab-header" data-tab-header="">
+									<div class="tab-item">
+										<a class="link" data-tab-item="">픽업방법 및 일정</a>
+									</div>
+									<div class="tab-item">
+										<a class="link" data-tab-item="">제품 상세정보</a>
+									</div>
+									<div class="tab-item">
+										<a class="link" data-tab-item="">취소환불</a>
+									</div>
+									<div class="tab-item">
+										<a class="link" data-tab-item="">리뷰</a>
+									</div>
+								</div>
+								<div class="tab-body" data-tab-body="">
+									<!-- S : 픽업방법 및 일정 -->
+									<div class="tab-content" data-tab-content="">
+										<div class="tab-content__inner">
+											<!-- 
+												개발작업 시 아래 div.py-40.text-center ~~~ 태그 꼭 삭제해주세요.
+												(임의로 넣어놓은것입니다.)
+											-->
+											<div class="d-flex align-items-center justify-content-center px-5 text-center common-text--md bg-light text-gray-7" style="height: 37.5em">에디터로 등록한 픽업방법 및 일정 내용이 노출됩니다.</div>
+										</div>
+									</div>
+									<!-- E : 픽업방법 및 일정 -->
+
+									<!-- S : 제품상세정보-->
+									<div class="tab-content" data-tab-content="">
+										<div class="tab-content__inner">
+											<!-- 
+											개발작업 시 아래 div.py-40.text-center ~~~ 태그 꼭 삭제해주세요.
+											(임의로 넣어놓은것입니다.)
+										-->
+											<div class="d-flex align-items-center justify-content-center px-5 text-center common-text--md bg-light text-gray-7" style="height: 37.5em">에디터로 등록한 제품상세정보 내용이 노출됩니다.</div>
+										</div>
+									</div>
+									<!-- E : 제품상세정보-->
+
+									<!-- S : 취소환불 -->
+									<div class="tab-content" data-tab-content="">
+										<div class="tab-content__inner">
+											<!-- 
+												개발작업 시 아래 div.py-40.text-center ~~~ 태그 꼭 삭제해주세요.
+												(임의로 넣어놓은것입니다.)
+											-->
+											<div class="d-flex align-items-center justify-content-center px-5 text-center common-text--md bg-light text-gray-7" style="height: 37.5em">에디터로 등록한 취소환불 내용이 노출됩니다.</div>
+										</div>
+									</div>
+									<!-- E : 취소환불 -->
+
+									<!-- S : 리뷰 -->
+									<div class="tab-content" data-tab-content="">
+										<div class="tab-content__inner">
+											<div class="review-wrap">
+												<div class="rating-box mb-8">
+													<div class="rating-box__star">
+														<div class="rating__star">
+															<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 139.1 24.8" style="enable-background: new 0 0 139.1 24.8" xml:space="preserve">
+																<g id="Layer_3">
+																	<g>
+																		<defs>
+																			<rect id="SVGID_1_" x="47.3" y="24.9" width="139.1" height="24.8" />
+																		</defs>
+																		<clipPath id="SVGID_2_">
+																			<use xlink:href="#SVGID_1_" style="overflow: visible" />
+																		</clipPath>
+																		<polygon class="st0" points="13.1,0 9,8.2 0,9.5 6.5,15.8 5,24.8 13.1,20.6 21.1,24.8 19.6,15.8 26.1,9.5 17.1,8.2 		" />
+																	</g>
+																	<rect x="47.3" y="24.9" class="st1" width="139.1" height="24.8" />
+																	<polygon class="st2" points="41.3,0 37.3,8.2 28.3,9.5 34.8,15.8 33.2,24.8 41.3,20.6 49.4,24.8 47.8,15.8 54.4,9.5 45.3,8.2 	" />
+																	<rect x="47.3" y="24.9" class="st1" width="139.1" height="24.8" />
+																	<polygon class="st2" points="69.6,0 65.5,8.2 56.5,9.5 63,15.8 61.5,24.8 69.6,20.6 77.6,24.8 76.1,15.8 82.6,9.5 73.6,8.2 	" />
+																	<rect x="47.3" y="24.9" class="st1" width="139.1" height="24.8" />
+																	<polygon
+																		class="st2"
+																		points="97.8,0 93.8,8.2 84.8,9.5 91.3,15.8 89.7,24.8 97.8,20.6 105.9,24.8 104.3,15.8 110.9,9.5 101.8,8.2 	
+		"
+																	/>
+																	<rect x="47.3" y="24.9" class="st1" width="139.1" height="24.8" />
+																	<polygon
+																		class="st2"
+																		points="126.1,0 122,8.2 113,9.5 119.5,15.8 118,24.8 126.1,20.6 134.1,24.8 132.6,15.8 139.1,9.5 130.1,8.2 	
+		"
+																	/>
+																</g>
+																<g id="Layer_1"></g>
+																<g id="Layer_2">
+																	<g>
+																		<defs>
+																			<rect id="SVGID_3_" x="0" y="0" width="139.1" height="24.8" />
+																		</defs>
+																		<clipPath id="SVGID_4_">
+																			<use xlink:href="#SVGID_3_" style="overflow: visible" />
+																		</clipPath>
+																		<polygon class="st3" points="13.1,0 9,8.2 0,9.5 6.5,15.8 5,24.8 13.1,20.6 21.1,24.8 19.6,15.8 26.1,9.5 17.1,8.2 		" />
+																		<polygon
+																			class="st3"
+																			points="41.3,0 37.3,8.2 28.3,9.5 34.8,15.8 33.2,24.8 41.3,20.6 49.4,24.8 47.8,15.8 54.4,9.5 45.3,8.2 		
+			"
+																		/>
+																		<polygon class="st3" points="69.6,0 65.5,8.2 56.5,9.5 63,15.8 61.5,24.8 69.6,20.6 77.6,24.8 76.1,15.8 82.6,9.5 73.6,8.2 		" />
+																		<polygon
+																			class="st3"
+																			points="97.8,0 93.8,8.2 84.8,9.5 91.3,15.8 89.7,24.8 97.8,20.6 105.9,24.8 104.3,15.8 110.9,9.5 101.8,8.2 
+					"
+																		/>
+																		<polygon
+																			class="st3"
+																			points="126.1,0 122,8.2 113,9.5 119.5,15.8 118,24.8 126.1,20.6 134.1,24.8 132.6,15.8 139.1,9.5 130.1,8.2 
+					"
+																		/>
+																	</g>
+																</g>
+															</svg>
+														</div>
+														<div class="rating__txt common-title--26 font-weight-medium mt-4">
+															<span id="rating-grade">4.5</span>
+															<span class="text-gray-9 font-weight-light"> / </span>
+															<span class="text-gray-9">5</span>
+														</div>
+													</div>
+													<div class="rating-box__gage">
+														<div class="d-flex align-items-center justify-content-between my-2">
+															<div class="grade">5점</div>
+															<div class="gage">
+																<div class="gage-bar" style="width: 98%"></div>
+															</div>
+															<div class="count">16</div>
+														</div>
+														<div class="d-flex align-items-center justify-content-between my-2">
+															<div class="grade">4점</div>
+															<div class="gage">
+																<div class="gage-bar" style="width: 5%"></div>
+															</div>
+															<div class="count">3</div>
+														</div>
+														<div class="d-flex align-items-center justify-content-between my-2">
+															<div class="grade">3점</div>
+															<div class="gage">
+																<div class="gage-bar"></div>
+															</div>
+															<div class="count">0</div>
+														</div>
+														<div class="d-flex align-items-center justify-content-between my-2">
+															<div class="grade">2점</div>
+															<div class="gage">
+																<div class="gage-bar"></div>
+															</div>
+															<div class="count">0</div>
+														</div>
+														<div class="d-flex align-items-center justify-content-between my-2">
+															<div class="grade">1점</div>
+															<div class="gage">
+																<div class="gage-bar"></div>
+															</div>
+															<div class="count">0</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="d-flex justify-content-between align-items-end common-text--xxs mb-3">
+													<div class="d-flex align-items-end">
+														<p class="common-text--ori font-weight-medium mr-5">리뷰 <span class="common-text--sm text-gray-9 font-weight-normal">(17)</span></p>
+
+														<a href="" class="sort-item mr-3 mr-sm-5 on">추천순</a>
+														<a href="" class="sort-item mr-3 mr-sm-5">최신순</a>
+														<a href="" class="sort-item">평점순</a>
+													</div>
+													<div>
+														<label class="input-label input-label--checkbox">
+															<input type="checkbox" name="" id="" />
+															<span class="input-label__txt">포토 리뷰만</span>
+														</label>
+													</div>
+												</div>
+
+												<div class="review-list">
+													<!-- S : 리뷰 아이템 -->
+													<div class="review-list__item">
+														<!-- S : 리뷰 간단 노출 -->
+														<a href="javascript:void(0);" class="inner">
+															<div class="txt-box">
+																<div class="d-flex align-items-center">
+																	<div class="ratings-star readonly">
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																	</div>
+																	<p class="common-text--xxxs ml-2 ml-xs-3">2022.01.01</p>
+																	<p class="common-text--xxxs ml-2 ml-xs-3">아이디노출</p>
+																</div>
+																<div class="review-list__content">리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다.</div>
+															</div>
+															<div class="img-box">
+																<img src="../images/board/no_img.jpg" alt="" />
+															</div>
+														</a>
+														<!-- E : 리뷰 간단 노출 -->
+
+														<!-- S : 리뷰 상세 팝업 -->
+														<div class="review-list__pop">
+															<button type="button" class="pop-close xi-close-thin"></button>
+															<div class="pop-inner">
+																<div class="img-box">
+																	<div class="img">
+																		<img src="../images/board/no_img.jpg" alt="" />
+																	</div>
+																</div>
+																<div class="txt-box">
+																	<p class="common-text--xxxs mb-2">아이디노출</p>
+																	<div class="d-flex align-items-center mb-4">
+																		<div class="ratings-star readonly">
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																		</div>
+																		<p class="common-text--xxxs ml-3">2022.01.01</p>
+																	</div>
+																	<div class="common-text--xxs review-pop-content">리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다. 리뷰내용이 노출됩니다.</div>
+																</div>
+															</div>
+														</div>
+														<!-- E : 리뷰 상세 팝업 -->
+													</div>
+													<!-- E : 리뷰 아이템 -->
+
+													<!-- S : 리뷰 아이템 -->
+													<div class="review-list__item">
+														<!-- S : 리뷰 간단 노출 -->
+														<a href="javascript:void(0);" class="inner">
+															<div class="txt-box">
+																<div class="d-flex align-items-center">
+																	<div class="ratings-star readonly">
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																		<div class="star on"></div>
+																	</div>
+																	<p class="common-text--xxxs ml-3">2022.01.01</p>
+																	<p class="common-text--xxxs ml-3">아이디노출</p>
+																</div>
+																<div class="review-list__content">222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다.</div>
+															</div>
+															<div class="img-box">
+																<img src="../images/board/no_img.jpg" alt="" />
+															</div>
+														</a>
+														<!-- E : 리뷰 간단 노출 -->
+
+														<!-- S : 리뷰 상세 팝업 -->
+														<div class="review-list__pop">
+															<button type="button" class="pop-close xi-close-thin"></button>
+															<div class="pop-inner">
+																<div class="img-box">
+																	<div class="img">
+																		<img src="../images/board/no_img.jpg" alt="" />
+																	</div>
+																</div>
+																<div class="txt-box">
+																	<p class="common-text--xxxs mb-2">아이디노출</p>
+																	<div class="d-flex align-items-center mb-4">
+																		<div class="ratings-star readonly">
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																			<div class="star on"></div>
+																		</div>
+																		<p class="common-text--xxxs ml-3">2022.01.01</p>
+																	</div>
+																	<div class="common-text--xxs review-pop-content">222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다. 222리뷰내용이 노출됩니다.</div>
+																</div>
+															</div>
+														</div>
+														<!-- E : 리뷰 상세 팝업 -->
+													</div>
+													<!-- E : 리뷰 아이템 -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- E : 리뷰 -->
+								</div>
+							</div>
+						</div>
+
+						<div class="product-view__option">
+							<div class="d-none d-lg-block">
+								<h1 class="common-title--26 font-weight-medium product-name mb-3">케이크명</h1>
+								<h1 class="common-title--26 font-weight-medium product-price mb-15">39,500 won</h1>
+							</div>
+
+							<!-- S : 남은 시간이 있을 경우 -->
+							<div class="d-none d-lg-block">
+								<h6 class="h6 mb-2">남은 시간</h6>
+								<div class="time-remaining mb-10">
+									<div class="time-remaining__item">
+										<div class="time-remaining__inner">
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter1_1">0</p>
+											</div>
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter1_2">8</p>
+											</div>
+										</div>
+									</div>
+									<div class="time-remaining__item non-number">:</div>
+									<div class="time-remaining__item">
+										<div class="time-remaining__inner">
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter2_1">2</p>
+											</div>
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter2_2">0</p>
+											</div>
+										</div>
+									</div>
+									<div class="time-remaining__item non-number">:</div>
+									<div class="time-remaining__item">
+										<div class="time-remaining__inner">
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter3_1">3</p>
+											</div>
+											<div class="time-remaining__card">
+												<p class="time-remaining__number" id="counter3_2">0</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- E : 남은 시간이 있을 경우 -->
+
+							<div class="option-toggle">
+								<div class="option-toggle__btn">옵션선택</div>
+								<div class="option-toggle__box">
+									<button type="button" class="hide-button">
+										<i class="xi-angle-down"></i>
+									</button>
+
+									<div class="option-toggle__inner">
+										<h6 class="h6 mb-2">배송방법</h6>
+										<div class="d-flex mx-n1">
+											<label class="input-label input-label--button mx-1">
+												<input type="radio" name="delivery_type" id="delivery_type1" />
+												<span class="input-label__txt">택배</span>
+											</label>
+											<label class="input-label input-label--button mx-1">
+												<input type="radio" name="delivery_type" id="delivery_type2" />
+												<span class="input-label__txt">픽업</span>
+											</label>
+											<label class="input-label input-label--button mx-1">
+												<input type="radio" name="delivery_type" id="delivery_type3" />
+												<span class="input-label__txt">퀵</span>
+											</label>
+										</div>
+
+										<h6 class="h6 h6--drop mb-2 mt-8 datepicker-click"><span class="drop">픽업 및 배송날짜</span></h6>
+										<input type="hidden" name="deliverydate" id="" class="datepicker" />
+										<div class="input-st1"></div>
+
+										<div class="custom-select-wrap">
+											<h6 class="h6 h6--drop mb-2 mt-8 custom-select-btn"><span class="drop">픽업시간</span></h6>
+											<input type="hidden" name="deliverytime" id="" />
+											<ul class="custom-select">
+												<li data-value="12:00 ~ 13:00">12:00 ~ 13:00</li>
+												<li data-value="13:00 ~ 14:00">13:00 ~ 14:00</li>
+												<li data-value="14:00 ~ 15:00">14:00 ~ 15:00</li>
+												<li data-value="15:00 ~ 16:00">15:00 ~ 16:00</li>
+												<li data-value="16:00 ~ 17:00">16:00 ~ 17:00</li>
+												<li data-value="17:00 ~ 18:00">17:00 ~ 18:00</li>
+												<li data-value="18:00 ~ 19:00">18:00 ~ 19:00</li>
+												<li data-value="19:00 ~ 20:00">19:00 ~ 20:00</li>
+											</ul>
+										</div>
+										<div class="input-st1"></div>
+
+										<h6 class="h6 mb-2 mt-8">맛</h6>
+										<div class="option-scroll-box">
+											<label class="input-label input-label--img">
+												<input type="radio" name="flavor" id="flavor1" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">티라미수 캐러멜</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="flavor" id="flavor2" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">치즈 라즈베리</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="flavor" id="flavor3" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">초코 <span class="text-color-1">+2,000원</span></span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="flavor" id="flavor4" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">녹차 <span class="text-color-1">+2,000원</span></span>
+											</label>
+										</div>
+
+										<h6 class="h6 mb-2 mt-8">케이크 모양 및 사이즈</h6>
+										<div class="option-scroll-box">
+											<label class="input-label input-label--img">
+												<input type="radio" name="shape" id="shape1" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">원형 1호</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="shape" id="shape2" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">원형 2호 <span class="text-color-1">+10,000원</span></span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="shape" id="shape3" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">정사각형 1호</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="shape" id="shape4" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">정사각형 2호 <span class="text-color-1">+10,000원</span></span>
+											</label>
+										</div>
+
+										<h6 class="h6 mb-2 mt-8">케이크 배경 색상</h6>
+										<div class="option-scroll-box">
+											<label class="input-label input-label--img">
+												<input type="radio" name="color" id="color1" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">흰색</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="color" id="color2" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">연분홍</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="color" id="color3" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">노랑</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="color" id="color4" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">보라</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="color" id="color5" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">하늘</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="color" id="color6" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">민트</span>
+											</label>
+											<label class="input-label input-label--img">
+												<input type="radio" name="color" id="color7" />
+												<div class="input-label__img">
+													<img src="../images/board/no_img.jpg" alt="" />
+												</div>
+												<span class="input-label__txt">검정</span>
+											</label>
+										</div>
+
+										<div class="custom-select-wrap">
+											<h6 class="h6 h6--drop mb-2 mt-8 custom-select-btn"><span class="drop">돈다발</span></h6>
+											<input type="hidden" name="money" id="" />
+											<ul class="custom-select">
+												<li data-value="없음">없음</li>
+												<li data-value="1호 20장 / 2호 25장 (원형에만 추가가능합니다.) +7,000원">1호 20장 / 2호 25장 (원형에만 추가가능합니다.) +7,000원</li>
+											</ul>
+										</div>
+										<div class="input-st1"></div>
+
+										<h6 class="h6 mb-2 mt-8">디자인 문구</h6>
+										<div class="drop-content">
+											<input type="text" name="" id="" class="input-st1" placeholder="문구를 입력해주세요." />
+										</div>
+
+										<input type="button" value="옵션선택 완료" class="w-100 btn-type-01 py-4 mt-10" onclick="optionComplete()" />
+									</div>
+
+									<!-- S : 위 옵션선택완료 버튼 클릭하면 노출 -->
+									<div class="option-toggle__result">
+										<div class="option-result mt-lg-12">
+											<div class="option-result__item">
+												<button type="button" class="remove-option xi-close-thin"></button>
+												<p class="product-name">상품명</p>
+												<div class="d-flex justify-content-between align-items-center my-3">
+													<div class="cart-product-quantity">
+														<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+														<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+															<i class="xi-minus"></i>
+														</button>
+														<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+														<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+															<i class="xi-plus"></i>
+														</button>
+													</div>
+													<div class="price">39,500 won</div>
+												</div>
+												<div class="option-list">
+													<span>2022년 2월 2일</span>
+													<span>12:00 ~ 13:00</span>
+													<span>옵션명 노출1</span>
+													<span>옵션명 노출2</span>
+													<span>옵션명 노출3</span>
+													<span>옵션명 노출4</span>
+													<span>옵션명 노출5</span>
+													<span>옵션명 노출6</span>
+													<span>옵션명 노출7</span>
+												</div>
+											</div>
+											<div class="option-result__item">
+												<button type="button" class="remove-option xi-close-thin"></button>
+												<p class="product-name">상품명</p>
+												<div class="d-flex justify-content-between align-items-center my-3">
+													<div class="cart-product-quantity">
+														<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+														<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+															<i class="xi-minus"></i>
+														</button>
+														<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+														<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+															<i class="xi-plus"></i>
+														</button>
+													</div>
+													<div class="price">39,500 won</div>
+												</div>
+												<div class="option-list">
+													<span>2022년 2월 2일</span>
+													<span>12:00 ~ 13:00</span>
+													<span>옵션명 노출1</span>
+													<span>옵션명 노출2</span>
+													<span>옵션명 노출3</span>
+													<span>옵션명 노출4</span>
+													<span>옵션명 노출5</span>
+													<span>옵션명 노출6</span>
+													<span>옵션명 노출7</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="d-flex justify-content-between align-items-center py-8">
+											<p class="common-text font-weight-bold">총 주문 금액</p>
+											<div>
+												<h1 class="common-title--26">
+													<span class="text-gray-8 common-text--md font-weight-medium align-middle mr-3">총 수량 2개</span>
+
+													79,000 won
+												</h1>
+											</div>
+										</div>
+
+										<div class="d-lg-none mb-2 mb-xs-3 mb-sm-4 mb-lg-0">
+											<input type="button" value="옵션추가" class="btn-type-01 __large py-4 w-100 option-add-button" />
+										</div>
+
+										<div class="d-flex justify-content-between">
+											<input type="button" value="주문하기" class="w-49 btn-type-01 __large py-4" onclick="location.href='../order/order.html'" />
+											<input type="button" value="장바구니" class="w-49 btn-type-01 __large py-4" onclick="location.href='../order/cart.html'" />
+										</div>
+									</div>
+									<!-- E : 위 옵션선택완료 버튼 클릭하면 노출 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 상세 -->
+		</main>
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+
+		<? include "../include/product-js.html" ?>
+	</body>
+</html>

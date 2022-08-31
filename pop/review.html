@@ -1,0 +1,89 @@
+<div class="popup popup--md">
+	<div class="popup-head">
+		<h1 class="common-title--26 font-weight-medium">리뷰작성</h1>
+	</div>
+	<div class="popup-body pt-5">
+		<div class="text-left">
+			<div class="pop-article">
+				<div class="ratings">
+					<input type="hidden" name="" id="ratings-score" />
+					<div class="ratings-star ratings-star--large">
+						<div class="star" data-value="1"></div>
+						<div class="star" data-value="2"></div>
+						<div class="star" data-value="3"></div>
+						<div class="star" data-value="4"></div>
+						<div class="star" data-value="5"></div>
+					</div>
+				</div>
+
+				<table class="table-form-01 type_narrow mt-5">
+					<colgroup>
+						<col class="col_w" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>상품명</th>
+							<td>레터링 기본케이크</td>
+						</tr>
+						<tr>
+							<th>내용</th>
+							<td>
+								<textarea name="" id="" cols="30" rows="10" class="area_for" placeholder="30자 이상 작성해주세요."></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>사진첨부</th>
+							<td>
+								<div class="input_wrap file_box multiple-file">
+									<span class="btn_type_file">찾아보기</span>
+									<input multiple="multiple" type="file" name="fileaddmulti[]" id="fileaddmulti" onchange="oncahngeUpload(event)" accept="image/*" />
+								</div>
+								<div id="preview" class="grid-img-list mt-3"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- S :  -->
+		<div class="d-flex justify-content-center mt-10 text-center">
+			<button type="button" class="btn-type-01 __line py-3 px-15 mx-1" onclick="closePopup()">취소</button>
+			<button type="submit" class="btn-type-01 py-3 px-15 mx-1">등록</button>
+		</div>
+		<!-- E :  -->
+	</div>
+</div>
+
+<script>
+	ratings.init();
+
+	function oncahngeUpload(event) {
+		if (event.target.files.length > 0) {
+			//파일 업로드가 있을 경우만
+			var preview = document.querySelector('#preview');
+			preview.innerHTML = '';
+
+			for (var i = 0, m = event.target.files.length; i < m; i++) {
+				//다중 셀렉트 가능.
+				var file = event.target.files[i];
+				if (file.type.indexOf('image') === -1) {
+					alert('이미지가 아닌 파일이 포함되어있습니다. 다시 선택해주시기 바랍니다.');
+					event.target.value = '';
+					//preview.innerHTML = '';
+					return false;
+				}
+				(function (file) {
+					var fileReader = new FileReader();
+					fileReader.onload = function (event) {
+						var img = new Image();
+						img.src = event.target.result;
+						preview.appendChild(img);
+					};
+					fileReader.readAsDataURL(file);
+				})(event.target.files[i]);
+			}
+		}
+	}
+</script>

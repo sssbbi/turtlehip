@@ -1,0 +1,101 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+			$P_dp1 = 'mypage';
+			$P_dp2 = '4';
+			$P_dp3 = '1';
+      include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4"><?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?></h2>
+								<div class="px-0 px-lg-5 py-5 py-lg-9 border-top-line border-top-line-2 border-bottom-line border-color-1">
+									<div class="text-left mb-6">
+										<p class="text-size-18 text-gray-2 font-weight-bold">쿠폰 등록</p>
+										<p class="text-size-15 text-gray-5 mt-3">쿠폰번호를 입력하신 후 쿠폰 등록하기 버튼을 클릭하시면 해당 쿠폰이 보유 쿠폰 리스트에 등록됩니다. <br />(쿠폰번호는 대소문자를 구분합니다.)</p>
+									</div>
+									<div class="input_find">
+										<input class="input_for" type="text" name="" id="" title="쿠폰번호" placeholder="쿠폰번호를 입력해주세요." required="" />
+										<button type="button" class="btn-type-01 table-btn-01 text-size-15 request-btn popup-link" href="../pop/coupon_search.html">등록하기</button>
+									</div>
+									<p class="text-size-14 text-danger font-weight-bold mt-2">등록할 수 없는 쿠폰번호입니다. 확인 후 다시 입력해주세요.</p>
+								</div>
+							</div>
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4">내가 보유한 쿠폰</h2>
+								<p class="text-size-14 text-color-1 font-weight-medium mb-4">* 유효기간이 지난 쿠폰은 재발행 되지 않으니 유효기간 내에 사용해 주시기 바랍니다.</p>
+								<div class="pt-10 border-top-line border-top-line-2 border-color-1">
+									<div class="row mt-n10 mt-md-0 mx-n3 mx-lg-n9 coupon-list">
+										<div class="col-12 col-md-6 px-3 px-lg-9 mt-10 mt-md-0">
+											<div class="coupon-box">
+												<p class="coupon-box__text">쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임 쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임 쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임 쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임</p>
+												<p class="coupon-box__price">
+													20,000
+													<span class="coupon-box__price-small">원</span>
+												</p>
+											</div>
+											<div class="mt-4">
+												<p class="text-size-15 text-gray-5">- 쿠폰혜택 : 할인쿠폰 20,000원 할인</p>
+												<p class="text-size-15 text-gray-5 mt-1">- 쿠폰번호 : AA123456789</p>
+												<p class="text-size-15 text-gray-5 mt-1">- 유효기간 : 2019.11.01 ~ 2019.12.31</p>
+												<p class="text-size-15 text-gray-5 mt-1">- 사용설명 : 신규회원 대상 가입 축하 쿠폰</p>
+											</div>
+										</div>
+										<div class="col-12 col-md-6 px-3 px-lg-9 mt-10 mt-md-0">
+											<div class="coupon-box">
+												<p class="coupon-box__text">쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임 쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임 쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임 쿠폰명/쿠폰명은 2줄만 노출됩니다. 초과 시 말줄임</p>
+												<p class="coupon-box__price">
+													20,000
+													<span class="coupon-box__price-small">원</span>
+												</p>
+											</div>
+											<div class="mt-4">
+												<p class="text-size-15 text-gray-5">- 쿠폰혜택 : 할인쿠폰 20,000원 할인</p>
+												<p class="text-size-15 text-gray-5 mt-1">- 쿠폰번호 : AA123456789</p>
+												<p class="text-size-15 text-gray-5 mt-1">- 유효기간 : 2019.11.01 ~ 2019.12.31</p>
+												<p class="text-size-15 text-gray-5 mt-1">- 사용설명 : 신규회원 대상 가입 축하 쿠폰</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

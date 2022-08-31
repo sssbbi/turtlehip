@@ -1,0 +1,147 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+      include "../include/meta.html";
+			$P_dp1 = 'mypage';
+      $P_dp2 = '3';
+      $P_dp3 = '2';
+      ${nav_.$P_dp1._.$P_dp2} = ${nav_.$P_dp1._.$P_dp2._.$P_dp3};
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+						<div class="mypage-content">
+							<!-- S : 제품 리스트 -->
+							<div class="product-list">
+								<!-- S : 당일 케이크 : 품절시에만 li 태그에 class="sold-out" 클래스 붙여주시면 됩니다 -->
+								<div class="product-list__item sold-out">
+									<a href="../cake/cake-view1.html" class="product-list__inner">
+										<div class="product-list__img">
+											<img src="../images/board/no_img.jpg" alt="제품" />
+											<div class="product-list__overlay">Sold Out</div>
+										</div>
+										<div class="product-list__text-box">
+											<p class="product-list__title">기본 레터링 케이크</p>
+											<div class="product-list__info">
+												<div class="product-list__info--item">
+													<p class="product-list__price"><span class="font-weight-bold">50,000</span> 원</p>
+												</div>
+												<div class="product-list__info--item">
+													<!-- S : 남은수량 : 당일케이크만 노출 -->
+													<p class="product-list__remain font-weight-light"><span class="font-weight-bold">0개</span> 남음</p>
+													<!-- E : 남은수량 : 당일케이크만 노출 -->
+												</div>
+											</div>
+											<div class="product-list__state product-list__state--sold-out">품절</div>
+											<!-- <div class="product-list__state product-list__state--purchase">주문하다</div> -->
+										</div>
+									</a>
+								</div>
+								<!-- E : 당일 케이크 -->
+								<!-- S : 당일케이크를 제외한 모든 제품 -->
+								<div class="product-list__item">
+									<a href="../cake/cake-view2.html" class="product-list__inner">
+										<div class="product-list__img">
+											<img src="../images/board/no_img.jpg" alt="제품" />
+											<span class="product-list__meaning product-list__meaning--best">BEST</span>
+										</div>
+										<div class="product-list__text-box">
+											<p class="product-list__title">기본 레터링 케이크</p>
+											<div class="product-list__info">
+												<div class="product-list__info--item">
+													<p class="product-list__price"><span class="font-weight-bold">50,000</span> 원</p>
+												</div>
+												<div class="product-list__info--item">
+													<p class="product-list__remain font-weight-light">2,456</p>
+												</div>
+											</div>
+											<div class="product-list__state product-list__state--purchase">주문하다</div>
+										</div>
+									</a>
+								</div>
+								<div class="product-list__item">
+									<a href="../cake/cake-view3.html" class="product-list__inner">
+										<div class="product-list__img">
+											<img src="../images/board/no_img.jpg" alt="제품" />
+											<span class="product-list__meaning product-list__meaning--hot">HOT</span>
+										</div>
+										<div class="product-list__text-box">
+											<p class="product-list__title">기본 레터링 케이크</p>
+											<div class="product-list__info">
+												<div class="product-list__info--item">
+													<p class="product-list__price"><span class="font-weight-bold">50,000</span> 원</p>
+												</div>
+												<div class="product-list__info--item">
+													<p class="product-list__remain font-weight-light">2,456</p>
+												</div>
+											</div>
+											<div class="product-list__state product-list__state--purchase">주문하다</div>
+										</div>
+									</a>
+								</div>
+								<!-- E : 당일케이크를 제외한 모든 제품 -->
+							</div>
+							<!-- E : 제품 리스트 -->
+							<!-- S :  -->
+							<div class="paging-area">
+								<ul>
+									<li>
+										<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="prev"><span>이전으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="active">1<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;">2<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;">3<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="next"><span>다음으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+									</li>
+								</ul>
+							</div>
+							<!-- E :  -->
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

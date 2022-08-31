@@ -1,0 +1,695 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp0 = 'main';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/main.min.css" />
+	</head>
+	<body class="main-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main" id="contents">
+			<!-- S : main-visual -->
+			<!--
+				pc : 1920x960
+				m : 1440x1740
+			-->
+			<section class="main-visual">
+				<h1 class="sr-only">메인비주얼 영역</h1>
+
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide item">
+							<a href="#none" class="link">
+								<div class="img-bx">
+									<img class="d-none d-md-block" src="../assets/images/main/main_banner_1.jpg" alt="메인배너" />
+									<img class="d-block d-md-none" src="../assets/images/main/main_banner_1.jpg" alt="메인배너" />
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide item">
+							<a href="#none" class="link">
+								<div class="img-bx">
+									<img class="d-none d-md-block" src="../assets/images/main/main_banner_1.jpg" alt="메인배너" />
+									<img class="d-block d-md-none" src="../assets/images/main/main_banner_1.jpg" alt="메인배너" />
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+
+					<button type="button" class="swiper-button swiper-button--prev" title="이전 슬라이드">
+						<img src="../assets/images/icon/arrow_left.svg" alt="arrow" />
+					</button>
+					<button type="button" class="swiper-button swiper-button--next" title="다음 슬라이드">
+						<img src="../assets/images/icon/arrow_right.svg" alt="arrow" />
+					</button>
+				</div>
+
+				<div class="main-visual__btn">
+					<a href="javascript:alert('준비중입니다.');" class="btn btn-type-01 __line wow fadeInLeft">터틀힙이 처음이신가요?</a>
+					<a href="../cake/list.html" class="btn btn-type-01 __line wow fadeInRight">전체 상품 보기</a>
+				</div>
+			</section>
+			<!-- E : main-visual -->
+
+			<!-- S : section -->
+			<section class="section main-brand wow fadeInUp">
+				<a href="#none" class="img">
+					<img src="../assets/images/main/brand_banner.jpg" alt="DRAWING FUN, Korea no.1 cake creator TURTLEHIP. 평범한 일상이 지겹고 특별함이 서툰 고객님들에게 케이크로 특별한 일상을 제안 합니다." />
+				</a>
+			</section>
+			<!-- E : section  -->
+
+			<!-- S : section -->
+			<section class="section main-lookbook">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#none">
+								<img src="../assets/images/main/lookbook_1.jpg" alt="룩북 이미지" />
+								<div class="hover-box">
+									<p class="text">다운로드</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+								<img src="../assets/images/main/lookbook_2.jpg" alt="룩북 이미지" />
+								<div class="hover-box">
+									<p class="text">다운로드</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+								<img src="../assets/images/main/lookbook_3.jpg" alt="룩북 이미지" />
+								<div class="hover-box">
+									<p class="text">다운로드</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+								<img src="../assets/images/main/lookbook_4.jpg" alt="룩북 이미지" />
+								<div class="hover-box">
+									<p class="text">다운로드</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+								<img src="../assets/images/main/lookbook_5.jpg" alt="룩북 이미지" />
+								<div class="hover-box">
+									<p class="text">다운로드</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+			<!-- S : section -->
+			<section class="section main-product pt-15 pt-sm-20 pt-md-30 wowrap">
+				<div class="container">
+					<div class="text-center mb-10">
+						<h1 class="main-title--img mb-3 wow fadeInUp">
+							<img src="../assets/images/main/title_best_cake.png" alt="BEST CAKE" />
+						</h1>
+						<h2 class="main-title text-color-1 wow fadeInUp">인기 케이크</h2>
+					</div>
+
+					<div class="swiper-container wow fadeInUp">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="product-list__item">
+									<a href="#none" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+										<div class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+											<div class="badge">
+												<img src="../assets/images/icon/badge_best.svg" alt="best" />
+											</div>
+										</div>
+										<div class="txt-box">
+											<p class="product-name">제품명</p>
+											<div class="price"><span>39,500</span> won</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product-list__item">
+									<a href="#none" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+										<div class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="txt-box">
+											<p class="product-name">제품명</p>
+											<div class="price"><span>39,500</span> won</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product-list__item">
+									<a href="#none" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+										<div class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="txt-box">
+											<p class="product-name">제품명</p>
+											<div class="price"><span>39,500</span> won</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product-list__item">
+									<a href="#none" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+										<div class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="txt-box">
+											<p class="product-name">제품명</p>
+											<div class="price"><span>39,500</span> won</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product-list__item">
+									<a href="#none" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+										<div class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+										</div>
+										<div class="txt-box">
+											<p class="product-name">제품명</p>
+											<div class="price"><span>39,500</span> won</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center mt-6 mt-md-10 wow fadeInUp">
+						<input type="button" class="btn-type-01 __line __large px-10 py-3 rounded-pill" value="SEE MORE" onclick="location.href='../cake/list.html'" />
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+			<!-- S : section -->
+			<section class="section main-cake pt-20 pt-md-30 wowrap">
+				<div class="container container--1680">
+					<div class="text-center mb-10">
+						<h1 class="main-title--img mb-3 wow fadeInUp">
+							<img src="../assets/images/main/title_tpo_cake.png" alt="TPO CAKE" />
+						</h1>
+						<h2 class="main-title text-color-1 wow fadeInUp">어떤 케이크가 필요하신가요?</h2>
+					</div>
+
+					<div class="swiper-container wow fadeInUp">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="../cake/tpo.html" class="inner">
+									<div class="img-box">
+										<div class="hover-line"></div>
+										<div class="img">
+											<img src="../assets/images/main/tpo_cake_1.png" alt="케이크" />
+										</div>
+									</div>
+									<p class="title">당일픽업</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="../cake/tpo.html" class="inner">
+									<div class="img-box">
+										<div class="hover-line"></div>
+										<div class="img">
+											<img src="../assets/images/main/tpo_cake_2.png" alt="케이크" />
+										</div>
+									</div>
+									<p class="title">생일</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="../cake/tpo.html" class="inner">
+									<div class="img-box">
+										<div class="hover-line"></div>
+										<div class="img">
+											<img src="../assets/images/main/tpo_cake_3.png" alt="케이크" />
+										</div>
+									</div>
+									<p class="title">효도</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="../cake/tpo.html" class="inner">
+									<div class="img-box">
+										<div class="hover-line"></div>
+										<div class="img">
+											<img src="../assets/images/main/tpo_cake_4.png" alt="케이크" />
+										</div>
+									</div>
+									<p class="title">연인</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="../cake/tpo.html" class="inner">
+									<div class="img-box">
+										<div class="hover-line"></div>
+										<div class="img">
+											<img src="../assets/images/main/tpo_cake_5.png" alt="케이크" />
+										</div>
+									</div>
+									<p class="title">유머</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="../cake/tpo.html" class="inner">
+									<div class="img-box">
+										<div class="hover-line"></div>
+										<div class="img">
+											<img src="../assets/images/main/tpo_cake_6.png" alt="케이크" />
+										</div>
+									</div>
+									<p class="title">감사</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="../cake/tpo.html" class="inner">
+									<div class="img-box">
+										<div class="hover-line"></div>
+										<div class="img">
+											<img src="../assets/images/main/tpo_cake_7.png" alt="케이크" />
+										</div>
+									</div>
+									<p class="title">B2B</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+			<!-- S : section -->
+			<section class="section main-review py-20 py-md-30 wowrap">
+				<div class="container">
+					<div class="text-center mb-10">
+						<h1 class="main-title--img mb-3 wow fadeInUp">
+							<img src="../assets/images/main/title_review.png" alt="REVIEW" />
+						</h1>
+						<h2 class="main-title text-color-1 wow fadeInUp">리뷰</h2>
+					</div>
+
+					<div class="review-slider wow fadeInUp">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="review-list__item hover-effect hover-effect--zoomIn">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<a href="#none" class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="리뷰 이미지" />
+										</a>
+										<div class="txt-box">
+											<a href="#none" class="text">리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다.</a>
+											<div class="writer">
+												<span class="name">mass****</span>
+												<span class="date">2022.01.01</span>
+											</div>
+											<div class="related-product">
+												<a class="link" href="">관련 제품명이 노출됩니다 관련 제품명이 노출됩니다</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-list__item hover-effect hover-effect--zoomIn">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<a href="#none" class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="리뷰 이미지" />
+										</a>
+										<div class="txt-box">
+											<a href="#none" class="text">리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다.</a>
+											<div class="writer">
+												<span class="name">mass****</span>
+												<span class="date">2022.01.01</span>
+											</div>
+											<div class="related-product">
+												<a class="link" href="">관련 제품명이 노출됩니다 관련 제품명이 노출됩니다</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-list__item hover-effect hover-effect--zoomIn">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<a href="#none" class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="리뷰 이미지" />
+										</a>
+										<div class="txt-box">
+											<a href="#none" class="text">리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다.</a>
+											<div class="writer">
+												<span class="name">mass****</span>
+												<span class="date">2022.01.01</span>
+											</div>
+											<div class="related-product">
+												<a class="link" href="">관련 제품명이 노출됩니다 관련 제품명이 노출됩니다</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-list__item hover-effect hover-effect--zoomIn">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<a href="#none" class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="리뷰 이미지" />
+										</a>
+										<div class="txt-box">
+											<a href="#none" class="text">리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다.</a>
+											<div class="writer">
+												<span class="name">mass****</span>
+												<span class="date">2022.01.01</span>
+											</div>
+											<div class="related-product">
+												<a class="link" href="">관련 제품명이 노출됩니다 관련 제품명이 노출됩니다</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-list__item hover-effect hover-effect--zoomIn">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<a href="#none" class="img-box hover-effect__wrap">
+											<img src="../images/board/no_img.jpg" alt="리뷰 이미지" />
+										</a>
+										<div class="txt-box">
+											<a href="#none" class="text">리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다. 리뷰 내용이 두줄 노출됩니다.</a>
+											<div class="writer">
+												<span class="name">mass****</span>
+												<span class="date">2022.01.01</span>
+											</div>
+											<div class="related-product">
+												<a class="link" href="">관련 제품명이 노출됩니다 관련 제품명이 노출됩니다</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button type="button" class="swiper-button swiper-button--prev" title="이전 슬라이드">
+							<img src="../assets/images/icon/arrow_left_color.svg" alt="arrow" />
+						</button>
+						<button type="button" class="swiper-button swiper-button--next" title="다음 슬라이드">
+							<img src="../assets/images/icon/arrow_right_color.svg" alt="arrow" />
+						</button>
+
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+			<!-- S : section -->
+			<section class="section main-menu py-10 py-sm-15 wowrap">
+				<div class="container container--1680">
+					<div class="menu-list">
+						<div class="menu-list__item wow zoomIn">
+							<a href="<?=$nav_1_href?>" class="link">
+								<div class="title-img">
+									<img src="../assets/images/main/main_menu_title_1.png" alt="CAKE" />
+								</div>
+								<p class="title">케이크</p>
+								<div class="icon">
+									<img src="../assets/images/main/main_menu_1.png" alt="CAKE" />
+								</div>
+							</a>
+						</div>
+						<div class="menu-list__item wow zoomIn">
+							<a href="<?=$nav_2_href?>" class="link">
+								<div class="title-img">
+									<img src="../assets/images/main/main_menu_title_2.png" alt="MACARON" />
+								</div>
+								<p class="title">마카롱</p>
+								<div class="icon">
+									<img src="../assets/images/main/main_menu_2.png" alt="MACARON" />
+								</div>
+							</a>
+						</div>
+						<div class="menu-list__item wow zoomIn">
+							<a href="<?=$nav_3_href?>" class="link">
+								<div class="title-img">
+									<img src="../assets/images/main/main_menu_title_3.png" alt="TODAY PICKUP" />
+								</div>
+								<p class="title">당일픽업</p>
+								<div class="icon">
+									<img src="../assets/images/main/main_menu_3.png" alt="TODAY PICKUP" />
+								</div>
+							</a>
+						</div>
+						<div class="menu-list__item wow zoomIn">
+							<a href="<?=$nav_4_href?>" class="link">
+								<div class="title-img">
+									<img src="../assets/images/main/main_menu_title_4.png" alt="B2B" />
+								</div>
+								<p class="title">기업 주문</p>
+								<div class="icon">
+									<img src="../assets/images/main/main_menu_4.png" alt="B2B" />
+								</div>
+							</a>
+						</div>
+						<div class="menu-list__item wow zoomIn">
+							<a href="<?=$nav_5_href?>" class="link" onclick="javascript:alert('준비중입니다'); return false">
+								<div class="title-img">
+									<img src="../assets/images/main/main_menu_title_5.png" alt="TURTLEHIP STORY" />
+								</div>
+								<p class="title">터틀힙 스토리</p>
+								<div class="icon">
+									<img src="../assets/images/main/main_menu_5.png" alt="TURTLEHIP STORY" />
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			var visualSwiper = new Swiper('.main-visual .swiper-container', {
+				loop: true,
+				speed: 700,
+				// effect: 'fade',
+				// fadeEffect: {
+				// 	crossFade: true,
+				// },
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.main-visual .swiper-pagination',
+					type: 'bullets',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.main-visual .swiper-button--next',
+					prevEl: '.main-visual .swiper-button--prev',
+				},
+			});
+
+			var lookbookSwiper = new Swiper('.main-lookbook .swiper-container', {
+				slidesPerView: 4.5,
+				spaceBetween: 10,
+				freemode: true,
+				loop: true,
+				speed: 4000,
+				autoplay: {
+					delay: 0,
+					disableOnInteraction: false,
+					//pauseOnMouseEnter: true,
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 2.2,
+						spaceBetween: 10,
+					},
+					577: {
+						slidesPerView: 2.5,
+						spaceBetween: 10,
+					},
+					769: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					1025: {
+						slidesPerView: 3.8,
+						spaceBetween: 10,
+					},
+					1401: {
+						slidesPerView: 4.5,
+						spaceBetween: 10,
+					},
+				},
+			});
+
+			// $('.main-lookbook .swiper-container').each(function (elem, target) {
+			// 	var swp = target.swiper;
+			// 	$(this).hover(
+			// 		function () {
+			// 			swp.autoplay.stop();
+			// 		},
+			// 		function () {
+			// 			swp.autoplay.start();
+			// 		}
+			// 	);
+			// });
+
+			$('.main-lookbook').on('mouseover', function () {
+				lookbookSwiper.autoplay.stop();
+			});
+			$('.main-lookbook').on('mouseout', function () {
+				lookbookSwiper.autoplay.start();
+			});
+
+			var productSwiper = new Swiper('.main-product .swiper-container', {
+				slidesPerView: 5,
+				spaceBetween: 20,
+				freemode: true,
+				loop: false,
+				speed: 700,
+				breakpoints: {
+					0: {
+						slidesPerView: 1.6,
+						spaceBetween: 10,
+						allowTouchMove: true,
+					},
+					577: {
+						slidesPerView: 2.5,
+						spaceBetween: 10,
+						allowTouchMove: true,
+					},
+					769: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+						allowTouchMove: true,
+					},
+					1025: {
+						slidesPerView: 4.2,
+						spaceBetween: 20,
+						allowTouchMove: false,
+					},
+					1201: {
+						slidesPerView: 5,
+						spaceBetween: 20,
+						allowTouchMove: false,
+					},
+				},
+			});
+
+			var cakeSwiper = new Swiper('.main-cake .swiper-container', {
+				slidesPerView: 7,
+				spaceBetween: 70,
+				loop: false,
+				freemode: true,
+				speed: 700,
+				breakpoints: {
+					0: {
+						slidesPerView: 2.4,
+						spaceBetween: 10,
+						allowTouchMove: true,
+					},
+					577: {
+						slidesPerView: 3.5,
+						spaceBetween: 15,
+						allowTouchMove: true,
+					},
+					769: {
+						slidesPerView: 5.2,
+						spaceBetween: 20,
+						allowTouchMove: true,
+					},
+					1025: {
+						slidesPerView: 7,
+						spaceBetween: 30,
+						allowTouchMove: false,
+					},
+					1401: {
+						slidesPerView: 7,
+						spaceBetween: 70,
+						allowTouchMove: false,
+					},
+				},
+			});
+
+			var reviewSwiper = new Swiper('.main-review .swiper-container', {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				loop: false,
+				speed: 700,
+				navigation: {
+					nextEl: '.main-review .swiper-button--next',
+					prevEl: '.main-review .swiper-button--prev',
+				},
+				pagination: {
+					el: '.main-review .swiper-pagination',
+					type: 'bullets',
+					clickable: true,
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1.3,
+						spaceBetween: 15,
+					},
+					577: {
+						slidesPerView: 2.2,
+						spaceBetween: 15,
+					},
+					769: {
+						slidesPerView: 2.6,
+						spaceBetween: 15,
+					},
+					1025: {
+						slidesPerView: 3.5,
+						spaceBetween: 20,
+					},
+					1201: {
+						slidesPerView: 4,
+						spaceBetween: 20,
+					},
+				},
+			});
+		</script>
+	</body>
+</html>

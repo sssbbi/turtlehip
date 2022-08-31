@@ -1,0 +1,95 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+		$P_dp2 = '1';
+    include "../include/meta.html" 
+    ?>
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<div class="title-icon text-center mb-3">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div>
+					<h1 class="sub-main__title"><?=${nav_.$P_dp1}?></h1>
+				</div>
+			</section>
+
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<? include "customer-nav.html" ?>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container container--1160">
+					<table class="table-view-01">
+						<caption>
+							<span class="hidden">상세 입니다.</span>
+						</caption>
+						<colgroup>
+							<col width="90px" />
+							<col width="100%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<td colspan="2" class="clearfix tit_box">
+									<p class="tit">터틀힙 공식 홈페이지 리뉴얼 오픈, 마일리지 게시</p>
+									<p class="tbl_detail_span mt_05">
+										<span class="name">터틀힙</span>
+										<span class="date">2021.04.27</span>
+										<!--   <span class="check_01">조회:51</span>  -->
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="board-box">
+										<p style="text-align: center">
+											<img src="https://turtlehip.com/cheditor/attach/20210427184910_reiktplr.jpg" alt="마일리지.jpg" />
+										</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="text_right board_view_btn_box">
+						<a href="JavaScript:history.go(-1);" class="btn-type-01 py-3">목록</a>
+					</div>
+
+					<div class="border-list-type">
+						<ul>
+							<li>
+								<a href="#" title="이전">
+									<div class="clearfix">
+										<div class="left list-up-bg list-title">이전</div>
+										<div class="left w-con">이전 글이 없습니다.</div>
+									</div>
+								</a>
+							</li>
+							<li class="">
+								<a href="" title="다음">
+									<div class="clearfix">
+										<div class="left list-down-bg list-title">다음</div>
+										<div class="left w-con">고객센터 안내</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

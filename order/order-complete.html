@@ -1,0 +1,213 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 'order';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<!-- <div class="title-icon text-center mb-3">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div> -->
+					<h1 class="sub-main__title">주문완료</h1>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container container--1160">
+					<div class="cart-situation">
+						<p class="cart-quantity">Order Complete</p>
+						<ul class="cart-process">
+							<li class="cart-process__item">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--cart"></div>
+									<p class="cart-process__text">Cart</p>
+								</div>
+							</li>
+							<li class="cart-process__item">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--payment"></div>
+									<p class="cart-process__text">Payment</p>
+								</div>
+							</li>
+							<li class="cart-process__item on">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--order-competed"></div>
+									<p class="cart-process__text">Order Complete</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="order-completed mb-10">
+						<div class="order-completed__box">
+							<p class="common-title--26 text-gray-2 font-weight-bold">주문이 정상적으로 완료되었습니다.</p>
+							<p class="common-text font-weight-bold mt-5">주문번호는 <span class="ff-sprtant text-color-1">AA201912121234567</span> 입니다.</p>
+						</div>
+					</div>
+
+					<!--
+						pc : 1160 x 270
+						m : 1440 x 630
+					-->
+					<div class="order-banner mb-10">
+						<a href="#none" class="d-block">
+							<img class="d-none d-md-block" src="../images/board/order_banner.jpg" alt="배너 타이틀(pc)" />
+							<img class="d-md-none" src="../images/board/order_banner_m.jpg" alt="배너 타이틀(m)" />
+						</a>
+					</div>
+
+					<table class="cart-table cart-table__competed">
+						<colgroup>
+							<col width="*" />
+							<col width="240px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>상품정보</th>
+								<th>배송정보</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cart-table-td__info">
+									<div class="cart-product">
+										<div class="cart-product-img">
+											<a href="#none" class="cart-product-img__src">
+												<img src="../images/board/no_img.jpg" alt="제품" />
+												<div class="cart-product-img__overlay">Sold Out</div>
+											</a>
+										</div>
+										<div class="cart-product-info">
+											<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+											<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+											<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+										</div>
+									</div>
+								</td>
+								<td data-title="배송정보">
+									<p class="underline opacity-7">퀵서비스</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="cart-table-td__info">
+									<div class="cart-product">
+										<div class="cart-product-img">
+											<a href="#none" class="cart-product-img__src">
+												<img src="../images/board/no_img.jpg" alt="제품" />
+												<div class="cart-product-img__overlay">Sold Out</div>
+											</a>
+										</div>
+										<div class="cart-product-info">
+											<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+											<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+											<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+										</div>
+									</div>
+								</td>
+								<td data-title="배송정보">
+									<p class="underline opacity-7">퀵서비스</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="order-article">
+						<h2 class="common-title--22 font-weight-medium mb-4">적립예정 내역</h2>
+						<div class="p-5 p-sm-11 border-top-line-2 border-bottom-line border-color-1-opacity-5">
+							<p class="text-size-16 font-weight-bold">최초 결제금액(쿠폰, 마일리지 금액 제외)에 따라 계산되며 배송완료 후 8영엽일 후 적립됩니다.</p>
+							<p class="text-size-16 font-weight-bold mt-6">
+								<span class="d-inline-block">마일리지</span>
+								<span class="text-danger d-inline-block ml-20"><span class="">3500</span>P</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="order-article">
+						<div class="row mx-0 align-items-end justify-content-between mb-3">
+							<div class="col px-0">
+								<h2 class="common-title--22 font-weight-medium">결제정보</h2>
+							</div>
+							<div class="col px-0 text-right">
+								<button type="button" class="btn-type-01 py-3 text-size-14" onclick="print_front(document.getElementById('printArea').innerHTML)">영수증 인쇄</button>
+							</div>
+						</div>
+
+						<div id="printArea">
+							<div class="payment-info">
+								<div class="payment-info__item">
+									<div class="payment-info__inner">
+										<p class="payment-info__title">총 주문금액</p>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">상품합계</p>
+											<p class="payment-info-result__number"><span class="text-color-1">187,040</span>원</p>
+										</div>
+									</div>
+								</div>
+								<div class="payment-info__item">
+									<div class="payment-info__inner">
+										<p class="payment-info__title">총 할인금액</p>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">쿠폰</p>
+											<p class="payment-info-result__number"><span class="">3,000</span>원</p>
+										</div>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">마일리지</p>
+											<p class="payment-info-result__number text-danger"><span class="text-danger">0</span>P</p>
+										</div>
+									</div>
+								</div>
+								<div class="payment-info__item">
+									<div class="payment-info__inner">
+										<p class="payment-info__title">총 결제금액</p>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">신용카드</p>
+											<p class="payment-info-result__number">우리카드 <span class="ml-2">186,540</span>원</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="payment-amount">
+								<div class="payment-amount__item">
+									<div class="payment-amount__title-box">
+										<p class="payment-amount__title">총 배송비</p>
+									</div>
+									<div class="payment-amount__price-box">
+										<p class="payment-amount__price payment-amount__price--small"><span class="">2,500</span> 원</p>
+									</div>
+								</div>
+								<div class="payment-amount__item">
+									<div class="payment-amount__title-box"><p class="payment-amount__title">총 결제금액</p></div>
+									<div class="payment-amount__price-box">
+										<p class="payment-amount__price payment-amount__price--big"><span class="text-color-1">187,040</span> 원</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center mx-n1 mt-15 mt-lg-22">
+						<div class="col-auto px-1">
+							<a href="../cake/list.html" class="btn-type-01 __line py-4 px-3 px-sm-8">쇼핑하러가기</a>
+						</div>
+						<div class="col-auto px-1">
+							<a href="../mypage/history__order_check.html" class="btn-type-01 py-4 px-7 px-sm-13">주문조회</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

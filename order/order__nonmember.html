@@ -1,0 +1,297 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 'order';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<!-- <div class="title-icon text-center mb-3">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div> -->
+					<h1 class="sub-main__title"><?=${nav_.$P_dp1}?></h1>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container container--1160">
+					<div class="cart-situation">
+						<p class="cart-quantity">Payment</p>
+						<ul class="cart-process">
+							<li class="cart-process__item">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--cart"></div>
+									<p class="cart-process__text">Cart</p>
+								</div>
+							</li>
+							<li class="cart-process__item on">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--payment"></div>
+									<p class="cart-process__text">Payment</p>
+								</div>
+							</li>
+							<li class="cart-process__item">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--order-competed"></div>
+									<p class="cart-process__text">Order Complete</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<table class="cart-table cart-table__payment">
+						<form name="listform" method="post" action="?" id="listform"></form>
+						<input type="hidden" name="buytype" />
+
+						<colgroup>
+							<col width="55px" />
+							<col width="*" />
+							<col width="15%" />
+							<col width="13%" />
+							<col width="13%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>
+									<input type="checkbox" name="chklist[]" id="goods_id" value="4470" class="goods_id" checked="" onclick="cart_basket_check(1)" />
+									<label for="goods_id"></label>
+								</th>
+								<th>상품정보</th>
+								<th>수량</th>
+								<th>주문금액</th>
+								<th>배송구분</th>
+							</tr>
+						</thead>
+						<tbody>
+							<input type="hidden" name="totalprice_1" id="totalprice_1" value="53500" /><!--  금액 -->
+							<input type="hidden" name="buyprice_1" id="buyprice_1" value="53500" /><!--  단가 -->
+							<input type="hidden" name="cart_uid_1" id="cart_uid_1" value="4470" /><!--  장바구니 번호 -->
+							<input type="hidden" name="point_per_1" id="point_per_1" value="0" /><!--  상품 적립률 -->
+
+							<tr>
+								<td class="cart-table-td__check">
+									<input type="checkbox" name="chklist[]" id="goods_id_1" value="4470" class="goods_id" checked="" onclick="cart_basket_check(1)" />
+									<label for="goods_id_1"></label>
+								</td>
+								<td class="cart-table-td__info" data-title="상품정보">
+									<div class="cart-product">
+										<div class="cart-product-img">
+											<a href="#none" class="cart-product-img__src">
+												<img src="../images/board/no_img.jpg" alt="제품" />
+												<div class="cart-product-img__overlay">Sold Out</div>
+											</a>
+										</div>
+										<div class="cart-product-info">
+											<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">[전국] 해피플라워 케이크</p></a>
+											<p class="cart-product-info__date">택배 : <span class="font-weight-bold">2022-01-27 </span></p>
+											<a href="../pop/cart_option_view.html?cart_uid=4470" class="cart-product-info__option popup-link">옵션상세보기</a>
+										</div>
+									</div>
+								</td>
+								<td class="cart-table-td__number" data-title="수량"><p>1개</p></td>
+								<td class="cart-table-td__number" data-title="주문금액">
+									<p class=""><span class="cart-jumun-price">53,500</span>원</p>
+								</td>
+								<td class="cart-table-td__number" data-title="배송구분">
+									<p class="underline opacity-7">택배 <br />2022-01-27</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="cart-table-td__check">
+									<input type="checkbox" name="chklist[]" id="goods_id_1" value="4470" class="goods_id" checked="" onclick="cart_basket_check(1)" />
+									<label for="goods_id_1"></label>
+								</td>
+								<td class="cart-table-td__info" data-title="상품정보">
+									<div class="cart-product">
+										<div class="cart-product-img">
+											<a href="#none" class="cart-product-img__src">
+												<img src="../images/board/no_img.jpg" alt="제품" />
+												<div class="cart-product-img__overlay">Sold Out</div>
+											</a>
+										</div>
+										<div class="cart-product-info">
+											<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">[전국] 해피플라워 케이크</p></a>
+											<p class="cart-product-info__date">택배 : <span class="font-weight-bold">2022-01-27 </span></p>
+											<a href="../pop/cart_option_view.html?cart_uid=4470" class="cart-product-info__option popup-link">옵션상세보기</a>
+										</div>
+									</div>
+								</td>
+								<td class="cart-table-td__number" data-title="수량"><p>1개</p></td>
+								<td class="cart-table-td__number" data-title="주문금액">
+									<p class=""><span class="cart-jumun-price">53,500</span>원</p>
+								</td>
+								<td class="cart-table-td__number" data-title="배송구분">
+									<p class="underline opacity-7">택배 <br />2022-01-27</p>
+								</td>
+							</tr>
+						</tbody>
+
+						<input type="hidden" name="total_price" id="total_price" value="53500" />
+						<input type="hidden" name="deliveryprice" id="deliveryprice" value="0" /><!-- 부과 배송비 -->
+						<input type="hidden" name="delivery_info_money" id="delivery_info_money" value="" /><!-- 기준금액 -->
+						<input type="hidden" name="deliverymoney" id="deliverymoney" value="" /><!-- 세팅 배송비 -->
+					</table>
+
+					<form name="signform" method="post" action="?" id="signform">
+						<input type="hidden" name="formmode" id="formmode" value="baesongchk" />
+						<input type="hidden" name="deviceinfo" id="deviceinfo" value="pc" />
+						<input type="hidden" name="tot_paypoint" id="tot_paypoint" value="1000" />
+						<input type="hidden" name="cart_choice" id="cart_choice" value="" />
+						<input type="hidden" name="product_price" id="product_price" value="53500" />
+						<input type="hidden" name="coupon_uid" id="coupon_uid" />
+						<input type="hidden" name="coupon_price" id="coupon_price" />
+						<input type="hidden" name="mileage_price" id="mileage_price" />
+						<input type="hidden" name="min_paypoint" id="min_paypoint" value="1000" />
+						<input type="hidden" name="max_paypoint" id="max_paypoint" value="2000" />
+						<input type="hidden" name="deliveryprice" id="deliveryprice" value="0" />
+
+						<input type="hidden" name="sale_price" id="sale_price" />
+						<input type="hidden" name="paymoney_old" id="paymoney_old" value="53500" />
+						<input type="hidden" name="paymoney" id="paymoney" value="53500" />
+						<input type="hidden" name="buytype" id="buytype" value="basket_no" />
+						<input type="hidden" name="cart_basket_uid" id="cart_basket_uid" value="4470" />
+						<input type="hidden" name="orderNumber" value="202201191730585811" />
+
+						<!-- S : 주문자 정보 -->
+						<div class="order-article">
+							<h2 class="common-title--22 font-weight-medium mb-4">주문자 정보</h2>
+							<table class="table-form-01 type_b">
+								<colgroup>
+									<col class="col_w" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>주문자명</th>
+										<td>
+											<input class="input_for input_50" type="text" name="buyr_name" id="buyr_name" title="이름" placeholder="이름을 입력해주세요." required="" value="박샘이나" />
+										</td>
+									</tr>
+									<tr>
+										<th>휴대폰 번호</th>
+										<td>
+											<input class="input_for input_50" type="tel" name="uptel" id="uptel" title="연락처" value="01047366670" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="‘–’ 제외하고 숫자만 입력해주세요." required="" />
+										</td>
+									</tr>
+									<tr>
+										<th>주소</th>
+										<td>
+											<div class="input_find input_40">
+												<input type="text" name="rcvr_zipx" id="rcvr_zipx" title="우편번호" class="input_30" readonly="" onclick="javascript:postcode1();" value="03992" />
+												<a href="javascript:postcode1();" class="table-btn-01 btn-type-01">우편번호</a>
+											</div>
+											<div class="row mx-0">
+												<div class="col-12 px-0 mt-2">
+													<input type="text" class="input_for" name="rcvr_addr1" id="rcvr_addr1" title="기본주소" maxlength="200" placeholder="기본주소" value="서울 마포구 동교로23길 6 (동교동, 달리빌딩)" />
+												</div>
+												<div class="col-12 px-0 mt-2">
+													<input type="text" class="input_for" name="rcvr_addr2" id="rcvr_addr2" title="상세주소" maxlength="200" placeholder="상세주소" value="111" />
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- E : 주문자 정보 -->
+
+						<!-- S : 총계산금액 -->
+						<div class="cart-sum border-top-line border-color-1">
+							<div class="cart-sum-list">
+								<div class="cart-sum-list__item">
+									<div class="cart-sum-list__inner">
+										<p class="cart-sum-list__price"><span class="font-weight-bold text-color-1" id="tot_price_text1">53,500</span> 원</p>
+										<p class="cart-sum-list__text">최종 결제금액</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- E : 총계산금액 -->
+					</form>
+
+					<div class="order-article">
+						<h2 class="common-title--22 font-weight-medium mb-4">약관동의</h2>
+						<div class="terms-agree">
+							<div class="terms-agree__item">
+								<div class="terms-agree__head">
+									<input type="checkbox" id="yark" name="yark" value="Y" /><label for="yark" class="">주문할 상품 및 결제, 주문정보 확인하였으며, 이에 동의합니다. (필수)</label>
+									<!--<button type="button" class="terms-agree__btn text-color-1">(필수)<i class="xi-angle-up"></i></button>-->
+								</div>
+								<div class="terms-agree__body">
+									<div class="terms-agree__textarea">고객님께서는 인정보 필수항목 수집 및 이용 동의를 거부하실 수 있으며, 동의 거부 시 가입, 주문 등 멤버십 서비스 이용이 불가합니다. 또한 개인정보 선택항목 수집및 이용 동의를 거부하실 경우, 일부 서비스에 제한 받으 실 수 있습니 다.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="order-article">
+						<h2 class="common-title--22 font-weight-medium pb-4 border-bottom border-color-1">결제방법</h2>
+						<div class="py-8 border-top border-bottom border-color-1">
+							<div class="row mx-n5 my-n2 my-sm-0 text-gray-5">
+								<div class="col-12 col-xs-auto px-5 my-2 my-sm-0">
+									<label class="input-label input-label--checkbox">
+										<input type="radio" name="payway" id="method_01" value="Card" checked="" />
+										<span class="input-label__txt">신용/체크카드</span>
+									</label>
+								</div>
+
+								<div class="col-12 col-xs-auto px-5 my-2 my-sm-0">
+									<label class="input-label input-label--checkbox">
+										<input type="radio" name="payway" id="method_02" value="DirectBank" />
+										<span class="input-label__txt">실시간계좌이체</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center mx-n1 mt-15 mt-lg-22">
+						<div class="col-auto px-1">
+							<a href="javascript:history.go(-1);" class="btn-type-01 __line py-4 px-13">이전단계</a>
+						</div>
+						<div class="col-auto px-1">
+							<a href="order-complete.html" class="btn-type-01 py-4 px-13" onclick="order_check_last()">결제하기</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+
+		<script>
+			$('.payment-method-tab .payment-method-tab__btn').on('click', function () {
+				$('.payment-method-tab .payment-method-tab__btn').removeClass('on');
+				$(this).toggleClass('on');
+			});
+
+			$('.terms-agree__head label').on('click', function () {
+				$(this).parents('.terms-agree__head').toggleClass('on');
+				$(this).parents('.terms-agree__head').next('.terms-agree__body').stop().slideToggle(0);
+			});
+
+			$(document).on('click', '.mileage-point', function () {
+				var point = $(this).next().find('.point').text();
+				$(this).toggleClass('active');
+				if ($(this).hasClass('active')) {
+					$(this).attr('checked', true);
+					console.log(point);
+					$('.mileage-input').val(point);
+				} else {
+					$(this).attr('checked', false);
+					$('.mileage-input').val('');
+				}
+			});
+		</script>
+	</body>
+</html>

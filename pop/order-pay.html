@@ -1,0 +1,102 @@
+<?
+require_once($_SERVER['DOCUMENT_ROOT']."/INC/header.php");
+$basket = get_tb_other("cart_id='".$BASKET_CODE."'","tb_cart_baesonginfo","uid");
+if(!$basket[uid]) {
+ $common->error("관련된 정보가 없습니다.","previous",""); } ?>
+<div class="popup popup--sm">
+	<div class="popup-head text-center">
+		<h1 class="common-title--26 font-weight-medium text-gray-3">결제수단 선택</h1>
+	</div>
+	<div class="popup-body pt-6 pt-sm-10">
+		<div class="px-0 px-sm-5">
+			<form name="signform2" id="signform2" method="post">
+				<input type="hidden" name="deviceinfo" id="deviceinfo" value="<?=$deviceinfo?>" />
+				<input type="hidden" name="orderNumber" id="orderNumber" value="<?=$basket[jumuncode]?>" />
+				<input type="hidden" name="paymemberuname" id="paymemberuname" value="<?=$Memberinfo['uname']?>" />
+
+				<!-- <div class="row mx-n5 my-n2 my-sm-0 text-gray-5">
+          <div class="col-12 col-xs-auto px-5 my-2 my-sm-0">
+            <label class="input-label input-label--checkbox">
+              <input type="radio" name="payway" id="method_01" value="Card" checked="" onclick="chkform222(document.signform2)"/>
+              <span class="input-label__txt">신용/체크카드/네이버/카카오페이</span>
+            </label>
+          </div>
+
+          <div class="col-12 col-xs-auto px-5 my-2 my-sm-0">
+            <label class="input-label input-label--checkbox">
+              <input type="radio" name="payway" id="method_02" value="DirectBank" onclick="chkform222(document.signform2)"/>
+              <span class="input-label__txt">실시간계좌이체</span>
+            </label>
+          </div>
+        </div> -->
+
+				<div class="row mx-n1 mt-n2 mt-sm-0">
+					<div class="col-6 col-sm-3 px-1 mt-2 mt-sm-0">
+						<label class="input-label input-label--pay">
+							<input type="radio" name="payway" id="method_01" value="Card" onclick="chkform222(document.signform2)" />
+							<div class="input-label__txt">
+								<div class="icon">
+									<img src="../assets/images/order/pay_card.jpg" alt="card" />
+								</div>
+								<p class="title">신용카드</p>
+							</div>
+						</label>
+					</div>
+					<div class="col-6 col-sm-3 px-1 mt-2 mt-sm-0">
+						<label class="input-label input-label--pay">
+							<input type="radio" name="payway" id="method_04" value="Card" onclick="chkform222(document.signform2)" />
+							<div class="input-label__txt">
+								<div class="icon">
+									<img src="../assets/images/order/pay_naver.jpg" alt="naver" />
+								</div>
+								<p class="title">네이버페이</p>
+							</div>
+						</label>
+					</div>
+					<div class="col-6 col-sm-3 px-1 mt-2 mt-sm-0">
+						<label class="input-label input-label--pay">
+							<input type="radio" name="payway" id="method_03" value="Card" onclick="chkform222(document.signform2)" />
+							<div class="input-label__txt">
+								<div class="icon">
+									<img src="../assets/images/order/pay_kakao.jpg" alt="kakao" />
+								</div>
+								<p class="title">카카오페이</p>
+							</div>
+						</label>
+					</div>
+					<div class="col-6 col-sm-3 px-1 mt-2 mt-sm-0">
+						<label class="input-label input-label--pay">
+							<input type="radio" name="payway" id="method_02" value="DirectBank" onclick="chkform222(document.signform2)" />
+							<div class="input-label__txt">
+								<div class="icon">
+									<img src="../assets/images/order/pay_transfer.jpg" alt="계좌이체" />
+								</div>
+								<p class="title">실시간<br class="d-none d-sm-block" />계좌이체</p>
+							</div>
+						</label>
+					</div>
+				</div>
+
+				<ul class="bullet-list bullet-list--txt mt-5 common-text--md text-gray-6">
+					<li class="item" data-bullet="-">신용카드 포인트 사용은 결제창에서 함께 사용하실 수 있습니다.</li>
+					<li class="item mt-1" data-bullet="-">신용카드 할부는결제금액이 50,000원 이상일 경우에만 가능합니다.</li>
+					<li class="item mt-1" data-bullet="-">30만원이상 결제 구매시 공인인증서가 필요합니다.</li>
+					<li class="item mt-1" data-bullet="-">
+						정확한 결제와주문완료를 위하여 주문완료 페이지가 보여지기전에<br class="d-none d-md-block" />
+						현재창과 결제창을 닫지 마십시오.
+					</li>
+					<li class="item mt-1" data-bullet="-">세금계산서 발행을 원하실 경우, 고객센터>온라인문의에서 신청해주시기 바랍니다.</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('.scrollbar-inner').scrollbar();
+	function chkform222(f) {
+		$('#gopaymethod').val(f.payway.value);
+		payment_start();
+	}
+</script>
+<? include "../allpay/_common.php"?>

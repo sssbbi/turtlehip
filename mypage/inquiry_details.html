@@ -1,0 +1,129 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+      include "../include/meta.html";
+			$P_dp1 = 'mypage';
+			$P_dp2 = '5';
+      
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<!-- S :  -->
+							<table class="table_board_for qna_type_a text_center">
+								<colgroup>
+									<col width="8%" />
+									<col width="*%;" />
+									<col width="12%;" />
+									<col width="14%;" />
+									<col width="12%;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>제목</th>
+										<th>분류</th>
+										<th>작성일</th>
+										<th>상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- end 상단 출력인 경우 사용  -->
+									<tr>
+										<td>2</td>
+										<td class="text_left posi_r">
+											<a href="../mypage/inquiry_details-view.html">제목 노출 입니다. 제목 노출 입니다.제목 노출 입니다.제목 노출 입니다.</a>
+										</td>
+										<td>Q&amp;A</td>
+										<td>2018.04.25</td>
+										<td><span class="anwer_off">답변대기</span></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="text_left posi_r">
+											<a href="../mypage/inquiry_details-view.html">제목 노출 입니다. 제목 노출 입니다.제목 노출 입니다.제목 노출 입니다. </a>
+										</td>
+										<td>1:1문의</td>
+										<td>2018.04.25</td>
+										<td><span class="anwer_on">답변완료</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="paging-area">
+								<ul>
+									<li>
+										<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="prev"><span>이전으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="active">1<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;">2<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;">3<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="next"><span>다음으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="board-search-01">
+								<form method="POST" action="?" id="searchForm">
+									<fieldset>
+										<legend class="hidden">검색</legend>
+										<select name="find_field" title="search" class="select-type-01">
+											<option value="title">제목</option>
+											<option value="content">내용</option>
+										</select>
+										<input type="text" title="검색어" class="input-type-01" name="find_word" value="" />
+										<input type="submit" value="검색" class="btn btn-color-01" />
+									</fieldset>
+								</form>
+							</div>
+
+							<!-- E :  -->
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

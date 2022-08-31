@@ -1,0 +1,273 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+			$P_dp1 = 'mypage';
+			$P_dp2 = '3';
+      include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+						<div class="mypage-content">
+							<div class="cart-situation">
+								<p class="cart-quantity">Cart<span class="cart-quantity-number">(1)</span></p>
+							</div>
+							<table class="cart-table">
+								<colgroup>
+									<col width="55px" />
+									<col width="*" />
+									<col width="13%" />
+									<col width="13%" />
+									<col width="13%" />
+									<col width="13%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th><input type="checkbox" id="all_check" name="" value="Y" /><label for="all_check" class=""></label></th>
+										<th>상품정보</th>
+										<th>상품금액</th>
+										<th>할인금액</th>
+										<th>할인적용 금액</th>
+										<th>상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="cart-table-td__check"><input type="checkbox" id="prd_check1" name="" value="Y" /><label for="prd_check1" class=""></label></td>
+										<td class="cart-table-td__info" data-title="상품정보">
+											<div class="cart-product">
+												<div class="cart-product-img">
+													<a href="#none" class="cart-product-img__src sold-out">
+														<img src="../images/board/no_img.jpg" alt="제품" />
+														<div class="cart-product-img__overlay">Sold Out</div>
+													</a>
+													<div class="cart-product-quantity">
+														<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+														<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+															<i class="xi-minus"></i>
+														</button>
+														<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+														<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+															<i class="xi-plus"></i>
+														</button>
+													</div>
+												</div>
+												<div class="cart-product-info">
+													<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+													<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+													<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+												</div>
+											</div>
+										</td>
+										<td class="cart-table-td__number" data-title="상품금액">
+											<p class="">
+												<span><span class="">33,600</span>원</span>
+												<span class="text-size-13 text-danger d-block"><span class="">10%</span> 적립</span>
+											</p>
+										</td>
+										<td class="cart-table-td__number" data-title="할인금액">
+											<p class=""><span class="">2,000</span>원</p>
+										</td>
+										<td class="cart-table-td__number" data-title="할인적용 금액">
+											<p class=""><span class="">31,600</span>원</p>
+										</td>
+										<td class="cart-table-td__btn" data-title="상태">
+											<div class="cart-table-td__btn-wrap">
+												<a href="#none" class="btn-type-01 small __line py-1 text-size-13 remove-btn"> 삭제 </a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cart-table-td__check"><input type="checkbox" id="prd_check1" name="" value="Y" /><label for="prd_check1" class=""></label></td>
+										<td class="cart-table-td__info" data-title="상품정보">
+											<div class="cart-product">
+												<div class="cart-product-img">
+													<a href="#none" class="cart-product-img__src">
+														<img src="../images/board/no_img.jpg" alt="제품" />
+														<div class="cart-product-img__overlay">Sold Out</div>
+													</a>
+													<div class="cart-product-quantity">
+														<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+														<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+															<i class="xi-minus"></i>
+														</button>
+														<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+														<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+															<i class="xi-plus"></i>
+														</button>
+													</div>
+												</div>
+												<div class="cart-product-info">
+													<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+													<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+													<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+												</div>
+											</div>
+										</td>
+										<td class="cart-table-td__number" data-title="상품금액">
+											<p class="">
+												<span><span class="">33,600</span>원</span>
+												<span class="text-size-13 text-danger d-block"><span class="">10%</span> 적립</span>
+											</p>
+										</td>
+										<td class="cart-table-td__number" data-title="할인금액">
+											<p class=""><span class="">2,000</span>원</p>
+										</td>
+										<td class="cart-table-td__number" data-title="할인적용 금액">
+											<p class=""><span class="">31,600</span>원</p>
+										</td>
+										<td class="cart-table-td__btn" data-title="상태">
+											<div class="cart-table-td__btn-wrap">
+												<a href="#none" class="btn-type-01 small __line py-1 text-size-13"> 주문 </a>
+												<a href="#none" class="btn-type-01 small __line py-1 text-size-13 mt-1"> 옵션수정 </a>
+												<a href="#none" class="btn-type-01 small __line py-1 text-size-13 mt-1 remove-btn"> 삭제 </a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="cart-btn__wrap">
+								<div class="cart-btn__box">
+									<button type="button" class="btn-type-01">선택 삭제</button>
+									<button type="button" class="btn-type-01">품절상품 삭제</button>
+								</div>
+								<p class="text-size-14 text-color-1 font-weight-medium">※ 판매종료된 상품은 장바구니에서 자동삭제됩니다.</p>
+							</div>
+							<!-- S :  -->
+
+							<!-- E :  -->
+							<!-- S : 총계산금액 -->
+							<div class="cart-sum border-top-line border-color-1">
+								<div class="cart-sum-list">
+									<div class="cart-sum-list__item">
+										<div class="cart-sum-list__inner">
+											<p class="cart-sum-list__price"><span class="">187,040</span> 원</p>
+											<p class="cart-sum-list__text">총 주문금액</p>
+										</div>
+									</div>
+									<div class="cart-sum-list__item cart-sum-list__item--equation">
+										<span class="equation bg-light"></span>
+									</div>
+									<div class="cart-sum-list__item">
+										<div class="cart-sum-list__inner">
+											<p class="cart-sum-list__price"><span class="" data-equation="-">3,000</span> 원</p>
+											<p class="cart-sum-list__text">총 할인금액</p>
+										</div>
+									</div>
+									<div class="cart-sum-list__item cart-sum-list__item--equation">
+										<span class="equation bg-color-1"></span>
+										<span class="equation bg-color-1"></span>
+									</div>
+									<div class="cart-sum-list__item">
+										<div class="cart-sum-list__inner">
+											<p class="cart-sum-list__price"><span class="font-weight-bold text-color-1">184,040</span> 원</p>
+											<p class="cart-sum-list__text">총 결제금액</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- E : 총계산금액 -->
+							<!-- S :  -->
+							<div class="row justify-content-center mx-n1 mt-22 btn-multiple">
+								<div class="col-auto px-1">
+									<a href="../cake/list.html" class="btn-type-01 __line py-4 px-4 px-sm-8">쇼핑하러가기</a>
+								</div>
+								<div class="col-auto px-1">
+									<a href="javascript:bask_check_order()" class="btn-type-01 py-4 px-4 px-sm-8">선택상품주문</a>
+								</div>
+								<div class="col-auto px-1">
+									<a href="order.html" class="btn-type-01 py-4 px-9 px-sm-13">전체주문</a>
+									<!-- <a href="javascript:bask_all_order()" class="btn-type-01 py-4 px-9 px-sm-13"">전체주문</a> -->
+								</div>
+							</div>
+							<!-- E :  -->
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script>
+			function opt_change(v, index) {
+				var old_val = parseInt($('input[name=opt_cnt' + index + ']').val());
+				$('input[name=opt_cnt' + index + ']').val(old_val + v);
+				var new_val = parseInt($('input[name=opt_cnt' + index + ']').val());
+				if (new_val < 1) {
+					$('input[name=opt_cnt' + index + ']').val(1);
+					return false;
+				}
+
+				var buyprice = parseInt(document.signform.buyprice.value);
+
+				var old_p = parseInt($('input[name=opt_price' + index + ']').val());
+				$('#span_price_' + index).html(comma(String(old_p * new_val)) + '원');
+
+				var old_tp = parseInt(document.signform.total_price.value);
+				var new_tp = old_tp + v * old_p;
+
+				$('#span_price_total').html(comma(String(new_tp)));
+				$('.quick .opt-item .price > i').html(comma(String(new_tp)));
+
+				document.signform.total_price.value = new_tp;
+
+				var o_op = document.signform.optchk_i.value;
+				var o_opa = o_op.split('|');
+				var o_opc = document.signform.optchk_c.value;
+				var o_opca = o_opc.split('|');
+				var n_opc = '';
+
+				for (var i = 0; i < o_opa.length; i++) {
+					if (o_opa[i] == index) o_opca[i] = new_val;
+					if (i == 0) n_opc = o_opca[i];
+					else n_opc += '|' + o_opca[i];
+				}
+				document.signform.optchk_c.value = n_opc;
+			}
+
+			function opt_changex(v) {
+				var old_val = parseInt($('input[name=prd_ctn]').val());
+				$('input[name=prd_ctn]').val(old_val + v);
+				var new_val = parseInt($('input[name=prd_ctn]').val());
+				if (new_val < 1) {
+					$('input[name=prd_ctn]').val(1);
+					return false;
+				}
+				document.signform.optchk_c.value = $('input[name=prd_ctn]').val();
+
+				$('#span_price_total').html(comma(String(document.signform.prd_ctn.value * document.signform.buyprice.value)));
+			}
+
+			$(document).on('click', '.remove-btn', function () {
+				$(this).parents('tr').remove();
+			});
+		</script>
+	</body>
+</html>

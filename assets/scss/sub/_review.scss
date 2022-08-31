@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+.review-list {
+	&__item {
+		position: relative;
+
+		// &::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	left: 0;
+		// 	top: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	border: 0px solid $color-1;
+		// 	transition: border-width 0.3s;
+		// 	z-index: 1;
+		// }
+		.img-box {
+			@include img-to-bg(100%);
+			img {
+				transition: 0.3s;
+			}
+		}
+		.txt-box {
+			border: 1px solid $gray-d;
+			border-top: 0;
+			padding: rem(20) rem(20) 0;
+			line-height: 1.2;
+			position: relative;
+			&::before {
+				content: '\f6b0';
+				font-family: bootstrap-icons !important;
+				display: inline-block;
+				font-size: em(30);
+				color: $gray-4;
+			}
+			.text {
+				display: block;
+				font-size: em(18);
+				font-weight: 500;
+				color: $gray-3;
+				@include text-truncate(2, 1.4);
+				margin-bottom: rem(10);
+			}
+			.writer {
+				color: $gray-6;
+				margin: 0 rem(-10);
+				margin-bottom: rem(20);
+				span {
+					display: inline-block;
+					vertical-align: middle;
+					padding: 0 rem(10);
+					position: relative;
+					& + span::before {
+						content: '';
+						width: 1px;
+						height: rem(12);
+						margin-top: 1px;
+						background: $gray-9;
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+			}
+			.related-product {
+				padding: rem(20) 0;
+				border-top: 1px solid $gray-d;
+				.link {
+					display: block;
+					@include text-truncate(1);
+					font-size: em(18);
+					color: $gray-5;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.line {
+			position: absolute;
+			z-index: 2;
+			background: $color-1;
+			&--t,
+			&--b {
+				transition: width 0.3s;
+				width: 0;
+				height: 4px;
+			}
+			&--r,
+			&--l {
+				transition: height 0.3s;
+				width: 4px;
+				height: 0;
+			}
+			&--t {
+				top: 0;
+				left: 0;
+			}
+			&--r {
+				top: 0;
+				right: 0;
+			}
+			&--b {
+				right: 0;
+				bottom: 0;
+			}
+			&--l {
+				left: 0;
+				bottom: 0;
+			}
+		}
+
+		@include mdq-min(lg) {
+			&:hover {
+				// &::after {
+				// 	border-width: 4px;
+				// }
+				.line {
+					&--t,
+					&--b {
+						width: 100%;
+					}
+					&--r,
+					&--l {
+						height: 100%;
+					}
+				}
+				.img-box {
+					img {
+						transform: translate(-50%, -50%) scale(0.105);
+					}
+				}
+			}
+		}
+
+		@include mdq-max(md) {
+			.txt-box {
+				&::before {
+					font-size: em(25);
+				}
+				.text {
+					font-size: em(17);
+				}
+				.related-product {
+					.link {
+						font-size: em(16);
+					}
+				}
+			}
+		}
+	}
+}

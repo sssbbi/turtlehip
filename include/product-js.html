@@ -1,0 +1,137 @@
+<script>
+	/* S : 제품상세 이미지 슬라이드 */
+	var productThumbsSwiper = new Swiper('.product-slider-thumbs .swiper-container', {
+		slidesPerView: 4.4,
+		spaceBetween: 10,
+		freeMode: true,
+		watchSlidesProgress: true,
+		speed: 500,
+	});
+	var productSwiper = new Swiper('.product-slider .swiper-container', {
+		slidesPerView: 1,
+		speed: 500,
+		thumbs: {
+			swiper: productThumbsSwiper,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
+		},
+	});
+	/* E : 제품상세 이미지 슬라이드 */
+
+	/* S : datepicker 관련 */
+	$(function () {
+		$('.datepicker').datepicker({
+			dateFormat: 'yy년 mm월 dd일',
+			showOtherMonths: true,
+			showMonthAfterYear: true,
+			yearSuffix: '년',
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			changeYear: false,
+			changeMonth: false,
+			minDate: 2,
+			maxDate: '+15d',
+			// beforeShow: function (input) {
+			// 	var i_offset = $(input).offset(); //클릭된 input의 위치값 체크
+			// 	setTimeout(function () {
+			// 		$('#ui-datepicker-div').css({ top: i_offset.top, bottom: '', left: '20px' }); //datepicker의 div의 포지션을 강제로 input 위치에 그리고 좌측은 모바일이여서 작기때문에 무조건 10px에 놓았다.
+			// 	});
+			// },
+		});
+	});
+
+	$('.datepicker-click').on('click', function () {
+		$('.datepicker').datepicker('show');
+	});
+	/* E : datepicker 관련 */
+
+	$('input[name="deliverydate"]').on('change', function () {
+		var value = $(this).val();
+		//console.log(value);
+		$(this).next().text(value);
+	});
+
+	$('.custom-select-btn').on('click', function () {
+		$(this).next().next('.custom-select').stop(false, true).slideToggle(0);
+	});
+
+	$('.custom-select li').on('click', function () {
+		var dataVal = $(this).attr('data-value');
+		$('input[type="hidden"]').val(dataVal);
+		$('.custom-select').hide();
+		$(this).parents('.custom-select-wrap').next().text(dataVal);
+	});
+
+	$(window).on('load', function () {
+		$('.option-scroll-box').each(function () {
+			$(this).mCustomScrollbar({
+				axis: 'x',
+				theme: 'dark-3',
+				mouseWheelPixels: 150,
+			});
+		});
+	});
+
+	$(document).on('click', '.option-result__item .remove-option', function () {
+		$(this).parent().remove();
+	});
+
+	function tabScroll() {
+		var winScr = $(window).scrollTop(),
+			headerH = $('.header').outerHeight(),
+			tabTop = $('.tab--product').offset().top;
+
+		if (winScr > tabTop - headerH) {
+			$('.tab--product').addClass('fix');
+		} else {
+			$('.tab--product').removeClass('fix');
+		}
+	}
+
+	$(window).scroll(function () {
+		tabScroll();
+	});
+	$(document).ready(function () {
+		tabScroll();
+
+		var rating = $('#rating-grade').text(),
+			ratingPercentage = (rating / 5) * 100;
+
+		$('#SVGID_3_').css('width', ratingPercentage + '%');
+	});
+
+	$('.review-list__item > .inner').on('click', function () {
+		$('.review-list__pop').hide();
+		$(this).next('.review-list__pop').show();
+	});
+	$('.review-list__item .pop-close').on('click', function () {
+		$(this).parent().hide();
+	});
+
+	$('.option-toggle__btn')
+		.not('.submit')
+		.on('click', function () {
+			$('.option-toggle__box').addClass('active');
+			$('html, body').animate({ scrollTop: 0 }, 0).css('overflow-y', 'hidden');
+		});
+	$('.option-toggle__box .hide-button').on('click', function () {
+		$('.option-toggle__box').removeClass('active');
+		$('html, body').css('overflow-y', 'auto');
+	});
+
+	function optionComplete() {
+		$('.option-toggle__result').show();
+		if ($(window).innerWidth() < 1025) {
+			$('.option-toggle__inner').hide();
+		}
+	}
+
+	$('.option-add-button').on('click', function () {
+		$('html, body').animate({ scrollTop: 0 }, 0);
+		$('.option-toggle__inner').show();
+		$('.option-toggle__result').hide();
+	});
+</script>

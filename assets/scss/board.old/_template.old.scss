@@ -1,0 +1,472 @@
+@charset "UTF-8";
+// input
+$mc: $color-1;
+$mc2: $color-2;
+
+$input-height: rem(50);
+$input-height-lg: $input-height;
+$input-border: #ddd;
+$input-border-active-width: 3px;
+
+@import 'utilities'; // 유틸리티 ( mt_5, mt_10, ... )
+@import 'buttons'; // 버튼 ( btn-type-01, btn-type02, ... )
+@import 'forms'; // 입력폼 관련 (input, select, textarea, ... )
+@import 'editor'; // 에디터 영역 ( board-box )
+@import 'file'; // 파일첨부 ( file_box )
+@import 'check-radio'; // 체크박스, 라디오박스
+
+@import 'table'; // 테이블 공통 스타일 ( col_w, w_150, code, ... )
+@import 'table-view'; // 뷰페이지 ( table-view-01 )
+@import 'table-board-for'; // 일반게시판, Q&A 게시판 ( table_board_for )
+@import 'gallery'; // 갤러리형 ( img_board_list )
+@import 'thumbnail'; // 썸네일형 ( thumbnail )
+@import 'paging'; // 페이징 ( paging-area )
+@import 'search'; // 게시판 검색 ( board-search-01 )
+@import 'write'; // 작성폼 ( table-form-01 )
+@import 'states'; // 상태값 ( anwer )
+@import 'qna'; // 자주묻는 질문 (faq)
+
+@import 'reply'; // 답글 ( txt_post_wrap )
+
+@import 'policy'; // 약관 ( total_clause_bx, clause_list )
+
+@import 'login'; // 로그인 ( login-con, login-wrap, ... )
+
+@import 'sns-login'; // SNS 로그인 ( sns-login, bg--facebook, ... )
+
+// 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+// 888           888     888
+// 888           888     888
+// 888           888     888
+// 888888 8888b. 88888b. 888 .d88b.
+// 888       "88b888 "88b888d8P  Y8b
+// 888   .d888888888  88888888888888
+// Y88b. 888  888888 d88P888Y8b.
+//  "Y888"Y88888888888P" 888 "Y8888
+
+///*비밀글 진입*/
+.pass-wrap {
+	margin-top: 60px;
+
+	.tit {
+		font-size: 1.2em;
+		font-weight: 500;
+		color: #333;
+		margin-bottom: 20px;
+	}
+
+	.mt_05 {
+		margin-top: 5px;
+	}
+
+	input {
+		padding: 0 10px;
+	}
+}
+
+.schedule_type_a {
+	table-layout: fixed;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-top: 1px solid #000;
+	word-break: break-all;
+
+	thead th {
+		color: #222;
+		padding: 8px 0;
+		text-align: center;
+		border: 1px solid #ddd;
+		border-bottom: 0;
+		background: #f8f8f8;
+		font-weight: bold;
+
+		@include mdq-max(sm) {
+			font-size: 13px;
+		}
+	}
+
+	tr {
+		td,
+		th {
+			&:nth-child(1) {
+				&,
+				.date {
+					color: $red;
+				}
+			}
+
+			&:nth-child(7) {
+				&,
+				.date {
+					color: $blue;
+				}
+			}
+		}
+	}
+
+	tbody {
+		background: #fff;
+
+		td {
+			position: relative;
+			width: 14.258%;
+			font-weight: normal;
+			padding: 5px 5px;
+			height: 140px;
+
+			@include mdq-max(lg) {
+				height: 14vw;
+			}
+
+			vertical-align: top;
+			border: 1px solid #ccc;
+
+			.date {
+				display: block;
+				color: #222;
+				font-weight: bold;
+
+				&.red {
+					color: $red;
+				}
+
+				&.blue {
+					color: $blue;
+				}
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			&:hover {
+				// background: #edf3f7;
+
+				// .btn_tooltip_ajax {
+				//   color: #000;
+				//   text-decoration: underline !important;
+				// }
+			}
+
+			.cursor_default {
+				cursor: default;
+			}
+
+			@include mdq-max(sm) {
+				.meal_list li,
+				.kcal_t {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+}
+
+.normal-table {
+	width: 100%;
+	table-layout: fixed;
+	border-top: 2px solid $color-1;
+	.vertical-top {
+		vertical-align: top;
+	}
+	tr {
+		border-bottom: 1px solid rgba($color-1, 0.5);
+	}
+	th {
+		padding: em(20) em(15);
+	}
+	td {
+		padding: em(15) em(15);
+		line-height: 1.3;
+	}
+	th,
+	td {
+		color: #54514c;
+		text-align: center;
+		letter-spacing: letterSpacing(-20);
+		border-right: 1px solid rgba($color-1, 0.5);
+		&:last-of-type {
+			border-right: 0;
+		}
+	}
+
+	&__type-2 {
+		tbody {
+		}
+		tr {
+			border-bottom: 1px solid rgba($color-1, 0.5);
+		}
+		th,
+		td {
+			text-align: center;
+			padding: em(20) em(10);
+			border-right: 1px solid rgba($color-1, 0.5);
+			&:last-of-type {
+				border-right: 0;
+			}
+		}
+		th {
+			color: $color-1;
+		}
+		td {
+			// color: #251e1c;
+			color: #54514c;
+		}
+	}
+}
+
+.order-lookup {
+	padding: em(30) 0;
+	border-top: 2px solid $color-1;
+	border-bottom: 1px solid rgba($color-1, 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: flex-start;
+	&__process {
+		max-width: percentage(5/6);
+		flex: 1 0 percentage(5/6);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: flex-start;
+		.order-lookup__item {
+			width: 100%;
+			flex: 1 0;
+			&:last-of-type {
+				.order-lookup__number {
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+		.order-lookup__number {
+			position: relative;
+			&::before {
+				content: '\e940';
+				font-family: xeicon !important;
+				font-size: 36px;
+				color: $color-1;
+				display: block;
+				position: absolute;
+				right: em(-36/2, 36);
+				top: 44%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&__cancel {
+		width: 100%;
+		max-width: percentage(1/6);
+		flex: 1 0 percentage(1/6);
+		.order-lookup__item {
+			width: 100%;
+			max-width: 100%;
+			flex: 1 0 100%;
+			border-left: 1px solid rgba($color-1, 0.5);
+		}
+	}
+	&__item {
+		text-align: center;
+		padding: 5px 0;
+	}
+	&__text {
+	}
+	&__number {
+		$fs: 46;
+		font-size: em($fs);
+		line-height: 1;
+		color: #251e1c;
+		font-weight: 500;
+		margin-top: em(15, $fs);
+	}
+
+	@include mdq-max(md) {
+		padding: rem(20) 0;
+		&__process {
+			flex: 1 0 100%;
+			max-width: 100%;
+			align-items: flex-start;
+			.order-lookup__number::before {
+				font-size: 20px;
+			}
+		}
+		&__cancel {
+			flex: 1 0 100%;
+			max-width: 100%;
+			.order-lookup__item {
+				border-left: 0;
+				border-top: 1px solid rgba($color-1, 0.5);
+				margin-top: rem(15);
+				padding-top: rem(15);
+			}
+		}
+		&__text {
+			font-size: 12px;
+		}
+		&__number {
+			font-size: em(25);
+		}
+	}
+}
+
+.info-table {
+	padding: em(40) em(20);
+	border-top: 1px solid $color-1;
+	border-bottom: 1px solid rgba($color-1, 0.5);
+	min-height: em(188);
+	@include mdq-max(sm) {
+		min-height: auto;
+	}
+	&-box {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: flex-start;
+		margin-bottom: 15px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		&__title {
+			max-width: em(152);
+			flex: 0 0 em(152);
+			padding-left: em(35);
+		}
+		&__content {
+			flex: 1 1 auto;
+			width: 1%;
+			padding-left: em(35);
+		}
+
+		@include mdq-max(sm) {
+			margin-bottom: 10px;
+			&__title {
+				max-width: em(100);
+				flex: 0 0 em(100);
+				padding-left: 0;
+			}
+			&__content {
+				padding-left: em(20);
+			}
+		}
+	}
+}
+
+.grid-img-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin: 0 -3px;
+	img {
+		margin: 3px;
+		display: block;
+		max-height: 120px;
+	}
+}
+
+.multiple-file {
+	width: 100px;
+	position: relative;
+	.btn_type_file {
+		position: relative;
+		cursor: pointer;
+	}
+	input {
+	}
+}
+
+.unbind {
+	cursor: default;
+	background-color: rgba($gray-5, 0) !important;
+	color: $gray-5 !important;
+	border: 1px solid $gray-5 !important;
+	&:hover {
+		background-color: rgba($gray-5, 0) !important;
+		color: $gray-5 !important;
+		border: 1px solid $gray-5 !important;
+	}
+}
+
+.cash-receipt {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: flex-start;
+	&__btn {
+		width: 85px;
+		height: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $gray-d;
+		&.on {
+			background-color: $color-1;
+			border-color: $color-1;
+			color: $white;
+		}
+	}
+}
+
+//제품 수량 조정
+.cart-product-quantity {
+	$fs: 13;
+	font-size: $fs + px;
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&__minus {
+		color: $white;
+		width: 30px;
+		height: 30px;
+		background: $color-1;
+		i {
+			display: block;
+			line-height: 1;
+		}
+	}
+	&__number {
+		flex: 1 1 auto;
+		max-width: 60px;
+		height: 30px !important;
+		padding: 0;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 700;
+		border: 1px solid $color-1 !important;
+		margin: 0 -1px;
+	}
+	&__plus {
+		color: $white;
+		width: 30px;
+		height: 30px;
+		background: $color-1;
+		i {
+			display: block;
+			line-height: 1;
+		}
+	}
+
+	@include mdq-max(md) {
+		font-size: 11px;
+
+		&__minus {
+			width: 25px;
+			height: 25px;
+		}
+		&__number {
+			max-width: 50px;
+			height: 25px !important;
+			font-size: 12px;
+		}
+		&__plus {
+			width: 25px;
+			height: 25px;
+		}
+	}
+}

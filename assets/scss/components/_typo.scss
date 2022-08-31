@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+//공통사용 텍스트 스타일 정의
+
+.common-title {
+	&--60 {
+		font-size: rem(60);
+		line-height: 1.3;
+	}
+	&--50 {
+		font-size: rem(50);
+		line-height: 1.3;
+	}
+	&--40 {
+		font-size: rem(40);
+		line-height: 1.3;
+	}
+	&--30 {
+		font-size: rem(30);
+		line-height: 1.3;
+	}
+	&--26 {
+		font-size: rem(26);
+		line-height: 1.3;
+	}
+	&--22 {
+		font-size: rem(22);
+		line-height: 1.3;
+	}
+	&--20 {
+		font-size: rem(20);
+	}
+
+	@include mdq-max(lg) {
+		&--60 {
+			font-size: rem(52);
+		}
+	}
+
+	@include mdq-max(md) {
+		&--60 {
+			font-size: rem(44);
+		}
+		&--50 {
+			font-size: rem(40);
+		}
+		&--40 {
+			font-size: rem(32);
+		}
+		&--30 {
+			font-size: rem(25);
+		}
+		&--26 {
+			font-size: rem(22);
+		}
+		&--22 {
+			font-size: rem(18);
+		}
+		&--20 {
+			font-size: rem(17);
+		}
+	}
+
+	@include mdq-max(sm) {
+		&--60 {
+			font-size: rem(38);
+		}
+		&--50 {
+			font-size: rem(32);
+		}
+		&--40 {
+			font-size: rem(28);
+		}
+		&--30 {
+			font-size: rem(23);
+		}
+		&--26 {
+			font-size: rem(20);
+		}
+		&--22 {
+			font-size: rem(17);
+		}
+	}
+}
+
+.common-text {
+	font-size: rem(18);
+	&--ori {
+		font-size: 16px;
+	}
+	&--md {
+		font-size: 15px;
+	}
+	&--sm {
+		font-size: 14px;
+	}
+	&--xs {
+		font-size: 13px;
+	}
+	&--xxs {
+		font-size: 12px;
+	}
+	&--xxxs {
+		font-size: 10px;
+	}
+
+	@include mdq-max(md) {
+		font-size: rem(16);
+		&--ori {
+			font-size: 15px;
+		}
+		&--md {
+			font-size: 14px;
+		}
+		&--sm {
+			font-size: 13px;
+		}
+		&--xs {
+			font-size: 12px;
+		}
+		&--xxs {
+			font-size: 11px;
+		}
+	}
+}
+
+.text-size-15 {
+	font-size: 15px !important;
+}
+.text-size-14 {
+	font-size: 14px !important;
+}
+.text-size-13 {
+	font-size: 13px !important;
+}
+
+@include mdq-max(lg) {
+	.text-size-15 {
+		font-size: 13px !important;
+	}
+	.text-size-14 {
+		font-size: 12px !important;
+	}
+	.text-size-13 {
+		font-size: 11px !important;
+	}
+}
+
+.toggle-click {
+	display: inline-block;
+	position: relative;
+	padding-right: rem(30);
+	cursor: pointer;
+	&::after {
+		content: '\e942';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -1px;
+		transform: translateY(-50%);
+		color: $color-1;
+		font-size: 18px;
+		font-family: 'xeicon' !important;
+	}
+	&.on::after {
+		transform: translateY(-50%) rotate(180deg);
+	}
+}
+.toggle-click-content {
+	display: none;
+}

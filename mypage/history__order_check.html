@@ -1,0 +1,383 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+			$P_dp1 = 'mypage';
+			$P_dp2 = '2';
+			$P_dp3 = '1';
+      include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="sub-section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+						<div class="mypage-content">
+							<h2 class="common-title--22 font-weight-medium mb-4">주문조회</h2>
+							<div class="mypage-article">
+								<!-- S : 주문조회 현황 -->
+								<div class="order-lookup">
+									<div class="order-lookup__process list-05">
+										<div class="order-lookup__item">
+											<p class="order-lookup__text">결제완료</p>
+											<p class="order-lookup__number">1</p>
+										</div>
+										<div class="order-lookup__item">
+											<p class="order-lookup__text">제작중</p>
+											<p class="order-lookup__number">4</p>
+										</div>
+										<div class="order-lookup__item">
+											<p class="order-lookup__text">픽업/배송중</p>
+											<p class="order-lookup__number">1</p>
+										</div>
+										<div class="order-lookup__item">
+											<p class="order-lookup__text">픽업/배송완료</p>
+											<p class="order-lookup__number">0</p>
+										</div>
+									</div>
+									<div class="order-lookup__cancel">
+										<div class="order-lookup__item">
+											<p class="order-lookup__text">주문취소</p>
+											<p class="order-lookup__number">2</p>
+										</div>
+									</div>
+								</div>
+								<!-- E : 주문조회 현황 -->
+								<!-- S : 검색 -->
+								<div class="data-find__wrap">
+									<div class="data-find">
+										<div class="data-find__date">
+											<div class="calendar-list">
+												<div class="calendar-list__input">
+													<input type="text" readonly="" class="datepicker" />
+												</div>
+												<div class="calendar-list__text">~</div>
+												<div class="calendar-list__input">
+													<input type="text" readonly="" class="datepicker" />
+												</div>
+											</div>
+										</div>
+										<div class="data-find__category">
+											<div class="data-find__category--item">
+												<a href="#none" class="data-find__category--btn on">최근 1주일</a>
+											</div>
+											<div class="data-find__category--item">
+												<a href="#none" class="data-find__category--btn">최근 1개월</a>
+											</div>
+											<div class="data-find__category--item">
+												<a href="#none" class="data-find__category--btn">최근 3개월</a>
+											</div>
+											<div class="data-find__category--item">
+												<a href="#none" class="data-find__category--btn">최근 6개월</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- E : 검색 -->
+								<p class="text-size-14 text-color-1 font-weight-medium mt-6">* 주문하신 제품은 픽업 4일전까지 레터링 문구만 수정 가능합니다</p>
+								<p class="text-size-14 text-color-1 font-weight-medium mt-1">* 레터링 외 수정사항은 취소 후 재주문 부탁드립니다.</p>
+							</div>
+							<div class="mypage-article">
+								<div class="mypage-inner">
+									<!-- S :  -->
+									<div class="row align-items-center mb-2">
+										<div class="col">
+											<ul class="text-line-list">
+												<li class="text-line-list__item">
+													<p class="font-weight-bold">
+														<span class="text-gray-2">주문번호 :</span>
+														<span class="text-color-1">AA201912121234567</span>
+													</p>
+												</li>
+												<li class="text-line-list__item">
+													<p class="">
+														<span class="text-gray-2 font-weight-bold">주문일 :</span>
+														<span class="font-weight-medium text-gray-6">2019-10-14</span>
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="col-auto">
+											<a href="../mypage/history__order_check_detail.html" class="btn-type-01 py-2 text-size-14"> 상세보기 <i class="xi-angle-right-min"></i> </a>
+										</div>
+									</div>
+									<table class="cart-table cart-table__payment">
+										<colgroup>
+											<col width="55px" />
+											<col width="*" />
+											<col width="13%" />
+											<col width="13%" />
+											<col width="13%" />
+											<col width="13%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th><input type="checkbox" id="all_check" name="" value="Y" /><label for="all_check" class=""></label></th>
+												<th>상품정보</th>
+												<th>결제금액</th>
+												<th>배송구분</th>
+												<th>진행상태</th>
+												<th>상태</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cart-table-td__check"><input type="checkbox" id="prd_check2" name="" value="Y" /><label for="prd_check2" class=""></label></td>
+												<td class="cart-table-td__info" data-title="상품정보">
+													<div class="cart-product">
+														<div class="cart-product-img">
+															<a href="#none" class="cart-product-img__src">
+																<img src="../images/board/no_img.jpg" alt="제품" />
+																<div class="cart-product-img__overlay">Sold Out</div>
+															</a>
+															<div class="cart-product-quantity">
+																<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+																<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+																	<i class="xi-minus"></i>
+																</button>
+																<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+																<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+																	<i class="xi-plus"></i>
+																</button>
+															</div>
+														</div>
+														<div class="cart-product-info">
+															<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+															<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+															<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+														</div>
+													</div>
+												</td>
+												<td class="cart-table-td__number" data-title="결제금액">
+													<p class=""><span class="">153,440</span>원</p>
+												</td>
+												<td class="cart-table-td__number" data-title="배송구분">
+													<p class="underline">퀵서비스</p>
+												</td>
+												<td class="cart-table-td__number" data-title="진행상태">
+													<p class="underline">미입금</p>
+												</td>
+												<td class="cart-table-td__btn" data-title="상태">
+													<div class="cart-table-td__btn-wrap">
+														<a href="#none" class="btn-type-01 small __line py-1 text-size-13">주문수정</a>
+														<a href="../pop/order_cancel.html" class="btn-type-01 small __line py-1 text-size-13 mt-1 popup-link">취소요청</a>
+														<a href="../pop/review.html" class="btn-type-01 small __line py-1 text-size-13 mt-1 popup-link">리뷰작성</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="cart-table-td__check"><input type="checkbox" id="prd_check4" name="" value="Y" /><label for="prd_check4" class=""></label></td>
+												<td class="cart-table-td__info" data-title="상품정보">
+													<div class="cart-product">
+														<div class="cart-product-img">
+															<a href="#none" class="cart-product-img__src">
+																<img src="../images/board/no_img.jpg" alt="제품" />
+																<div class="cart-product-img__overlay">Sold Out</div>
+															</a>
+															<div class="cart-product-quantity">
+																<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+																<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+																	<i class="xi-minus"></i>
+																</button>
+																<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+																<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+																	<i class="xi-plus"></i>
+																</button>
+															</div>
+														</div>
+														<div class="cart-product-info">
+															<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+															<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+															<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+														</div>
+													</div>
+												</td>
+												<td class="cart-table-td__number" data-title="결제금액">
+													<p class=""><span class="">153,440</span>원</p>
+												</td>
+												<td class="cart-table-td__number" data-title="배송구분">
+													<p class="underline">퀵서비스</p>
+												</td>
+												<td class="cart-table-td__number" data-title="진행상태">
+													<p class="underline">미입금</p>
+												</td>
+												<td class="cart-table-td__btn" data-title="상태">
+													<div class="cart-table-td__btn-wrap">
+														<a href="#none" class="btn-type-01 small __line py-1 text-size-13">주문수정</a>
+														<a href="../pop/order_cancel.html" class="btn-type-01 small __line py-1 text-size-13 mt-1 popup-link">취소요청</a>
+														<a href="../pop/review.html" class="btn-type-01 small __line py-1 text-size-13 mt-1 popup-link">리뷰작성</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- E :  -->
+								</div>
+								<div class="mypage-inner">
+									<!-- S :  -->
+									<div class="row align-items-center mb-2">
+										<div class="col">
+											<ul class="text-line-list">
+												<li class="text-line-list__item">
+													<p class="font-weight-bold">
+														<span class="text-gray-2">주문번호 :</span>
+														<span class="text-color-1">AA201912121234567</span>
+													</p>
+												</li>
+												<li class="text-line-list__item">
+													<p class="">
+														<span class="text-gray-2 font-weight-bold">주문일 :</span>
+														<span class="font-weight-medium text-gray-6">2019-10-14</span>
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="col-auto">
+											<a href="../mypage/history__order_check_detail.html" class="btn-type-01 py-2 text-size-14"> 상세보기 <i class="xi-angle-right-min"></i> </a>
+										</div>
+									</div>
+									<table class="cart-table cart-table__payment">
+										<colgroup>
+											<col width="55px" />
+											<col width="*" />
+											<col width="13%" />
+											<col width="13%" />
+											<col width="13%" />
+											<col width="13%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th><input type="checkbox" id="all_check" name="" value="Y" /><label for="all_check" class=""></label></th>
+												<th>상품정보</th>
+												<th>결제금액</th>
+												<th>배송구분</th>
+												<th>진행상태</th>
+												<th>상태</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cart-table-td__check"><input type="checkbox" id="prd_check2" name="" value="Y" /><label for="prd_check2" class=""></label></td>
+												<td class="cart-table-td__info" data-title="상품정보">
+													<div class="cart-product">
+														<div class="cart-product-img">
+															<a href="#none" class="cart-product-img__src">
+																<img src="../images/board/no_img.jpg" alt="제품" />
+																<div class="cart-product-img__overlay">Sold Out</div>
+															</a>
+															<div class="cart-product-quantity">
+																<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+																<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+																	<i class="xi-minus"></i>
+																</button>
+																<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+																<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+																	<i class="xi-plus"></i>
+																</button>
+															</div>
+														</div>
+														<div class="cart-product-info">
+															<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+															<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+															<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+														</div>
+													</div>
+												</td>
+												<td class="cart-table-td__number" data-title="결제금액">
+													<p class=""><span class="">153,440</span>원</p>
+												</td>
+												<td class="cart-table-td__number" data-title="배송구분">
+													<p class="underline">퀵서비스</p>
+												</td>
+												<td class="cart-table-td__number" data-title="진행상태">
+													<p class="underline">미입금</p>
+												</td>
+												<td class="cart-table-td__btn" data-title="상태">
+													<div class="cart-table-td__btn-wrap">
+														<a href="#none" class="btn-type-01 small __line py-1 text-size-13"> 주문수정 </a>
+														<a href="../pop/order_cancel.html" class="btn-type-01 small __line py-1 text-size-13 mt-1 popup-link"> 취소요청 </a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- E :  -->
+								</div>
+							</div>
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4">주문상태 안내</h2>
+
+								<div class="row-scrollwrap" data-show="700">
+									<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+									<div class="row-scrollwrap__scroll">
+										<div class="row-scrollwrap__content">
+											<table class="normal-table normal-table__type-2 mb-6">
+												<thead>
+													<tr>
+														<th>결제대기</th>
+														<th>결제완료</th>
+														<th>제작 중</th>
+														<th>픽업일(D-day)</th>
+														<th>픽업완료</th>
+														<th>주문취소</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-left vertical-top"><p class="text-size-14 font-weight-medium text-line_height-7">주문완료 후 결제내역 미확인 상태입니다.</p></td>
+														<td class="text-left vertical-top"><p class="text-size-14 font-weight-medium text-line_height-7">결제 및 입금확인이 완료되었습니다.</p></td>
+														<td class="text-left vertical-top"><p class="text-size-14 font-weight-medium text-line_height-7">주문한 제품이 제작중입니다.</p></td>
+														<td class="text-left vertical-top"><p class="text-size-14 font-weight-medium text-line_height-7">예약하신 시간에 맞게 제품 준비됩니다.</p></td>
+														<td class="text-left vertical-top">
+															<p class="text-size-14 font-weight-medium text-line_height-7">고객이 픽업완료된 상태입니다. <br />고객의 수락처리 또는 고객승인없이 자동승인처리됩니다.</p>
+														</td>
+														<td class="text-left vertical-top">
+															<p class="text-size-14 font-weight-medium text-line_height-7">제작완료 전 주문취소요청에 의해 주문취소가 완료되었습니다.<br />(단, 위약금 발생)</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script>
+			$(function () {
+				$('.datepicker').datepicker({
+					dateFormat: 'yy-mm-dd',
+				});
+			});
+		</script>
+	</body>
+</html>

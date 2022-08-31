@@ -1,0 +1,320 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/product.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<!-- S : 제품 카테고리 -->
+			<!--
+				TODO:
+				카테고리 이미지 사이즈 : 410x410
+				해당 카테고리 'a.link' 태그에 'on' 클래스 추가.
+			-->
+			<section class="section mb-20 mb-lg-30">
+				<div class="container container--1680">
+					<div class="product-category">
+						<div class="product-category__item">
+							<a href="" class="link">
+								<div class="circle">
+									<p class="title">전체</p>
+									<div class="bg">
+										<img src="../assets/images/product/category_all.png" alt="전체" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-category__item">
+							<a href="" class="link on">
+								<div class="circle">
+									<p class="title"><?=$nav_1_1?></p>
+									<div class="bg">
+										<img src="../assets/images/product/category_full.png" alt="<?=$nav_1_1?>" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-category__item">
+							<a href="" class="link">
+								<div class="circle">
+									<p class="title"><?=$nav_1_2?></p>
+									<div class="bg">
+										<img src="../assets/images/product/category_lettering.png" alt="<?=$nav_1_2?>" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-category__item">
+							<a href="" class="link">
+								<div class="circle">
+									<p class="title"><?=$nav_1_3?></p>
+									<div class="bg">
+										<img src="../assets/images/product/category_special.png" alt="<?=$nav_1_3?>" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-category__item">
+							<a href="" class="link">
+								<div class="circle">
+									<p class="title"><?=$nav_1_4?></p>
+									<div class="bg">
+										<img src="../assets/images/product/category_mini.png" alt="<?=$nav_1_4?>" />
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 제품 카테고리 -->
+
+			<!-- S : 카테고리 설명 -->
+			<section class="section product-introduction mb-15">
+				<div class="container container--1680">
+					<div class="img mb-8">
+						<img src="../assets/images/product/cake_icon.png" width="102" alt="CAKE" />
+					</div>
+					<h1 class="title mb-5">풀커스텀 케이크</h1>
+					<p class="description mb-8">
+						케익위에 무엇이든 그려드립니다.<br />
+						여러분의 스토리를 사진, 메시지 등으로 자유롭게 준비해주세요.<br />
+						주문부터 제작까지 최소 3일 이상이 소요되니 넉넉한 기간을 갖고 주문하세요.
+					</p>
+
+					<!-- TODO: 아래 버튼 풀커스텀 케이크에만 노출 -->
+					<a href="" class="btn-type-01 px-16 py-4 rounded-pill">커스텀 매니저와 1:1 상담하기</a>
+				</div>
+			</section>
+			<!-- E : 카테고리 설명 -->
+
+			<!-- S : 제품 -->
+			<section class="section">
+				<div class="container container--1680">
+					<!-- S : sort -->
+					<div class="product-sort d-flex flex-wrap mb-5">
+						<a href="" class="item on">인기도순</a>
+						<a href="" class="item">신상품순</a>
+						<a href="" class="item">낮은가격순</a>
+						<a href="" class="item">높은가격순</a>
+						<a href="" class="item">리뷰많은순</a>
+					</div>
+					<!-- E : sort -->
+
+					<!-- S : list -->
+					<div class="product-list">
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+									<div class="badge badge--best"></div>
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+									<div class="badge badge--sale"></div>
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+									<div class="badge badge--new"></div>
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name"><span class="nationwide">전국배송</span> 제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name"><span class="nationwide">전국배송</span> 제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="view.html" class="inner hover-effect hover-effect--zoomIn hover-effect--border">
+								<div class="img-box hover-effect__wrap">
+									<img src="../images/board/no_img.jpg" alt="제품 이미지" />
+								</div>
+								<div class="txt-box">
+									<p class="product-name">제품명</p>
+									<div class="price"><span>39,500</span> won</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- E : list -->
+
+					<!-- S : paging -->
+					<div class="paging-area">
+						<ul>
+							<li>
+								<a href="javascript:;" class="prev"><span>이전으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="active">1</a>
+							</li>
+							<li>
+								<a href="javascript:;">2</a>
+							</li>
+							<li>
+								<a href="javascript:;">3</a>
+							</li>
+							<li>
+								<a href="javascript:;">4</a>
+							</li>
+							<li>
+								<a href="javascript:;">5</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next"><span>다음으로</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : paging -->
+				</div>
+			</section>
+			<!-- E : 제품 -->
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+		$P_dp0 = 'main'; 
+    include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/guide.min.css" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				overflow-x: hidden;
+			}
+			.spacer {
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body class="main-body guide">
+		<? include "../include/header.html"?>
+
+		<!-- S : Main -->
+
+		<div class="spacer"></div>
+		<div class="spacer"></div>
+		<div class="spacer"></div>
+
+		<div class="spacer s1"></div>
+
+		<div id="animation">
+			<section class="first panel">
+				<img src="../assets/images/guide/custom_slide1_1.png" />
+			</section>
+			<section class="panel">
+				<img src="../assets/images/guide/custom_slide1_2.png" />
+			</section>
+			<section class="panel">
+				<img src="../assets/images/guide/custom_slide1_3.png" />
+			</section>
+		</div>
+
+		<div class="spacer"></div>
+
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/PixiPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+		<script>
+			gsap.registerPlugin(ScrollTrigger);
+
+			let sections = gsap.utils.toArray('section'),
+				currentSection = sections[0];
+
+			gsap.defaults({ overwrite: 'auto', duration: 0.25 });
+			gsap.set('#animation', { height: sections.length * 100 + '%' });
+
+			sections.forEach((section, i) => {
+				ScrollTrigger.create({
+					start: () => (i - 0.1) * innerHeight,
+					end: () => (i + 0.1) * innerHeight,
+					onToggle: (self) => self.isActive && setSection(section),
+				});
+			});
+
+			function setSection(newSection) {
+				if (newSection !== currentSection) {
+					gsap.to(currentSection, { autoAlpha: 0 });
+					gsap.to(newSection, { autoAlpha: 1 });
+					currentSection = newSection;
+				}
+			}
+
+			gsap.to('.s1', {
+				scrollTrigger: {
+					trigger: '#animation',
+					start: 'top top',
+					end: $('#animation').height(),
+					pin: true,
+					markers: true,
+					onLeave: myLeaveFunc,
+				},
+			});
+
+			function myLeaveFunc() {
+				gsap.set('#animation', { height: '800px' });
+			}
+		</script>
+	</body>
+</html>

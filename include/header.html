@@ -1,0 +1,79 @@
+<ul class="skip">
+	<li><a class="link" href="#contents">본문내용 바로가기</a></li>
+	<li><a class="link" href="#header">헤더 바로가기</a></li>
+	<li><a class="link" href="#footer">푸터 바로가기</a></li>
+</ul>
+
+<header id="header" class="header">
+	<div class="container header-wrap">
+		<nav class="nav">
+			<? include "../include/nav.html" ?>
+		</nav>
+
+		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+			<?if($P_dp0=='main'){?>
+			<img src="../assets/images/main/logo.svg" alt="<?=$SS[sitename]?>" />
+			<?}else{?>
+			<img src="../assets/images/main/logo_color.svg" alt="<?=$SS[sitename]?>" />
+			<?}?>
+		</a>
+
+		<ul class="util">
+			<li class="mx-3">
+				<a href="../member/login.html" class="link">로그인</a>
+			</li>
+			<li class="mx-3">
+				<a href="../member/join.html" class="link">회원가입</a>
+			</li>
+			<!-- <li class="mx-3">
+				<a href="" class="link">로그아웃</a>
+			</li>
+			<li class="mx-3">
+				<a href="../mypage/" class="link">마이페이지</a>
+			</li> -->
+			<li class="mx-3">
+				<a href="../customer/notice.html" class="link">고객센터</a>
+			</li>
+			<li class="mx-3">
+				<a href="../order/cart.html" class="link cart" title="장바구니">
+					<i class="xi-cart"></i>
+					<!-- S : 장바구니에 담긴 상품이 있을때만 노출 -->
+					<span class="cart__count">3</span>
+					<!-- E : 장바구니에 담긴 상품이 있을때만 노출 -->
+				</a>
+			</li>
+		</ul>
+
+		<div class="search-box">
+			<form action="../search/list.html">
+				<input type="submit" value="" class="search-box__btn" />
+				<input type="text" name="" id="" class="w-100 search-box__input" placeholder="어떤 케이크를 찾으시나요?" />
+			</form>
+		</div>
+
+		<button class="search-mobile__btn" type="button">
+			<?if($P_dp0=='main'){?>
+			<img src="../assets/images/icon/search_icon.svg" alt="search" />
+			<?}else{?>
+			<img src="../assets/images/icon/search_icon_color.svg" alt="search" />
+			<?}?>
+			<i class="bi bi-x-lg <?if($P_dp0!='main'){?>text-color-1<?}?>"></i>
+		</button>
+
+		<button class="nav-mobile__btn" type="button">
+			<i class="bi bi-list"></i>
+		</button>
+
+		<div class="nav__bg d-none"></div>
+	</div>
+</header>
+
+<!-- S : mobile navigation -->
+<? include "../include/aside.html" ?>
+<!-- E : mobile navigation -->
+
+<!-- S : loading image -->
+<div class="loading-image">
+	<img src="../assets/images/icon/loading.svg" alt="" />
+</div>
+<!-- E : loading image -->

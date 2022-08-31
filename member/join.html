@@ -1,0 +1,231 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 'join';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section">
+				<div class="container">
+					<div class="text-center title-icon mb-2">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div>
+					<h1 class="sub-main__title mb-10">회원가입</h1>
+
+					<form name="signform" id="signform" method="post" action="../Bboard/memberok.php" enctype="multipart/form-data" autocomplete="off" onsubmit="return memberform_chk();">
+						<input type="hidden" name="formmode" value="save" />
+						<input type="hidden" name="passchk1" id="passchk1" value="" title="비밀번호" />
+						<input type="hidden" name="passchk" id="passchk" value="" title="비밀번호" />
+						<input type="hidden" name="idchk" id="idchk" value="" title="아이디" />
+						<input type="hidden" name="snstype" id="snstype" value="" />
+						<input type="hidden" name="snsid" id="snsid" value="" />
+						<div class="join__wrap">
+							<!-- S : 필수사항 -->
+							<h3 class="join__title">필수사항</h3>
+							<div class="join-area join-area--border-top2 join-area--border-color1 mt-3">
+								<div class="join-area__box">
+									<p class="join-area__title">회원구분</p>
+									<div class="row no-gutters mt-4">
+										<div class="col-auto">
+											<label class="input-label input-label--radio">
+												<input type="radio" id="ulevel1" name="ulevel" value="1" onclick="ulevel_formchk(1);" />
+												<span class="input-label__txt text-color-1 font-weight-medium">개인회원</span>
+											</label>
+										</div>
+										<div class="col-auto ml-5">
+											<label class="input-label input-label--radio">
+												<input type="radio" id="ulevel2" name="ulevel" value="2" onclick="ulevel_formchk(2);" />
+												<span class="input-label__txt text-color-1 font-weight-medium">기업회원</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">아이디(이메일)</p>
+									<input class="input_for" type="email" name="mid" id="mid" title="아이디" placeholder="이메일 주소를 입력해주세요." required="" value="" />
+									<p class="text-size-14 text-danger mt-2" id="loginId"></p>
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">비밀번호</p>
+									<input type="password" class="input_for" name="upasswd" id="upasswd" title="비밀번호" txtlimit="6" maxlength="16" chk="pwcheck" placeholder="" required="" aria-autocomplete="list" />
+									<p class="text-size-14 text-danger mt-2" id="passId"></p>
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">비밀번호 확인</p>
+									<input type="password" class="input_for" name="upasswd1" id="upasswd1" title="비밀번호 확인" txtlimit="6" maxlength="16" chk="pwcheck" placeholder="비밀번호 재입력" required="" />
+									<p class="text-size-14 text-danger mt-2" id="passId_1"></p>
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">이름</p>
+									<input class="input_for" type="text" name="uname" id="uname" title="이름" placeholder="이름을 입력해주세요." required="" />
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">성별</p>
+									<div class="row mt-4">
+										<div class="col-auto"><input type="radio" id="female" name="gender" value="female" /><label for="female" class="text-color-1 font-weight-medium">여성</label></div>
+										<div class="col-auto pl-0"><input type="radio" id="male" name="gender" value="male" /><label for="male" class="text-color-1 font-weight-medium">남성</label></div>
+									</div>
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">휴대폰번호</p>
+									<div class="input_find">
+										<input class="input_for" type="tel" name="uptel" id="uptel" title="연락처" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="‘–’ 제외하고 숫자만 입력해주세요." required="" />
+										<button type="button" class="btn-type-01 table-btn-01 text-size-15 request-btn">인증번호 요청</button>
+										<button type="button" class="btn-type-01 table-btn-01 text-size-15 request-complete-btn unbind" style="display: none">인증완료</button>
+										<p class="text-size-14 text-danger mt-2" id="phonenum_return"></p>
+
+										<input type="hidden" id="smscheck" value="" />
+										<input type="hidden" name="uptelcheck_value" value="" />
+									</div>
+									<div class="input_find number-form mt-3 input-time__count22">
+										<div class="input-time__count">
+											<input type="text" class="input_for" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="인증번호(6자리)" id="certNumber" />
+											<div class="input-time__count--box">
+												<span class="input-time__count--min"></span>
+												<span class="input-time__count--sec"></span>
+											</div>
+										</div>
+										<button type="button" class="btn-type-01 table-btn-01 text-size-15 certify-btn" onclick="chknumber($('#certNumber').val())">인증하기</button>
+									</div>
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">생년월일</p>
+									<input class="input_for" type="date" placeholder="생년월일을 숫자 8자리로 입력해주세요. (ex. 19880512) 만 14세 이상" name="ubir" required="" />
+								</div>
+								<!--
+                <div class="join-area__box">
+                  <p class="join-area__title">기념일</p>
+                  <input class="input_for" type="date" placeholder="기념일을 숫자 8자리로 입력해주세요. (ex. 19950602)" required name="ubir1"/>
+                  <p class="text-size-14 text-color-1 mt-2">* 터틀힙에서 작은 선물을 준비할게요. 특별한 날을 알려주세요.</p>
+                </div>
+				-->
+								<div class="join-area__box">
+									<p class="join-area__title">주소</p>
+									<div class="input_find input_40">
+										<input type="text" id="uzip" name="uzip" class="" readonly="" onclick="daum_zipcode()" />
+										<a href="javascript:daum_zipcode()" class="btn-type-01 table-btn-01 text-size-15">우편번호</a>
+									</div>
+									<div class="row mx-0">
+										<div class="col-12 px-0 mt-2">
+											<input type="text" class="input_for" name="uaddr1" id="uaddr1" title="기본주소" maxlength="200" value="" readonly="" placeholder="기본주소" onclick="daum_zipcode()" />
+										</div>
+										<div class="col-12 px-0 mt-2">
+											<input type="text" class="input_for" name="uaddr2" id="uaddr2" title="상세주소" maxlength="200" value="" placeholder="상세주소 입력" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- E : 필수사항 -->
+							<!-- S : 기업회원 추가정보 -->
+							<h3 class="join__title level2_addarea" style="">기업회원 추가정보</h3>
+							<div class="join-area join-area--border-top2 join-area--border-color1 mt-3 level2_addarea" style="">
+								<div class="join-area__box">
+									<p class="join-area__title">한글상호</p>
+									<input class="input_for" type="text" name="cname" id="info1" title="한글상호" placeholder="한글상호를 입력해주세요." required="required" />
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">영문상호</p>
+									<input class="input_for" type="text" name="cyname" id="info2" title="영문상호" placeholder="영문상호를 입력해주세요." required="required" />
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">사업자등록번호</p>
+									<input class="input_for" type="text" name="cnumber" id="info3" title="사업자등록번호" placeholder="사업자등록번호를 입력해주세요." required="required" />
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">회사전화번호</p>
+									<input class="input_for" type="text" name="ctel" id="info4" title="회사전화번호" placeholder="회사전화번호를 입력해주세요." required="required" />
+								</div>
+								<div class="join-area__box">
+									<p class="join-area__title">회사이메일</p>
+									<input class="input_for" type="text" name="cemail" id="info5" title="회사이메일" placeholder="회사이메일을 입력해주세요." required="required" />
+								</div>
+							</div>
+							<!-- E : 필수사항 -->
+
+							<!-- S : 약관동의 -->
+							<div class="row no-gutters justify-content-between">
+								<div class="col-auto">
+									<h3 class="join__title">약관동의</h3>
+								</div>
+								<div class="col-auto"><input type="checkbox" id="check_all11" name="" value="Y" /><label for="check_all11" class="text-color-1 font-weight-medium">모두 동의합니다</label></div>
+							</div>
+
+							<div class="join-area join-area--border-top2 join-area--border-color1 mt-3 mb-0">
+								<div class="row no-gutters justify-content-between">
+									<div class="col-auto">
+										<span class="mr-3 d-inline-block">
+											<p class="text-size-15 font-weight-medium text-gray-8"><span class="text-color-1">(필수)</span> 이용약관</p>
+										</span>
+										<span class="d-inline-block">
+											<a href="../pop/terms_of_use.html" class="d-block text-size-14 font-weight-bold text-gray-5 underline popup-link">전문보기</a>
+										</span>
+									</div>
+									<div class="col-auto"><input type="checkbox" id="agree__12" name="yark1" title="이용약관 동의" value="Y" class="select_subject1" required="" /><label for="agree__12" class="text-size-15 text-gray-8 font-weight-medium">동의합니다</label></div>
+								</div>
+
+								<div class="row no-gutters justify-content-between mt-3">
+									<div class="col-auto">
+										<span class="mr-3 d-inline-block">
+											<p class="text-size-15 font-weight-medium text-gray-8"><span class="text-color-1">(필수)</span> 개인정보취급방침</p>
+										</span>
+										<span class="d-inline-block">
+											<a href="../pop/terms_privacy.html" class="d-block text-size-14 font-weight-bold text-gray-5 underline popup-link">전문보기</a>
+										</span>
+									</div>
+									<div class="col-auto"><input type="checkbox" id="agree__13" name="yark2" title="개인정보취급방침 동의" value="Y" class="select_subject1" required="" /><label for="agree__13" class="text-size-15 text-gray-8 font-weight-medium">동의합니다</label></div>
+								</div>
+								<!-- <div class="row justify-content-between mt-3">
+									<div class="col-auto">
+										<span class="mr-3 d-inline-block">
+											<p class="text-size-15 font-weight-medium text-gray-8"><span class="text-color-1">(필수)</span> 이메일무단수집거부</p>
+										</span>
+										<span class="d-inline-block">
+											<a href="../pop/terms_email.html" class="d-block text-size-14 font-weight-bold text-gray-5 underline popup-link">전문보기</a>
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="checkbox" id="agree__14" name="yark3" title="이메일무단수집거부 동의" value="Y" class="select_subject1" required="" />
+										<label for="agree__14" class="text-size-15 text-gray-8 font-weight-medium">동의합니다</label>
+									</div>
+								</div> -->
+							</div>
+							<div class="join-area join-area--border-top1 join-area--border-bottom1 join-area--border-color1 mt-3">
+								<h3 class="join__title mb-3">마케팅 안내</h3>
+								<div>
+									<span class="d-block d-md-inline-block mb-2 mb-md-0 mr-md-3">
+										<input type="checkbox" id="agree__16" name="agree16" value="Y" />
+										<label for="agree__16" class="text-size-15 text-gray-8 font-weight-medium">(이메일/문자) 마케팅 수신 모두 동의</label>
+									</span>
+									<span class="d-block d-md-inline-block mb-2 mb-md-0 mr-md-3">
+										<input type="checkbox" id="agree__17" name="mailtype" value="Y" class="mailsmstype" />
+										<label for="agree__17" class="text-size-15 text-gray-8 font-weight-medium">이메일</label>
+									</span>
+									<span class="d-block d-md-inline-block">
+										<input type="checkbox" id="agree__18" name="smstype" value="Y" class="mailsmstype" />
+										<label for="agree__18" class="text-size-15 text-gray-8 font-weight-medium">문자(SMS)</label>
+									</span>
+								</div>
+							</div>
+							<!-- E : 약관동의 -->
+						</div>
+
+						<div class="text-center mt-12">
+							<button type="submit" class="btn-type-01 py-4 px-15 text-size-18">회원가입</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

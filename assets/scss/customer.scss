@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+.map-box {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+
+	.map-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 13px;
+		height: 35px;
+		border-radius: 35px;
+		background-color: $white;
+		transition: background-color 0.3s;
+		&--naver {
+			border: 1px solid #5ac367;
+			color: #5ac367;
+			&:hover {
+				background-color: #5ac367;
+				color: $white;
+			}
+		}
+		&--google {
+			border: 1px solid #4285f4;
+			color: #4285f4;
+			&:hover {
+				background-color: #4285f4;
+				color: $white;
+			}
+		}
+		&--kakao {
+			border: 1px solid #fae100;
+			color: #fae100;
+			&:hover {
+				background-color: #fae100;
+				color: $white;
+			}
+		}
+	}
+}

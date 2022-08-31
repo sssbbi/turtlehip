@@ -1,0 +1,249 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 'ordercheck';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<h1 class="sub-main__title"><?=${nav_.$P_dp1}?></h1>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container container--1160">
+					<div class="mypage-article">
+						<div class="mt-3 mb-5">
+							<ul class="text-line-list">
+								<li class="text-line-list__item">
+									<p class="font-weight-bold">
+										<span class="text-gray-2">주문번호 :</span>
+										<span class="text-color-1">AA201912121234567</span>
+									</p>
+								</li>
+								<li class="text-line-list__item">
+									<p class="">
+										<span class="text-gray-2 font-weight-bold">주문일 :</span>
+										<span class="font-weight-medium text-gray-6">2019-10-14</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<!-- S :  -->
+						<table class="cart-table cart-table__payment">
+							<colgroup>
+								<col width="55px" />
+								<col width="*" />
+								<col width="13%" />
+								<col width="13%" />
+								<col width="13%" />
+								<col width="13%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th><input type="checkbox" id="all_check" name="" value="Y" /><label for="all_check" class=""></label></th>
+									<th>상품정보</th>
+									<th>결제금액</th>
+									<th>배송구분</th>
+									<th>진행상태</th>
+									<th>상태</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="cart-table-td__check"><input type="checkbox" id="prd_check2" name="" value="Y" /><label for="prd_check2" class=""></label></td>
+									<td class="cart-table-td__info" data-title="상품정보">
+										<div class="cart-product">
+											<div class="cart-product-img">
+												<a href="#none" class="cart-product-img__src">
+													<img src="../images/board/no_img.jpg" alt="제품" />
+													<div class="cart-product-img__overlay">Sold Out</div>
+												</a>
+												<div class="cart-product-quantity">
+													<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+													<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+														<i class="xi-minus"></i>
+													</button>
+													<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+													<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+														<i class="xi-plus"></i>
+													</button>
+												</div>
+											</div>
+											<div class="cart-product-info">
+												<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">레터링 기본 케이크</p></a>
+												<p class="cart-product-info__date">픽업날짜: <span class="font-weight-bold">2019-11-29 16:00</span></p>
+												<a href="../pop/cart_option_view.html" class="cart-product-info__option popup-link">옵션상세보기</a>
+											</div>
+										</div>
+									</td>
+									<td class="cart-table-td__number" data-title="결제금액">
+										<p class=""><span class="">153,440</span>원</p>
+									</td>
+									<td class="cart-table-td__number" data-title="배송구분">
+										<p class="underline">퀵서비스</p>
+									</td>
+									<td class="cart-table-td__number" data-title="진행상태">
+										<p class="underline">미입금</p>
+									</td>
+									<td class="cart-table-td__btn" data-title="상태">
+										<div class="cart-table-td__btn-wrap">
+											<a href="#none" class="btn-type-01 small __line py-1 text-size-13"> 주문수정 </a>
+											<a href="../pop/order_cancel.html" class="btn-type-01 small __line py-1 text-size-13 mt-1 popup-link"> 취소요청 </a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- E :  -->
+					</div>
+					<div class="mypage-article">
+						<h2 class="common-title--22 font-weight-medium mb-4">주문자정보</h2>
+						<div class="info-table">
+							<div class="info-table-box">
+								<div class="info-table-box__title">
+									<p class="text-size-15 font-weight-bold text-gray-5">이름</p>
+								</div>
+								<div class="info-table-box__content">
+									<p class="text-size-15 text-gray-5">홍길동</p>
+								</div>
+							</div>
+							<div class="info-table-box">
+								<div class="info-table-box__title">
+									<p class="text-size-15 font-weight-bold text-gray-5">휴대폰</p>
+								</div>
+								<div class="info-table-box__content">
+									<p class="text-size-15 text-gray-5">01012345678</p>
+								</div>
+							</div>
+							<div class="info-table-box">
+								<div class="info-table-box__title">
+									<p class="text-size-15 font-weight-bold text-gray-5">이메일</p>
+								</div>
+								<div class="info-table-box__content">
+									<p class="text-size-15 text-gray-5">abc@naver.com</p>
+								</div>
+							</div>
+							<div class="info-table-box">
+								<div class="info-table-box__title">
+									<p class="text-size-15 font-weight-bold text-gray-5">주소</p>
+								</div>
+								<div class="info-table-box__content">
+									<p class="text-size-15 text-gray-5">주소 노출</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mypage-article">
+						<h2 class="common-title--22 font-weight-medium mb-4">환불계좌정보</h2>
+						<div class="info-table">
+							<div class="info-table-box">
+								<div class="info-table-box__title">
+									<p class="text-size-15 font-weight-bold text-gray-5">예금주</p>
+								</div>
+								<div class="info-table-box__content">
+									<p class="text-size-15 text-gray-5">홍길동</p>
+								</div>
+							</div>
+							<div class="info-table-box">
+								<div class="info-table-box__title">
+									<p class="text-size-15 font-weight-bold text-gray-5">은행</p>
+								</div>
+								<div class="info-table-box__content">
+									<p class="text-size-15 text-gray-5">신한은행</p>
+								</div>
+							</div>
+							<div class="info-table-box">
+								<div class="info-table-box__title">
+									<p class="text-size-15 font-weight-bold text-gray-5">계좌번호</p>
+								</div>
+								<div class="info-table-box__content">
+									<p class="text-size-15 text-gray-5">1234564564859</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mypage-article">
+						<div class="row mx-0 pb-4 border-bottom-line border-color-1 align-items-center">
+							<div class="col-auto px-0">
+								<h2 class="common-title--22 font-weight-medium">제품 옵션 수정</h2>
+							</div>
+							<div class="col px-0 text-right">
+								<a href="#none" class="btn-type-01 small __line py-1 text-size-13"> 수정하기 </a>
+							</div>
+						</div>
+					</div>
+					<div class="mypage-article">
+						<div class="row mx-0 align-items-end justify-content-between mb-3">
+							<div class="col-auto px-0"><h2 class="common-title--22 font-weight-medium">결제정보</h2></div>
+							<div class="col px-0 text-right">
+								<button type="button" href="../pop/cash_receipt.html" class="btn-type-01 text-size-14 py-2 px-3 mr-1 popup-link">현금영수증 변경</button>
+								<button type="button" class="btn-type-01 text-size-14 py-2 px-5" OnClick="print_front(document.getElementById('printArea').innerHTML)">영수증 인쇄</button>
+							</div>
+						</div>
+						<div id="printArea">
+							<div class="payment-info">
+								<div class="payment-info__item">
+									<div class="payment-info__inner">
+										<p class="payment-info__title">총 주문금액</p>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">상품합계</p>
+											<p class="payment-info-result__number"><span class="text-color-1">187,040</span>원</p>
+										</div>
+									</div>
+								</div>
+								<div class="payment-info__item">
+									<div class="payment-info__inner">
+										<p class="payment-info__title">총 할인금액</p>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">쿠폰</p>
+											<p class="payment-info-result__number"><span class="">3,000</span>원</p>
+										</div>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">마일리지</p>
+											<p class="payment-info-result__number text-danger"><span class="text-danger">0</span>P</p>
+										</div>
+									</div>
+								</div>
+								<div class="payment-info__item">
+									<div class="payment-info__inner">
+										<p class="payment-info__title">총 결제금액</p>
+										<div class="payment-info-result">
+											<p class="payment-info-result__title">신용카드</p>
+											<p class="payment-info-result__number">우리카드 <span class="ml-2">186,540</span>원</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="payment-amount">
+								<div class="payment-amount__item">
+									<div class="payment-amount__title-box"><p class="payment-amount__title">총 결제금액</p></div>
+									<div class="payment-amount__price-box">
+										<p class="payment-amount__price payment-amount__price--big"><span class="text-color-1">187,040</span> 원</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="text-center mt-15">
+							<a href="../main/main.html" class="btn-type-01 px-15 py-3 text-size-18">메인으로</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

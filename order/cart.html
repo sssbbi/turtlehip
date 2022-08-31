@@ -1,0 +1,239 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 'cart';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<!-- <div class="title-icon text-center mb-3">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div> -->
+					<h1 class="sub-main__title"><?=${nav_.$P_dp1}?></h1>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container container--1160">
+					<div class="cart-situation">
+						<p class="cart-quantity">Cart<span class="cart-quantity-number">(0)</span></p>
+						<ul class="cart-process">
+							<li class="cart-process__item on">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--cart"></div>
+									<p class="cart-process__text">Cart</p>
+								</div>
+							</li>
+							<li class="cart-process__item">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--payment"></div>
+									<p class="cart-process__text">Payment</p>
+								</div>
+							</li>
+							<li class="cart-process__item">
+								<div class="cart-process__inner">
+									<div class="cart-process__icon cart-process__icon--order-competed"></div>
+									<p class="cart-process__text">Order Complete</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<table class="cart-table">
+						<form name="listform" method="post" action="?" id="listform"></form>
+						<input type="hidden" name="buytype" />
+
+						<colgroup>
+							<col width="55px" />
+							<col width="*" />
+							<col width="15%" />
+							<col width="13%" />
+							<col width="13%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>
+									<input type="checkbox" name="chklist[]" id="goods_id" value="4470" class="goods_id" checked="" onclick="cart_basket_check(1)" />
+									<label for="goods_id"></label>
+								</th>
+								<th>상품정보</th>
+								<th>수량</th>
+								<th>주문금액</th>
+								<th>배송구분</th>
+							</tr>
+						</thead>
+						<tbody>
+							<input type="hidden" name="totalprice_1" id="totalprice_1" value="53500" /><!--  금액 -->
+							<input type="hidden" name="buyprice_1" id="buyprice_1" value="53500" /><!--  단가 -->
+							<input type="hidden" name="cart_uid_1" id="cart_uid_1" value="4470" /><!--  장바구니 번호 -->
+							<input type="hidden" name="point_per_1" id="point_per_1" value="0" /><!--  상품 적립률 -->
+
+							<tr>
+								<td class="cart-table-td__check">
+									<input type="checkbox" name="chklist[]" id="goods_id_1" value="4470" class="goods_id" checked="" onclick="cart_basket_check(1)" />
+									<label for="goods_id_1"></label>
+								</td>
+								<td class="cart-table-td__info" data-title="상품정보">
+									<div class="cart-product">
+										<div class="cart-product-img">
+											<a href="#none" class="cart-product-img__src">
+												<img src="../images/board/no_img.jpg" alt="제품" />
+												<div class="cart-product-img__overlay">Sold Out</div>
+											</a>
+										</div>
+										<div class="cart-product-info">
+											<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">[전국] 해피플라워 케이크</p></a>
+											<p class="cart-product-info__date">택배 : <span class="font-weight-bold">2022-01-27 </span></p>
+											<a href="../pop/cart_option_view.html?cart_uid=4470" class="cart-product-info__option popup-link">옵션상세보기</a>
+										</div>
+									</div>
+								</td>
+								<td class="cart-table-td__number" data-title="수량">
+									<div class="cart-product-quantity">
+										<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+										<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+											<i class="xi-minus"></i>
+										</button>
+										<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+										<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+											<i class="xi-plus"></i>
+										</button>
+									</div>
+								</td>
+								<td class="cart-table-td__number" data-title="주문금액">
+									<p class=""><span class="cart-jumun-price">53,500</span>원</p>
+								</td>
+								<td class="cart-table-td__number" data-title="배송구분">
+									<p class="underline opacity-7">택배 <br />2022-01-27</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="cart-table-td__check">
+									<input type="checkbox" name="chklist[]" id="goods_id_1" value="4470" class="goods_id" checked="" onclick="cart_basket_check(1)" />
+									<label for="goods_id_1"></label>
+								</td>
+								<td class="cart-table-td__info" data-title="상품정보">
+									<div class="cart-product">
+										<div class="cart-product-img">
+											<a href="#none" class="cart-product-img__src">
+												<img src="../images/board/no_img.jpg" alt="제품" />
+												<div class="cart-product-img__overlay">Sold Out</div>
+											</a>
+										</div>
+										<div class="cart-product-info">
+											<a href="#none" class="d-block border-bottom mb-4"><p class="cart-product-info__title">[전국] 해피플라워 케이크</p></a>
+											<p class="cart-product-info__date">택배 : <span class="font-weight-bold">2022-01-27 </span></p>
+											<a href="../pop/cart_option_view.html?cart_uid=4470" class="cart-product-info__option popup-link">옵션상세보기</a>
+										</div>
+									</div>
+								</td>
+								<td class="cart-table-td__number" data-title="수량">
+									<div class="cart-product-quantity">
+										<!-- 알토디자인 제품 수량 조절 하는 거랑 동일한 클래스 넣어놨습니다. -->
+										<button type="button" class="cart-product-quantity__minus vol_btn down" onclick="opt_change(-1,1);">
+											<i class="xi-minus"></i>
+										</button>
+										<input type="text" class="cart-product-quantity__number vol_inp" name="opt_cnt1" value="1" readonly="" />
+										<button type="button" class="cart-product-quantity__plus vol_btn up" onclick="opt_change(1,1);">
+											<i class="xi-plus"></i>
+										</button>
+									</div>
+								</td>
+								<td class="cart-table-td__number" data-title="주문금액">
+									<p class=""><span class="cart-jumun-price">53,500</span>원</p>
+								</td>
+								<td class="cart-table-td__number" data-title="배송구분">
+									<p class="underline opacity-7">택배 <br />2022-01-27</p>
+								</td>
+							</tr>
+
+							<tr class="no--list">
+								<td colspan="5">
+									<span>
+										<div class="no-content no-border">
+											<div class="no-content-in">
+												<div class="no-i">
+													<i class="xi-cog"></i>
+												</div>
+												<p class="no-tt">장바구니가 비어 있습니다.</p>
+											</div>
+										</div>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+
+						<input type="hidden" name="total_price" id="total_price" value="53500" />
+						<input type="hidden" name="deliveryprice" id="deliveryprice" value="0" /><!-- 부과 배송비 -->
+						<input type="hidden" name="delivery_info_money" id="delivery_info_money" value="" /><!-- 기준금액 -->
+						<input type="hidden" name="deliverymoney" id="deliverymoney" value="" /><!-- 세팅 배송비 -->
+					</table>
+
+					<div class="cart-btn__wrap">
+						<div class="cart-btn__box">
+							<button type="button" class="btn-type-01" onclick="bask_check_del()">선택 삭제</button>
+							<button type="button" class="btn-type-01" onclick="bask_pumjeol_del()">품절상품 삭제</button>
+						</div>
+					</div>
+
+					<div class="cart-sum border-top-line border-color-1">
+						<div class="cart-sum-list">
+							<!--
+              <div class="cart-sum-list__item">
+                <div class="cart-sum-list__inner">
+                  <p class="cart-sum-list__price"><span class="">187,040</span> 원</p>
+                  <p class="cart-sum-list__text">총 주문금액</p>
+                </div>
+              </div>
+              <div class="cart-sum-list__item cart-sum-list__item--equation">
+                <span class="equation bg-light"></span>
+              </div>
+              <div class="cart-sum-list__item">
+                <div class="cart-sum-list__inner">
+                  <p class="cart-sum-list__price"><span class="">187,040</span> 원</p>
+                  <p class="cart-sum-list__text">총 주문금액</p>
+                </div>
+              </div>
+              <div class="cart-sum-list__item cart-sum-list__item--equation">
+                <span class="equation bg-color-1"></span>
+                <span class="equation bg-color-1"></span>
+              </div>
+			  			-->
+							<div class="cart-sum-list__item">
+								<div class="cart-sum-list__inner">
+									<p class="cart-sum-list__price"><span class="font-weight-bold text-color-1 total-price">0</span> 원</p>
+									<p class="cart-sum-list__text">총 주문금액</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center mx-n1 mt-15 mt-lg-22 btn-multiple">
+						<div class="col-auto px-1">
+							<a href="../cake/list.html" class="btn-type-01 __line py-4 px-3 px-sm-8">쇼핑하러가기</a>
+						</div>
+						<div class="col-auto px-1">
+							<a href="javascript:bask_check_order()" class="btn-type-01 py-4 px-3 px-sm-8">선택상품주문</a>
+						</div>
+						<div class="col-auto px-1">
+							<a href="order.html" class="btn-type-01 py-4 px-7 px-sm-13">전체주문</a>
+							<!-- <a href="javascript:bask_all_order()" class="btn-type-01 py-4 px-7 px-sm-13"">전체주문</a> -->
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

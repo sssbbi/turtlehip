@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+.tab {
+	&--box {
+		> .tab-header {
+			word-break: keep-all;
+			text-align: center;
+			display: flex;
+			line-height: 1.3;
+			letter-spacing: letterSpacing(-30);
+			margin: 0 rem(-5);
+
+			.tab-item {
+				flex: 1 1 auto;
+				max-width: rem(340);
+				padding: 0 rem(5);
+
+				.link {
+					padding: 0 0.5em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					align-content: center;
+					min-height: rem(70);
+					background-color: #fff;
+					border: 1px solid #ccc;
+					font-size: em(20);
+					color: #555;
+					height: 100%;
+					cursor: pointer;
+
+					&:not(.on) {
+						&:hover {
+							color: $color-1;
+						}
+					}
+
+					&.on {
+						color: #fff;
+						background-color: $color-1;
+						font-weight: 500;
+					}
+				}
+
+				@include mdq-max(lg) {
+					.link {
+						min-height: rem(60);
+						font-size: em(18);
+						padding: 0 0.2em;
+					}
+				}
+			}
+		}
+	}
+
+	&--border {
+		> .tab-header {
+			display: flex;
+			text-align: center;
+			align-items: center;
+			border-bottom: 1px solid #ddd;
+			line-height: 1.3;
+
+			.tab-item {
+				.link {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					height: rem(42);
+					font-size: em(18);
+					padding: 0 1.5em;
+					color: #222;
+					background-color: #f9f9f9;
+					border-bottom: 0;
+					border-left: 0;
+					border: 1px solid #f9f9f9;
+					border-bottom: 0;
+					cursor: pointer;
+
+					&.on {
+						border-color: #ddd;
+						background-color: #fff;
+						color: $color-1;
+					}
+				}
+			}
+		}
+	}
+
+	&--find {
+		max-width: 500px;
+		margin: 0 auto;
+
+		> .tab-header {
+			word-break: keep-all;
+			text-align: center;
+			display: flex;
+			line-height: 1.3;
+			letter-spacing: letterSpacing(-30);
+			margin: 0 rem(-5);
+
+			.tab-item {
+				flex: 1 1 auto;
+				max-width: rem(340);
+				padding: 0 rem(5);
+
+				.link {
+					padding: 0 0.5em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					align-content: center;
+					min-height: rem(70);
+					background-color: #fff;
+					border: 1px solid #ccc;
+					font-size: em(20);
+					color: #555;
+					height: 100%;
+					cursor: pointer;
+
+					&:not(.on) {
+						&:hover {
+							color: $color-1;
+						}
+					}
+
+					&.on {
+						color: #fff;
+						background-color: $color-1;
+						font-weight: 500;
+					}
+				}
+
+				@include mdq-max(lg) {
+					.link {
+						min-height: rem(60);
+						font-size: em(18);
+						padding: 0 0.2em;
+					}
+				}
+			}
+		}
+
+		> .tab-body {
+			padding: 10px 0;
+		}
+	}
+
+	&--product {
+		.tab-header {
+			display: flex;
+			flex-wrap: wrap;
+			.tab-item {
+				flex: 1;
+				> .link {
+					height: rem(50);
+					font-weight: 500;
+					padding: 0 5px;
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-bottom: 1px solid $color-1;
+					color: $color-1;
+					position: relative;
+					cursor: pointer;
+					line-height: 1.2;
+					&::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						width: 0;
+						bottom: -2px;
+						height: 3px;
+						background: $color-1;
+						border-radius: 3px;
+						transition: width 0.3s;
+					}
+					&.on::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.tab-content {
+			&__inner {
+				padding: em(40) 0;
+			}
+		}
+
+		&.fix {
+			.tab-header {
+				background: #fff;
+				position: fixed;
+				top: $header-height;
+				width: calc(#{percentage(612/1160)} - 20px);
+				max-width: 612px;
+				z-index: 99;
+
+				@include mdq-max(lg) {
+					top: $nav-height-lg;
+					width: auto;
+					left: 0;
+					width: 100%;
+					max-width: none;
+				}
+			}
+		}
+
+		@include mdq-max(lg) {
+			.tab-header {
+				border-top: 1px solid $color-1;
+			}
+		}
+	}
+
+	&--nav {
+		.tab-header {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+			margin: 0 rem(-10);
+			.tab-item {
+				padding: 0 rem(10);
+				> .link {
+					width: rem(160);
+					border-radius: rem(50);
+					height: rem(50);
+					border: 1px solid $color-1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					line-height: 1.2;
+					color: $color-1;
+					font-size: 15px;
+					font-weight: 500;
+					&.on {
+						color: $white;
+						background-color: $color-1;
+					}
+				}
+			}
+
+			@include mdq-max(sm) {
+				margin: 0 rem(-5);
+				.tab-item {
+					padding: 0 rem(5);
+					flex: 1 0 33.33%;
+					max-width: 33.33%;
+					> .link {
+						width: 100%;
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+///*QNA*/
+.qna {
+	border-top: 1px solid $color-1;
+	background: #fff;
+	text-align: left;
+
+	.qna-header {
+		padding: 15px 10px;
+		position: relative;
+		border-bottom: solid 1px #ddd;
+		cursor: pointer;
+
+		&.select {
+			color: $color-1;
+			&::after {
+				content: '\e944';
+			}
+		}
+		&:hover {
+			color: $color-1;
+		}
+
+		&::before {
+			content: 'Q.';
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			font-size: 20px;
+			transform: translateY(-50%);
+			font-weight: 500;
+		}
+		&::after {
+			content: '\e941';
+			font-family: 'xeicon' !important;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		a {
+			display: block;
+			padding-left: 40px;
+			padding-right: 30px;
+			text-decoration: none;
+			font-weight: 400;
+		}
+	}
+
+	.qna-body {
+		display: none;
+		padding: 20px 20px 20px 50px;
+		font-weight: 400;
+		border-bottom: solid 1px #ddd;
+		position: relative;
+		background: #fff;
+
+		&:before {
+			content: 'A.';
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			font-size: 20px;
+			font-weight: 500;
+			color: $color-1;
+		}
+	}
+
+	@include mdq-max(md) {
+		.qna-header {
+			&::before {
+				font-size: 16px;
+				left: 10px;
+			}
+			&::after {
+				right: 10px;
+			}
+			a {
+				padding-left: 25px;
+			}
+		}
+		.qna-body {
+			padding: 15px 15px 15px 35px;
+			&::before {
+				font-size: 16px;
+				top: 15px;
+				left: 10px;
+			}
+		}
+	}
+
+	&_tab {
+		margin-bottom: 30px;
+
+		ul {
+			text-align: center;
+
+			li {
+				float: left;
+
+				a {
+					display: block;
+					position: relative;
+					height: 45px;
+					line-height: 45px;
+					text-align: center;
+					font-size: 16px;
+					color: #666;
+					border: 1px solid #ddd;
+					background: #fff;
+					margin-left: -1px;
+					margin-top: -1px;
+
+					&.on,
+					&:hover {
+						color: #fff;
+						border-color: $color-1;
+						background: $color-1;
+					}
+				}
+			}
+		}
+
+		@include mdq-max(lg) {
+			margin-bottom: 20px;
+
+			ul {
+				li {
+					a {
+						height: 35px;
+						font-size: 13px;
+						line-height: 35px;
+						letter-spacing: -0.8px;
+						box-sizing: border-box;
+					}
+				}
+			}
+		}
+	}
+}

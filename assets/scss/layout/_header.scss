@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+$header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
+
+.header {
+	@if ($header-fix == true) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		@at-root html {
+			scroll-padding-top: $header-height + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
+		}
+	}
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	background-color: $color-1;
+	height: $header-height;
+	width: 100%;
+	z-index: 500;
+
+	.header-wrap {
+		height: $nav-height;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+
+		.logo {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			img {
+				width: rem(200);
+			}
+		}
+
+		.util {
+			font-size: 13px;
+			color: $white;
+			display: flex;
+			align-items: center;
+			position: absolute;
+			right: rem(310);
+			top: 50%;
+			transform: translateY(-50%);
+			.cart {
+				font-size: 20px;
+				position: relative;
+				&__count {
+					display: block;
+					font-size: 10px;
+					width: 13px;
+					height: 13px;
+					line-height: 13px;
+					text-align: center;
+					background: $white;
+					color: $color-1;
+					border-radius: 50%;
+					position: absolute;
+					right: -12px;
+					top: 0;
+				}
+			}
+		}
+
+		.search-box {
+			width: rem(250);
+			position: relative;
+			input {
+				height: 30px;
+			}
+			&__input {
+				border: 0;
+				border-bottom: 1px solid $white;
+				background: transparent;
+				text-align: center;
+				padding: 0 30px;
+				font-size: 12px;
+				color: $white;
+				&::placeholder {
+					color: rgba($white, 0.7);
+				}
+				&:-moz-placeholder {
+					color: rgba($white, 0.7);
+				}
+				&:-ms-input-placeholder {
+					color: rgba($white, 0.7);
+				}
+			}
+			&__btn {
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				border: 0;
+				width: 30px;
+				background: url(../images/icon/search_icon.svg) no-repeat left center;
+				background-size: 13px;
+			}
+		}
+		.search-mobile__btn {
+			display: none;
+			.bi {
+				display: none;
+				font-size: rem(20);
+				color: $white;
+			}
+			&.active {
+				img {
+					display: none;
+				}
+				.bi {
+					display: block;
+				}
+			}
+		}
+	}
+	@include mdq-max(xxl) {
+		.header-wrap {
+			.logo img {
+				width: rem(160);
+			}
+			.search-box {
+				display: none;
+				position: absolute;
+				top: 100%;
+				right: 0;
+				width: 100%;
+				max-width: 400px;
+				background: rgba($color-1, 0.9);
+				padding: rem(15) 20px;
+				&__btn {
+					bottom: auto;
+					top: 50%;
+					left: 20px;
+					transform: translateY(-50%);
+				}
+			}
+			.search-mobile__btn {
+				display: block;
+				img {
+					width: rem(20);
+					display: block;
+				}
+			}
+			.util {
+				right: rem(60);
+			}
+		}
+	}
+	@include mdq-max(lg) {
+		height: $nav-height-lg;
+
+		@at-root html {
+			scroll-padding-top: $nav-height-lg + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
+		}
+
+		.header-wrap {
+			height: $nav-height-lg;
+			.logo {
+				position: static;
+				top: auto;
+				left: auto;
+				transform: none;
+			}
+			.util {
+				display: none;
+			}
+			.search-mobile__btn {
+				margin-right: rem(43);
+			}
+			.search-box {
+				max-width: none;
+			}
+		}
+	}
+}
+
+.main-body,
+.sub-body {
+	@if ($header-fix == true) {
+		padding-top: $header-height;
+		@include mdq-max(lg) {
+			padding-top: $nav-height-lg;
+		}
+	}
+}
+
+.sub-body {
+	.header {
+		background-color: $white;
+		border-bottom: 1px solid rgba($color-1, 0.1);
+		.header-wrap {
+			max-width: 1680px + $container-gutter-width;
+			.util {
+				color: $color-1;
+				.cart {
+					&__count {
+						background: $color-1;
+						color: $white;
+					}
+				}
+			}
+			@include mdq-min(xxl) {
+				.search-box {
+					&__btn {
+						background-image: url(../images/icon/search_icon_color.svg);
+					}
+					&__input {
+						border-color: $color-1;
+						color: $color-1;
+						&::placeholder {
+							color: rgba($color-1, 0.7);
+						}
+						&:-moz-placeholder {
+							color: rgba($color-1, 0.7);
+						}
+						&:-ms-input-placeholder {
+							color: rgba($color-1, 0.7);
+						}
+					}
+				}
+			}
+		}
+	}
+}

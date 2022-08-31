@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+.container {
+	&.container--1680 {
+		max-width: 1680px + $container-gutter-width;
+	}
+	&.container--1160 {
+		max-width: 1160px + $container-gutter-width;
+	}
+}
+
+.sub-main {
+	padding-top: em(100);
+	padding-bottom: em(120);
+	min-height: em(400);
+	&__title {
+		text-align: center;
+		font-family: $font-family-sub;
+		font-size: em(32);
+		font-weight: 400;
+		color: $color-1;
+		letter-spacing: letterSpacing(-20);
+	}
+
+	@include mdq-max(lg) {
+		padding-top: em(70);
+	}
+	@include mdq-max(sm) {
+		padding-top: em(50);
+		min-height: em(250);
+	}
+}
+
+.title-icon {
+	img {
+		width: em(56);
+	}
+}
+
+.underline {
+	// text-decoration: underline !important;
+	// text-underline-position: under !important;
+	display: inline-block;
+	background: url(../images/sub/underline.png) repeat-x 0 100%;
+	padding-bottom: 3px;
+	color: #54514c !important;
+	&-thin {
+		text-decoration: underline !important;
+		text-underline-position: under !important;
+	}
+}
+
+.opacity {
+	$var: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+	@each $var in $var {
+		&-#{$var} {
+			opacity: ($var/10);
+		}
+	}
+}
+
+.border {
+	$var: normal, top, left, right, bottom;
+	@each $var in $var {
+		@if ($var == 'normal') {
+			&-line {
+				border: 1px solid;
+				&-2 {
+					border: 2px solid;
+				}
+			}
+		} @else {
+			&-#{$var} {
+				&-line {
+					border-#{$var}: 1px solid;
+					&-2 {
+						border-#{$var}: 2px solid;
+					}
+				}
+			}
+		}
+	}
+}
+
+.linecanvasWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999999;
+	pointer-events: none;
+
+	#linecanvas {
+		width: 100%;
+		height: 100%;
+	}
+
+	@include mdq-max(lg) {
+		display: none;
+	}
+}

@@ -1,0 +1,308 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+			$P_dp1 = 'mypage';
+			$P_dp2 = '4';
+			$P_dp3 = '2';
+      include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4"><?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?></h2>
+								<table class="normal-table normal-table__type-2 mb-6 no-data">
+									<tbody>
+										<tr>
+											<th>
+												<p class="text-size-16 font-weight-medium">현재 마일리지</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">사용한 마일리지</p>
+											</th>
+											<th>
+												<p class="text-size-16 font-weight-medium">소멸예정 마일리지</p>
+											</th>
+										</tr>
+										<tr>
+											<td>
+												<p class="text-size-15 font-weight-black">3500P</p>
+											</td>
+											<td>
+												<p class="text-size-15 font-weight-black">3500P</p>
+											</td>
+											<td>
+												<p class="text-size-15 font-weight-black">3500P</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="text-size-14 text-color-1 font-weight-medium">* 마일리지는 상품 구매 후 이벤트에 따라 적립됩니다.</p>
+								<p class="text-size-14 text-color-1 font-weight-medium mt-1">* 500P이상 적립되신 시점부터 결제수단으로 사용 가능하며, 10P단위로 사용 가능합니다. (10P=10원)</p>
+								<p class="text-size-14 text-color-1 font-weight-medium mt-1">* 적립된 마일리지의 사용기한은 적립일로부터 3년입니다.</p>
+							</div>
+							<div class="mypage-article">
+								<!-- S : 탭 -->
+
+								<div class="mileage__wrap" data-tab="true" data-tab-order="0" data-tab-active="on" data-tab-index="0" data-css="true">
+									<ul class="mileage-tab-list" data-tab-header="">
+										<li class="mileage-tab-list__item" data-tab-item="0">
+											<button type="button" class="mileage-tab-list__btn">적립</button>
+										</li>
+										<li class="mileage-tab-list__item" data-tab-item="1">
+											<button type="button" class="mileage-tab-list__btn">사용</button>
+										</li>
+									</ul>
+									<!-- S : 검색 -->
+									<div class="data-find__wrap">
+										<div class="data-find">
+											<div class="data-find__date">
+												<div class="calendar-list">
+													<div class="calendar-list__input">
+														<input type="text" readonly="" class="datepicker" />
+													</div>
+													<div class="calendar-list__text">~</div>
+													<div class="calendar-list__input">
+														<input type="text" readonly="" class="datepicker" />
+													</div>
+												</div>
+											</div>
+											<div class="data-find__category">
+												<div class="data-find__category--item">
+													<a href="#none" class="data-find__category--btn on">최근 1주일</a>
+												</div>
+												<div class="data-find__category--item">
+													<a href="#none" class="data-find__category--btn">최근 1개월</a>
+												</div>
+												<div class="data-find__category--item">
+													<a href="#none" class="data-find__category--btn">최근 3개월</a>
+												</div>
+												<div class="data-find__category--item">
+													<a href="#none" class="data-find__category--btn">최근 6개월</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- E : 검색 -->
+									<div data-tab-body="">
+										<div class="mileage-content" data-tab-content="">
+											<div class="row-scrollwrap" data-show="700">
+												<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+												<div class="row-scrollwrap__scroll">
+													<div class="row-scrollwrap__content">
+														<!-- S : 테이블 -->
+														<table class="normal-table">
+															<colgroup>
+																<col width="15%" />
+																<col width="20%" />
+																<col width="*" />
+																<col width="15%" />
+																<col width="12%" />
+															</colgroup>
+															<thead>
+																<tr>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">일자</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">적용내용</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">주문번호</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">구매금액</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">적립</p>
+																	</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td data-title="일자">
+																		<p class="text-size-14 font-weight-bold">2020.12.25</p>
+																	</td>
+																	<td data-title="적용내용">
+																		<p class="text-size-16">상품구매</p>
+																	</td>
+																	<td data-title="주문번호">
+																		<p class="text-size-14 font-weight-bold">AA201912121234588</p>
+																	</td>
+																	<td data-title="구매금액">
+																		<p class="text-size-14 font-weight-bold">100,000</p>
+																	</td>
+																	<td data-title="적립">
+																		<p class="text-size-14 font-weight-bold">1,000P</p>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<!-- E : 테이블 -->
+													</div>
+												</div>
+											</div>
+
+											<!-- S : 페이징 -->
+											<div class="paging-area">
+												<ul>
+													<li>
+														<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="prev"><span>이전으로</span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="active">1<span></span></a>
+													</li>
+													<li>
+														<a href="javascript:;">2<span></span></a>
+													</li>
+													<li>
+														<a href="javascript:;">3<span></span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="next"><span>다음으로</span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+													</li>
+												</ul>
+											</div>
+											<!-- E : 페이징 -->
+										</div>
+										<div class="mileage-content" data-tab-content="">
+											<div class="row-scrollwrap" data-show="700">
+												<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+												<div class="row-scrollwrap__scroll">
+													<div class="row-scrollwrap__content">
+														<!-- S : 테이블 -->
+														<table class="normal-table">
+															<colgroup>
+																<col width="15%" />
+																<col width="20%" />
+																<col width="*" />
+																<col width="15%" />
+																<col width="12%" />
+															</colgroup>
+															<thead>
+																<tr>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">일자</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">적용내용</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">주문번호</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">구매금액</p>
+																	</th>
+																	<th>
+																		<p class="text-size-16 font-weight-medium">사용</p>
+																	</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td data-title="일자">
+																		<p class="text-size-14 font-weight-bold">2020.12.25</p>
+																	</td>
+																	<td data-title="적용내용">
+																		<p class="text-size-16">상품구매</p>
+																	</td>
+																	<td data-title="주문번호">
+																		<p class="text-size-14 font-weight-bold">AA201912121234588</p>
+																	</td>
+																	<td data-title="구매금액">
+																		<p class="text-size-14 font-weight-bold">100,000</p>
+																	</td>
+																	<td data-title="사용">
+																		<p class="text-size-14 font-weight-bold text-danger">-3,000P</p>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<!-- E : 테이블 -->
+													</div>
+												</div>
+											</div>
+
+											<!-- S : 페이징 -->
+											<div class="paging-area">
+												<ul>
+													<li>
+														<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="prev"><span>이전으로</span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="active">1<span></span></a>
+													</li>
+													<li>
+														<a href="javascript:;">2<span></span></a>
+													</li>
+													<li>
+														<a href="javascript:;">3<span></span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="next"><span>다음으로</span></a>
+													</li>
+													<li>
+														<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+													</li>
+												</ul>
+											</div>
+											<!-- E : 페이징 -->
+										</div>
+									</div>
+								</div>
+								<!-- E : 탭 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script>
+			$(function () {
+				$('.datepicker').datepicker({
+					dateFormat: 'yy-mm-dd',
+				});
+			});
+		</script>
+	</body>
+</html>

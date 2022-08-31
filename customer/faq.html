@@ -1,0 +1,144 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+		$P_dp2 = '2';
+    include "../include/meta.html" 
+    ?>
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<div class="title-icon text-center mb-3">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div>
+					<h1 class="sub-main__title"><?=${nav_.$P_dp1}?></h1>
+				</div>
+			</section>
+
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<? include "customer-nav.html" ?>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container container--1160">
+					<div class="qna type_a">
+						<ul>
+							<li>
+								<div class="qna-header">
+									<a href="javascript:;" class="">제목이 노출됩니다.</a>
+								</div>
+								<div class="qna-body">
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출
+								</div>
+							</li>
+							<li>
+								<div class="qna-header">
+									<a href="javascript:;" class="">제목이 노출됩니다.</a>
+								</div>
+								<div class="qna-body">
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출
+								</div>
+							</li>
+							<li>
+								<div class="qna-header">
+									<a href="javascript:;" class="">제목이 노출됩니다.</a>
+								</div>
+								<div class="qna-body">
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출
+								</div>
+							</li>
+							<li>
+								<div class="qna-header">
+									<a href="javascript:;" class="">제목이 노출됩니다.</a>
+								</div>
+								<div class="qna-body">
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출
+								</div>
+							</li>
+							<li>
+								<div class="qna-header">
+									<a href="javascript:;" class="">제목이 노출됩니다.</a>
+								</div>
+								<div class="qna-body">
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출<br />
+									답변내용 노출
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="paging-area">
+						<ul>
+							<li>
+								<a href="" class="prev-first" alt="첫 페이지로 이동">
+									<span>맨앞으로</span>
+								</a>
+							</li>
+							<li>
+								<a href="" class="active">1</a>
+							</li>
+							<li>
+								<a href="" class="">2</a>
+							</li>
+							<li>
+								<a href="" class="">3</a>
+							</li>
+							<li>
+								<a href="" class="">4</a>
+							</li>
+							<li>
+								<a href="" class="">5</a>
+							</li>
+							<li>
+								<a href="" class="next-last" alt="마지막 페이지로 이동">
+									<span>맨뒤로</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-search-01">
+						<form method="POST" action="?" id="searchForm">
+							<fieldset>
+								<legend class="hidden">검색</legend>
+								<select name="find_field" title="search" class="select-type-01">
+									<option value="title">제목</option>
+									<option value="content">내용</option>
+								</select>
+								<input type="text" title="검색어" name="find_word" value="" class="input-type-01" />
+								<input type="hidden" name="language" value="KOR" />
+								<input type="submit" value="검색" class="btn btn-color-01" />
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

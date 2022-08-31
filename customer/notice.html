@@ -1,0 +1,112 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+		$P_dp2 = '1';
+    include "../include/meta.html" 
+    ?>
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<div class="title-icon text-center mb-3">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div>
+					<h1 class="sub-main__title"><?=${nav_.$P_dp1}?></h1>
+				</div>
+			</section>
+
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<? include "customer-nav.html" ?>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container container--1160">
+					<table class="table_board_for type_a">
+						<caption>
+							<span class="hidden">일반 게시판 입니다.</span>
+						</caption>
+						<colgroup>
+							<col width="8%" />
+							<col width="*" />
+							<col width="12%;" />
+							<col width="15%;" />
+						</colgroup>
+
+						<thead>
+							<tr>
+								<th scope="col">NO</th>
+								<th scope="col">제목</th>
+								<th scope="col">작성자</th>
+								<th scope="col">작성일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="no_data" colspan="4">등록된 게시물이 없습니다.</td>
+							</tr>
+
+							<tr class="">
+								<td>2</td>
+								<td class="text_left"><a href="notice-view.html">고객센터 안내</a></td>
+								<td>터틀힙</td>
+								<td>2021.04.27</td>
+							</tr>
+
+							<tr class="">
+								<td>1</td>
+								<td class="text_left"><a href="notice-view.html">터틀힙 공식 홈페이지 리뉴얼 오픈, 마일리지 게시</a></td>
+								<td>터틀힙</td>
+								<td>2021.04.27</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="paging-area">
+						<ul>
+							<li>
+								<a href="" class="prev-first" alt="첫 페이지로 이동">
+									<span>맨앞으로</span>
+								</a>
+							</li>
+							<li>
+								<a href="" class="active">1</a>
+							</li>
+							<li>
+								<a href="" class="next-last" alt="마지막 페이지로 이동">
+									<span>맨뒤로</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-search-01">
+						<form method="POST" action="?" id="searchForm">
+							<fieldset>
+								<legend class="hidden">검색</legend>
+								<select name="find_field" title="search" class="select-type-01">
+									<option value="title">제목</option>
+									<option value="content">내용</option>
+								</select>
+								<input type="text" title="검색어" name="find_word" value="" class="input-type-01" />
+								<input type="hidden" name="language" value="KOR" />
+								<input type="submit" value="검색" class="btn btn-color-01" />
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

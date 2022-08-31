@@ -1,0 +1,63 @@
+<div class="popup b2b-gallery">
+	<div class="popup-body">
+		<div class="b2b-slider">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="b2b-slider-thumbs">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+					<div class="swiper-slide">
+						<img src="../images/board/no_img.jpg" alt="이미지" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var b2bThumbsSwiper = new Swiper('.b2b-slider-thumbs .swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 6,
+		freeMode: true,
+		watchSlidesProgress: true,
+		speed: 700,
+		breakpoints: {
+			577: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+		},
+	});
+	var b2bSwiper = new Swiper('.b2b-slider .swiper-container', {
+		slidesPerView: 1,
+		speed: 700,
+		thumbs: {
+			swiper: b2bThumbsSwiper,
+		},
+	});
+</script>

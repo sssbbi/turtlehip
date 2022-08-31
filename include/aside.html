@@ -1,0 +1,41 @@
+<div class="nav-mobile__bg"></div>
+
+<aside class="nav-mobile">
+	<div class="nav-mobile__head">
+		<div class="nav-mobile__logo">
+			<img src="../assets/images/main/logo.svg" alt="<?=$SS[sitename]?>" />
+		</div>
+
+		<a href="../order/cart.html" class="cart" title="장바구니">
+			<i class="bi bi-cart2"></i>
+			<!-- S : 장바구니에 담긴 상품이 있을때만 노출 -->
+			<span class="cart__count">3</span>
+			<!-- E : 장바구니에 담긴 상품이 있을때만 노출 -->
+		</a>
+		<button class="nav-mobile__btn" type="button">
+			<i class="bi bi-x-lg"></i>
+		</button>
+	</div>
+	<div class="nav-mobile__util">
+		<ul class="util">
+			<li class="mx-3">
+				<a href="../member/login.html" class="link">로그인</a>
+			</li>
+			<li class="mx-3">
+				<a href="../member/join.html" class="link">회원가입</a>
+			</li>
+			<!-- <li class="mx-3">
+				<a href="" class="link">로그아웃</a>
+			</li>
+			<li class="mx-3">
+				<a href="../mypage/" class="link">마이페이지</a>
+			</li> -->
+			<li class="mx-3">
+				<a href="" class="link">고객센터</a>
+			</li>
+		</ul>
+	</div>
+	<div class="nav-mobile__body">
+		<? include "../include/nav.html" ?>
+	</div>
+</aside>

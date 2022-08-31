@@ -1,0 +1,88 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+		$P_dp2 = '3';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/customer.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<div class="title-icon text-center mb-3">
+						<img src="../assets/images/sub/title_icon.png" alt="candy" />
+					</div>
+					<h1 class="sub-main__title"><?=${nav_.$P_dp1}?></h1>
+				</div>
+			</section>
+
+			<section class="section mb-15">
+				<div class="container container--1160">
+					<? include "customer-nav.html" ?>
+				</div>
+			</section>
+
+			<section class="section text-center">
+				<div class="container container--1160">
+					<img src="../assets/images/customer/store_img.jpg" alt="터틀힙" />
+
+					<p class="common-text font-weight-medium text-color-1 mt-10 mt-md-18 mb-4">터틀힙</p>
+					<p class="common-text--sm mb-1">
+						<?=$P_addr1?>
+					</p>
+					<p class="common-text--sm mb-5">
+						<?=$SS[sitetel]?>
+					</p>
+
+					<p class="common-text--sm mb-1"><span class="toggle-click">영업 시간</span></p>
+					<div class="toggle-click-content">
+						<p class="common-text--sm">매일 12:00 - 20:00</p>
+					</div>
+
+					<div class="map-box mt-12 mt-md-20">
+						<div class="row mx-n1 mx-sm-n3 mb-7">
+							<div class="col-4 px-1 px-sm-3">
+								<a href="http://naver.me/GjRZK4Af" target="_blank" class="map-button map-button--naver">네이버맵</a>
+							</div>
+							<div class="col-4 px-1 px-sm-3">
+								<a href="https://goo.gl/maps/KSrmkdr3qpWbjdQj6" target="_blank" class="map-button map-button--google">구글맵</a>
+							</div>
+							<div class="col-4 px-1 px-sm-3">
+								<a href="http://kko.to/QJ4vmX0sk" target="_blank" class="map-button map-button--kakao">카카오맵</a>
+							</div>
+						</div>
+
+						<div class="mb-7">
+							<img src="../assets/images/customer/map_img.jpg" alt="지도" />
+						</div>
+
+						<p class="common-text--sm text-color-1 font-weight-medium mb-3">도보 추천경로</p>
+						<div class="common-text--sm">
+							2호선 홍대입구역 ⑧번출구<br />
+							→ 우측골목 진입 <br />
+							→ KT대리점과 오렌즈비전센터 사이 골목으로 직진 50m<br />
+							→ 마포어린이집 맞은 편 개미집 건물 2F
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+
+		<script>
+			$('.toggle-click').on('click', function () {
+				$(this).toggleClass('on');
+				$(this).parent().next('.toggle-click-content').stop(false, true).slideToggle(200);
+			});
+		</script>
+	</body>
+</html>

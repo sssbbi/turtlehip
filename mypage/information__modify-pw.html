@@ -1,0 +1,69 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+			$P_dp1 = 'mypage';
+			$P_dp2 = '6';
+			$P_dp3 = '1';
+      include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<div class="mypage-article">
+								<h2 class="common-title--22 font-weight-medium mb-4">비밀번호 확인</h2>
+								<p class="text-size-14 text-color-1 font-weight-medium text-line_height-7 mt-3">개인정보 보호를 위해 비밀번호를 다시 한번 입력해주시기 바랍니다.</p>
+								<div class="join-area join-area--border-top2 join-area--border-color1 border-bottom-line mt-3">
+									<div class="join-area__box">
+										<p class="join-area__title">아이디(이메일)</p>
+										<input class="input_for input_30 readonly" type="email" name="uemail" id="uemail" title="이메일" value="abc1234@naver.com" placeholder="" readonly required="" />
+									</div>
+									<div class="join-area__box">
+										<p class="join-area__title">비밀번호</p>
+										<input type="password" class="input_for input_30" name="upasswd" id="upasswd" title="비밀번호" txtlimit="6" maxlength="16" chk="pwcheck" placeholder="비밀번호를 입력해주세요." required="" />
+										<p class="text-size-14 text-danger mt-2">비밀번호를 입력해주세요.</p>
+									</div>
+								</div>
+
+								<!-- S :  -->
+								<a href="../mypage/information__modify.html" class="btn-type-01 py-3 px-15">확인</a>
+								<!-- E :  -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

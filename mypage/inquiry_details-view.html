@@ -1,0 +1,159 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<?
+      include "../include/meta.html";
+			$P_dp1 = 'mypage';
+			$P_dp2 = '5';
+      
+		?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+		<link rel="stylesheet" href="../assets/css/order.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main sub-main" id="contents">
+			<!-- S : Section -->
+			<section class="section">
+				<!-- S :  -->
+				<div class="container container--1160">
+					<div class="sub-title-box text-center">
+						<h2 class="sub-main__title mb-10"><?=${nav_.$P_dp1._.$P_dp2}?></h2>
+					</div>
+					<div class="mypage-container">
+						<!-- S : 마이페이지 lnb -->
+						<? include "../mypage/mypage_lnb.html" ?>
+						<!-- E : 마이페이지 lnb -->
+
+						<div class="mypage-content">
+							<!-- S :  -->
+							<table class="table-view-01 txt-mt">
+								<caption>
+									<span class="hidden">상세 입니다.</span>
+								</caption>
+								<colgroup>
+									<col class="col_w" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>구분</th>
+										<td>Q&amp;A</td>
+									</tr>
+									<tr>
+										<th>이름</th>
+										<td>김**</td>
+									</tr>
+									<tr>
+										<th>연락처</th>
+										<td>01012341234</td>
+									</tr>
+									<tr>
+										<th>이메일</th>
+										<td>mailid@masstige.biz</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="">
+											<p class="tit">문의 제목이 출력됩니다.</p>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<div class="board-box">내용 노출</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="mt_20">
+								<h4 class="gray_01 font_18">답변</h4>
+								<div class="mt_10">
+									<table summary="질문과답변 보기입니다." class="table-view-01 title-black">
+										<caption>
+											<span class="hidden">질문과답변 표</span>
+										</caption>
+										<colgroup>
+											<!--         <col width="10%">
+                      <col width="90%"> -->
+										</colgroup>
+										<tbody>
+											<tr>
+												<td class="clearfix tit_box">
+													<p class="tbl_detail_span mt_05">
+														<span class="name">관리자</span>
+														<span class="date">2017.01.17</span>
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="txt-board-box">고객문의내용이 출력됩니다.</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p class="addfile_txt">첨부파일 없음</p>
+													<p class="addfile_txt">첨부파일 없음</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="">
+													<p class="tbl_detail_span mt_05">
+														<!-- <span class="check_01">조회:1</span> -->
+														<span class="anwer_on">답변완료</span>
+														<span class="anwer_off">답변대기</span>
+														<!--       <span class="check_01">조회:123</span> -->
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="mt_40 text_right board_view_btn_box">
+								<a href="JavaScript:history.go(-1);" class="btn-type-01">목록</a>
+								<a href="javascript:;" class="btn-type-01">삭제</a>
+							</div>
+							<div class="border-list-type mt_30">
+								<ul>
+									<li>
+										<a href="/news/news_010100.html?bmain=view&amp;uid=16" title="이전">
+											<div class="clearfix">
+												<div class="left list-up-bg list-title">이전</div>
+												<div class="left w-con">이전글</div>
+											</div>
+										</a>
+									</li>
+									<li class="border-none">
+										<a href="#" title="다음">
+											<div class="clearfix">
+												<div class="left list-down-bg list-title">다음</div>
+												<div class="left w-con">다음 글이 없습니다.</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<!-- E :  -->
+						</div>
+					</div>
+				</div>
+				<!-- E :  -->
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/quick.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>
